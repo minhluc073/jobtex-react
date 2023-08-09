@@ -1,10 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-import MapBox from "react-map-gl";
+import MapBox, { Marker, Popup } from "react-map-gl";
+import lo1 from "../../assets/images/logo-company/cty1.png";
+import lo2 from "../../assets/images/logo-company/cty2.png";
+import lo3 from "../../assets/images/logo-company/cty3.png";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 Map.propTypes = {};
 
+// const Marker= [
+//     {}
+// ]
+const marKers = [
+  {
+    id: 1,
+    title: "TOP Agency, Inc",
+    name: "Full Stack Development",
+    address: "Las Vegas, NV 89107, USA",
+    longitude: -74.006821,
+    latitude: 40.706755,
+    img: lo1,
+  },
+  {
+    id: 2,
+    title: "TOP Agency, Inc",
+    name: "Full Stack Development",
+    address: "Las Vegas, NV 89107, USA",
+    longitude: -74.00423,
+    latitude: 40.705445,
+    img: lo2,
+  },
+  {
+    id: 3,
+    title: "TOP Agency, Inc",
+    name: "Full Stack Development",
+    address: "Las Vegas, NV 89107, USA",
+    longitude: -74.009766,
+    latitude: 40.703859,
+    img: lo3,
+  },
+];
+
 function Map(props) {
+  const [popupOpen, setPopupOpen] = useState({});
+  console.log("hhh", popupOpen);
+
   return (
     <section className="wd-feature-map">
       <div className="tf-slider slider-map style-1">
@@ -17,14 +57,97 @@ function Map(props) {
         <MapBox
           mapLib={import("mapbox-gl")}
           initialViewState={{
-            longitude: -100,
-            latitude: 40,
-            zoom: 3.5,
+            longitude: -74.000303,
+            latitude: 40.706243,
+            zoom: 15,
           }}
-          mapboxAccessToken={process.env.MAP_BOX_KEY}
-          style={{ width: 600, height: 400 }}
+          mapboxAccessToken="pk.eyJ1IjoidGhlbWVzZmxhdCIsImEiOiJjbGt3NGxtYncwa2F2M21saHM3M21uM3h2In0.9NbzjykXil1nELxQ1V8rkA"
+          style={{ width: "100%", height: 600 }}
           mapStyle="mapbox://styles/mapbox/streets-v9"
-        />
+        >
+          {marKers.map((item) => {
+            return (
+              <div key={item.id}>
+                <Marker
+                  longitude={item.longitude}
+                  latitude={item.latitude}
+                  anchor="center"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setPopupOpen((prevItem) => ({
+                      ...prevItem,
+                      [item.id]: !prevItem[item.id],
+                    }));
+                  }}
+                >
+                  <div className="marker temporary-marker">
+                    <img
+                      src={item.img}
+                      alt="img"
+                      style={{ width: "30px", height: "30px" }}
+                    />
+                  </div>
+                </Marker>
+                {popupOpen[item.id] && (
+                  <Popup
+                    key={item.id}
+                    longitude={item.longitude}
+                    latitude={item.latitude}
+                    anchor="center"
+                    onClose={() => setPopupOpen(false)}
+                    closeButton={true}
+                    offsetLeft={10}
+                  >
+                    <span style={{ fontSize: "1vw", fontFamily: "Poppins" }}>
+                      {item.name}
+                    </span>
+                  </Popup>
+                )}
+              </div>
+            );
+          })}
+        </MapBox>
+
+        {/* <MapBox
+          mapLib={import("mapbox-gl")}
+          initialViewState={{
+            longitude: -74.000303,
+            latitude: 40.706243,
+            zoom: 15,
+          }}
+          mapboxAccessToken="pk.eyJ1IjoidGhlbWVzZmxhdCIsImEiOiJjbGt3NGxtYncwa2F2M21saHM3M21uM3h2In0.9NbzjykXil1nELxQ1V8rkA"
+          style={{ width: "100%", height: 600 }}
+          mapStyle="mapbox://styles/mapbox/streets-v9"
+        >
+          <Marker
+            longitude={-74.006821}
+            latitude={40.706755}
+            anchor="center"
+            onClick={() => setPopupOpen(true)}
+          >
+            <div className="marker temporary-marker">
+              <img
+                src={lo1}
+                alt="img"
+                style={{ width: "30px", height: "30px" }}
+              />
+            </div>
+          </Marker>
+          {popupOpen && (
+            <Popup
+              longitude={-74.006821}
+              latitude={40.706755}
+              anchor="center"
+              onClose={() => setPopupOpen(false)}
+              closeButton={true}
+              offsetLeft={10}
+            >
+              <span style={{ fontSize: "1vw", fontFamily: "Poppins" }}>
+                Full Stack Development
+              </span>
+            </Popup>
+          )}
+        </MapBox> */}
 
         <div className="tf-container">
           <div className="content">
