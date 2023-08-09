@@ -109,12 +109,14 @@ function Banner09(props) {
                   </div>
                   <div className="content">
                     <h6 className="wrap-counter text-pri">
-                      <CountUp
-                        className="number"
-                        end={4800}
-                        prefix="+"
-                        duration={1}
-                      />
+                      <span>+</span>
+                      <span
+                        className="counter-number"
+                        data-speed="2000"
+                        data-to="4800"
+                      >
+                        4800
+                      </span>
                     </h6>
                     <p>Employers get benefits </p>
                   </div>
