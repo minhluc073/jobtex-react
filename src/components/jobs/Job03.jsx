@@ -63,10 +63,10 @@ function Job03(props) {
                             <div className="job-footer-left">
                               <ul className="job-tag">
                                 <li>
-                                  <Link to="#">Full-time</Link>
+                                  <Link to="#">{idx.jobs1}</Link>
                                 </li>
                                 <li>
-                                  <Link to="#">Remote</Link>
+                                  <Link to="#">{idx.jobs2}</Link>
                                 </li>
                               </ul>
                               <div className="star">
@@ -98,7 +98,7 @@ function Job03(props) {
                     ))}
                   </TabPanel>
                   <TabPanel className="row animation-tab job-tab-item">
-                    {data.map((idx) => (
+                    {data.slice(0, 6).map((idx) => (
                       <div key={idx.id} className="col-lg-6 ">
                         <div className="features-job">
                           <div className="job-archive-header">
@@ -132,10 +132,10 @@ function Job03(props) {
                             <div className="job-footer-left">
                               <ul className="job-tag">
                                 <li>
-                                  <Link to="#">Full-time</Link>
+                                  <Link to="#">{idx.jobs1}</Link>
                                 </li>
                                 <li>
-                                  <Link to="#">Remote</Link>
+                                  <Link to="#">{idx.jobs2}</Link>
                                 </li>
                               </ul>
                               <div className="star">
@@ -167,7 +167,7 @@ function Job03(props) {
                     ))}
                   </TabPanel>
                   <TabPanel className="row animation-tab job-tab-item">
-                    {data.map((idx) => (
+                    {data.slice(0, 6).map((idx) => (
                       <div key={idx.id} className="col-lg-6 ">
                         <div className="features-job">
                           <div className="job-archive-header">
@@ -201,10 +201,10 @@ function Job03(props) {
                             <div className="job-footer-left">
                               <ul className="job-tag">
                                 <li>
-                                  <Link to="#">Full-time</Link>
+                                  <Link to="#">{idx.jobs1}</Link>
                                 </li>
                                 <li>
-                                  <Link to="#">Remote</Link>
+                                  <Link to="#">{idx.jobs2}</Link>
                                 </li>
                               </ul>
                               <div className="star">
@@ -236,7 +236,7 @@ function Job03(props) {
                     ))}
                   </TabPanel>
                   <TabPanel className="row animation-tab job-tab-item">
-                    {data.map((idx) => (
+                    {data.slice(0, 6).map((idx) => (
                       <div key={idx.id} className="col-lg-6 ">
                         <div className="features-job">
                           <div className="job-archive-header">
@@ -270,10 +270,10 @@ function Job03(props) {
                             <div className="job-footer-left">
                               <ul className="job-tag">
                                 <li>
-                                  <Link to="#">Full-time</Link>
+                                  <Link to="#">{idx.jobs1}</Link>
                                 </li>
                                 <li>
-                                  <Link to="#">Remote</Link>
+                                  <Link to="#">{idx.jobs2}</Link>
                                 </li>
                               </ul>
                               <div className="star">
@@ -305,7 +305,7 @@ function Job03(props) {
                     ))}
                   </TabPanel>
                   <TabPanel className="row animation-tab job-tab-item">
-                    {data.map((idx) => (
+                    {data.slice(0, 6).map((idx) => (
                       <div key={idx.id} className="col-lg-6 ">
                         <div className="features-job">
                           <div className="job-archive-header">
@@ -339,10 +339,10 @@ function Job03(props) {
                             <div className="job-footer-left">
                               <ul className="job-tag">
                                 <li>
-                                  <Link to="#">Full-time</Link>
+                                  <Link to="#">{idx.jobs1}</Link>
                                 </li>
                                 <li>
-                                  <Link to="#">Remote</Link>
+                                  <Link to="#">{idx.jobs2}</Link>
                                 </li>
                               </ul>
                               <div className="star">

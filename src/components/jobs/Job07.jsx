@@ -27,7 +27,7 @@ function Job07(props) {
           </div>
           <div className="content-tab">
             <TabPanel className="row wow fadeInUp animation-tab job-tab-item">
-              {data.map((idx) => (
+              {data.slice(0, 9).map((idx) => (
                 <div key={idx.id} className="col-lg-4 ">
                   <div className="features-job">
                     <div className="job-archive-header">
@@ -63,10 +63,10 @@ function Job07(props) {
                       <div className="job-footer-left">
                         <ul className="job-tag">
                           <li>
-                            <Link to="#">Full-time</Link>
+                            <Link to="#">{idx.jobs1}</Link>
                           </li>
                           <li>
-                            <Link to="#">Remote</Link>
+                            <Link to="#">{idx.jobs2}</Link>
                           </li>
                         </ul>
                         <div className="star">
@@ -103,7 +103,7 @@ function Job07(props) {
               </div>
             </TabPanel>
             <TabPanel className="row wow fadeInUp animation-tab job-tab-item">
-              {data.map((idx) => (
+              {data.slice(0, 9).map((idx) => (
                 <div key={idx.id} className="col-lg-4 ">
                   <div className="features-job">
                     <div className="job-archive-header">
@@ -139,10 +139,10 @@ function Job07(props) {
                       <div className="job-footer-left">
                         <ul className="job-tag">
                           <li>
-                            <Link to="#">Full-time</Link>
+                            <Link to="#">{idx.jobs1}</Link>
                           </li>
                           <li>
-                            <Link to="#">Remote</Link>
+                            <Link to="#">{idx.jobs2}</Link>
                           </li>
                         </ul>
                         <div className="star">
@@ -179,7 +179,7 @@ function Job07(props) {
               </div>
             </TabPanel>
             <TabPanel className="row wow fadeInUp animation-tab job-tab-item">
-              {data.map((idx) => (
+              {data.slice(0, 9).map((idx) => (
                 <div key={idx.id} className="col-lg-4 ">
                   <div className="features-job">
                     <div className="job-archive-header">
@@ -215,10 +215,10 @@ function Job07(props) {
                       <div className="job-footer-left">
                         <ul className="job-tag">
                           <li>
-                            <Link to="#">Full-time</Link>
+                            <Link to="#">{idx.jobs1}</Link>
                           </li>
                           <li>
-                            <Link to="#">Remote</Link>
+                            <Link to="#">{idx.jobs2}</Link>
                           </li>
                         </ul>
                         <div className="star">
@@ -255,7 +255,7 @@ function Job07(props) {
               </div>
             </TabPanel>
             <TabPanel className="row wow fadeInUp animation-tab job-tab-item">
-              {data.map((idx) => (
+              {data.slice(0, 9).map((idx) => (
                 <div key={idx.id} className="col-lg-4">
                   <div className="features-job">
                     <div className="job-archive-header">
@@ -291,10 +291,10 @@ function Job07(props) {
                       <div className="job-footer-left">
                         <ul className="job-tag">
                           <li>
-                            <Link to="#">Full-time</Link>
+                            <Link to="#">{idx.jobs1}</Link>
                           </li>
                           <li>
-                            <Link to="#">Remote</Link>
+                            <Link to="#">{idx.jobs2}</Link>
                           </li>
                         </ul>
                         <div className="star">
@@ -331,7 +331,7 @@ function Job07(props) {
               </div>
             </TabPanel>
             <TabPanel className="row wow fadeInUp animation-tab job-tab-item">
-              {data.map((idx) => (
+              {data.slice(0, 9).map((idx) => (
                 <div key={idx.id} className="col-lg-4">
                   <div className="features-job">
                     <div className="job-archive-header">
@@ -367,10 +367,10 @@ function Job07(props) {
                       <div className="job-footer-left">
                         <ul className="job-tag">
                           <li>
-                            <Link to="#">Full-time</Link>
+                            <Link to="#">{idx.jobs1}</Link>
                           </li>
                           <li>
-                            <Link to="#">Remote</Link>
+                            <Link to="#">{idx.jobs2}</Link>
                           </li>
                         </ul>
                         <div className="star">

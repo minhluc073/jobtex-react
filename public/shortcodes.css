@@ -4461,13 +4461,13 @@
 }
 
 .group-select-display .btn-display:hover,
-.group-select-display .btn-display.active {
+.group-select-display .btn-display.react-tabs__tab--selected {
   background: #14a077;
   border-color: #14a077;
 }
 
 .group-select-display .btn-display:hover svg path,
-.group-select-display .btn-display.active svg path {
+.group-select-display .btn-display.react-tabs__tab--selected svg path {
   fill: #fff;
 }
 
@@ -4477,7 +4477,7 @@
   align-items: center;
 }
 
-.group-select-display .inner a:not(:last-child) {
+.group-select-display .inner .btn-display:not(:last-child) {
   margin-right: 15px;
 }
 
@@ -7986,7 +7986,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .group-range-title {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .group-range-title label {

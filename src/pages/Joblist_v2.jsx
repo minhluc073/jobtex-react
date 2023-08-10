@@ -6,6 +6,7 @@ import JobSec2 from '../components/jobs/JobSec2';
 import dataJobs from '../assets/fakeData/dataJobs';
 import Footer from '../components/footer';
 import FormSearch from '../components/formsearch';
+import Gotop from "../components/gotop";
 
 Joblist_v2.propTypes = {
     
@@ -21,6 +22,8 @@ function Joblist_v2(props) {
 
             <JobSec2 data={dataJobs} />
             <Footer />
+            <Gotop />
+            
         </div>
     );
 }

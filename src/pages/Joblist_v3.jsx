@@ -5,6 +5,7 @@ import Breadcrumb from '../components/breadcrumb';
 import JobSec3 from '../components/jobs/JobSec3';
 import dataJobs from '../assets/fakeData/dataJobs';
 import Footer from '../components/footer';
+import Gotop from '../components/gotop';
 
 Joblist_v3.propTypes = {
     
@@ -18,7 +19,7 @@ function Joblist_v3(props) {
             <JobSec3 data={dataJobs} />
 
             <Footer />
-            
+            <Gotop />
         </div>
     );
 }

@@ -8,7 +8,7 @@ import Category from "../components/category";
 import dataCate from "../assets/fakeData/dataCategory";
 import Job05 from "../components/jobs/Job05";
 import dataJobs from "../assets/fakeData/dataJobs";
-import Location04 from "../components/location/Location04";
+import Location05 from "../components/location/Location05";
 import About05 from "../components/about/About05";
 import Couter from "../components/couter";
 import Testimonials from "../components/testimonials";
@@ -27,7 +27,7 @@ function Home_v5(props) {
       <Category data={dataCate} />
       <Job05 data={dataJobs} />
 
-      <Location04 />
+      <Location05 />
 
       <About05 />
       <Couter />

@@ -41,7 +41,7 @@ const marKers = [
   },
 ];
 
-function Map(props) {
+function FormMap(props) {
   const [popupOpen, setPopupOpen] = useState({});
   console.log("hhh", popupOpen);
 
@@ -72,6 +72,7 @@ function Map(props) {
                   longitude={item.longitude}
                   latitude={item.latitude}
                   anchor="center"
+                  closeOnClick={false}
                   onClick={(e) => {
                     setPopupOpen((prevItem) => ({
                       ...prevItem,
@@ -147,9 +148,43 @@ function Map(props) {
             </Popup>
           )}
         </MapBox> */}
+
+        <div className="tf-container">
+          <div className="content">
+            <div className="form-sl">
+              <form method="post">
+                <div className="row-group-search home1 st">
+                  <div className="form-group-1">
+                    <span className="icon-search search-job"></span>
+                    <input
+                      type="text"
+                      className="input-filter-search"
+                      placeholder="Job title, key words or company"
+                    />
+                  </div>
+                  <div className="form-group-2">
+                    <span className="icon-map-pin"></span>
+                    <select id="select-location" className="select-location">
+                      <option value="">All Location</option>
+                      <option value="">Japan</option>
+                      <option value="">Canada</option>
+                      <option value="">England</option>
+                      <option value="">Mexico</option>
+                    </select>
+                  </div>
+                  <div className="form-group-4">
+                    <button type="submit" className="btn btn-find">
+                      Find Jobs
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
 }
 
-export default Map;
+export default FormMap;

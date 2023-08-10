@@ -84,7 +84,7 @@ function TabJob(props) {
           <div className="col-xl-7 col-lg-7 col-md-12">
             {data.map((idx) => (
               <TabPanel className="content-tab sticky-home2 po-sticky add-mgt">
-                <article key={idx.id} className={`job-article ${idx.stt}`}>
+                <article className={`job-article ${idx.stt}`}>
                   <div className="top-content">
                     <div className="features-job style-2 stc-apply">
                       <div className="job-archive-header">

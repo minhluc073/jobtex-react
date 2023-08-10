@@ -57,10 +57,10 @@ function Jobs(props) {
                   <div className="job-footer-left">
                     <ul className="job-tag">
                       <li>
-                        <Link to="#">Full-time</Link>
+                        <Link to="#">{idx.jobs1}</Link>
                       </li>
                       <li>
-                        <Link to="#">Remote</Link>
+                        <Link to="#">{idx.jobs2}</Link>
                       </li>
                     </ul>
                     <div className="star">

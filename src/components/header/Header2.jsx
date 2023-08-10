@@ -471,13 +471,17 @@ function Header2(props) {
                                 <NavLink to="/joblist_v1">List Layout</NavLink>
                               </li>
                               <li className="nav-menu-item">
-                                <NavLink to="/joblist_v2">List Sidebar</NavLink>
+                                <NavLink to="/job-grid">Grid Layout</NavLink>
                               </li>
                               <li className="nav-menu-item">
-                                <NavLink to="/joblist_v3">Grid Layout</NavLink>
+                                <NavLink to="/job-list-sidebar">
+                                  List Sidebar
+                                </NavLink>
                               </li>
                               <li className="nav-menu-item">
-                                <NavLink to="/joblist_v4">Grid Sidebar</NavLink>
+                                <NavLink to="/job-grid-sidebar">
+                                  Grid Sidebar
+                                </NavLink>
                               </li>
 
                               <li className="nav-menu-item">

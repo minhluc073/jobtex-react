@@ -85,18 +85,20 @@ function Header03(props) {
                             </Link>
                             <ul className="nav-sub-menu">
                               <li className="nav-menu-item">
-                                <NavLink to="/joblist_v1">
-                                  List Layout
+                                <NavLink to="/joblist_v1">List Layout</NavLink>
+                              </li>
+                              <li className="nav-menu-item">
+                                <NavLink to="/job-grid">List Sidebar</NavLink>
+                              </li>
+                              <li className="nav-menu-item">
+                                <NavLink to="/job-list-sidebar">
+                                  Grid Layout
                                 </NavLink>
                               </li>
                               <li className="nav-menu-item">
-                                <NavLink to="/joblist_v2">List Sidebar</NavLink>
-                              </li>
-                              <li className="nav-menu-item">
-                                <NavLink to="/joblist_v3">Grid Layout</NavLink>
-                              </li>
-                              <li className="nav-menu-item">
-                                <NavLink to="/joblist_v4">Grid Sidebar</NavLink>
+                                <NavLink to="/job-grid-sidebar">
+                                  Grid Sidebar
+                                </NavLink>
                               </li>
 
                               <li className="nav-menu-item">
@@ -163,35 +165,26 @@ function Header03(props) {
                               </li>
                               <li className="nav-menu-item">
                                 <NavLink to="/employers_v3">
-                                List Sidebar
-
+                                  List Sidebar
                                 </NavLink>
                               </li>
                               <li className="nav-menu-item">
                                 <NavLink to="/employers_v4">
-                                Grid Sidebar
-
+                                  Grid Sidebar
                                 </NavLink>
                               </li>
 
                               <li className="nav-menu-item">
                                 <NavLink to="/employers_v5">
-                                Grid Fullwidth
-
+                                  Grid Fullwidth
                                 </NavLink>
                               </li>
 
                               <li className="nav-menu-item">
-                                <NavLink to="/employers_v6">
-                                Top Map
-
-                                </NavLink>
+                                <NavLink to="/employers_v6">Top Map</NavLink>
                               </li>
                               <li className="nav-menu-item">
-                                <NavLink to="/employers_v7">
-                                Half Map
-
-                                </NavLink>
+                                <NavLink to="/employers_v7">Half Map</NavLink>
                               </li>
                             </ul>
                           </li>
@@ -234,43 +227,34 @@ function Header03(props) {
                             <ul className="nav-sub-menu">
                               <li className="nav-menu-item">
                                 <NavLink to="/candidates_v1">
-                                List Layout
-
+                                  List Layout
                                 </NavLink>
                               </li>
                               <li className="nav-menu-item">
                                 <NavLink to="/candidates_v2">
-                                Grid Layout
-
+                                  Grid Layout
                                 </NavLink>
                               </li>
                               <li className="nav-menu-item">
                                 <NavLink to="/candidates_v3">
-                                List Sidebar
-
+                                  List Sidebar
                                 </NavLink>
                               </li>
                               <li className="nav-menu-item">
-                                <NavLink to="/candidates_v4">
-                                  Top Map
-                                </NavLink>
+                                <NavLink to="/candidates_v4">Top Map</NavLink>
                               </li>
 
                               <li className="nav-menu-item">
-                                <NavLink to="/candidates_v5">
-                                  Half Map
-                                </NavLink>
+                                <NavLink to="/candidates_v5">Half Map</NavLink>
                               </li>
                               <li className="nav-menu-item">
                                 <NavLink to="/candidates_v6">
-                                No Available - V1
-
+                                  No Available - V1
                                 </NavLink>
                               </li>
                               <li className="nav-menu-item">
                                 <NavLink to="/candidates_v7">
-                                No Available - V2
-
+                                  No Available - V2
                                 </NavLink>
                               </li>
                             </ul>
@@ -336,27 +320,23 @@ function Header03(props) {
                           </li>
                           <li className="nav-sub">
                             <Link to="#">
-                            Blog Details
-
+                              Blog Details
                               <span className="icon-keyboard_arrow_right"></span>
                             </Link>
                             <ul className="nav-sub-menu">
                               <li className="nav-menu-item">
                                 <NavLink to="/blogsingle_v1">
-                                Blog Details - V1
-
+                                  Blog Details - V1
                                 </NavLink>
                               </li>
                               <li className="nav-menu-item">
                                 <NavLink to="/blogsingle_v2">
-                                Blog Details - V2
-
+                                  Blog Details - V2
                                 </NavLink>
                               </li>
                               <li className="nav-menu-item">
                                 <NavLink to="/blogsingle_v3">
-                                Blog Details Sidebar
-
+                                  Blog Details Sidebar
                                 </NavLink>
                               </li>
                             </ul>

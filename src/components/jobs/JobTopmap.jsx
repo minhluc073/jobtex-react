@@ -1,30 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Sidebar from "./Sidebar";
 import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
-JobSec6.propTypes = {};
+JobTopmap.propTypes = {};
 
-function JobSec6(props) {
+function JobTopmap(props) {
   const { data } = props;
+  const { className } = props;
   return (
-    <section>
-      <div className="tf-container ctn-full wrap-sidebar-full pl1">
+    <section className={`inner-jobs-section ${className}`}>
+      <div className="tf-container">
         <div className="row">
-          <div className="col-lg-3">
-            <div className="content-left style2 po-sticky">
-              <div className="inner st-filter">
-                <Sidebar />
-              </div>
-            </div>
-          </div>
-          <Tabs className="col-lg-9 tf-tab">
+          <Tabs className="col-lg-12 tf-tab">
             <div className="wd-meta-select-job">
               <div className="wd-findjob-filer">
                 <div className="group-select-display">
                   <TabList className="inner menu-tab">
-                    <Tab className="btn-display current active">
+                    <Tab className="btn-display">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17"
@@ -87,80 +80,11 @@ function JobSec6(props) {
                 </div>
               </div>
             </div>
-            <div className="content-tab style-scroll">
-              <TabPanel className="inner">
-                <div className="group-col-3">
-                  {data.map((idx) => (
-                    <div className="features-job cl3">
-                      <div className="job-archive-header">
-                        <div className="inner-box">
-                          <div className="logo-company">
-                            <img src={idx.img} alt="jobtex" />
-                          </div>
-                          <div className="box-content">
-                            <h4>
-                              <Link to="jobs-single.html">{idx.cate}</Link>
-                            </h4>
-                            <h3>
-                              <Link to="jobs-single.html"> {idx.title} </Link>
-                              <span className="icon-bolt"></span>
-                            </h3>
-                            <ul>
-                              <li>
-                                <span className="icon-map-pin"></span>
-                                {idx.map}
-                              </li>
-                              <li>
-                                <span className="icon-calendar"></span>
-                                {idx.time}
-                              </li>
-                            </ul>
-                            <span className="icon-heart"></span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="job-archive-footer">
-                        <div className="job-footer-left">
-                          <ul className="job-tag">
-                            <li>
-                              <Link to="#">{idx.jobs1}</Link>
-                            </li>
-                            <li>
-                              <Link to="#">{idx.jobs2}</Link>
-                            </li>
-                          </ul>
-                          <div className="star">
-                            <span className="icon-star-full"></span>
-                            <span className="icon-star-full"></span>
-                            <span className="icon-star-full"></span>
-                            <span className="icon-star-full"></span>
-                            <span className="icon-star-full"></span>
-                          </div>
-                        </div>
-                        <div className="job-footer-right">
-                          <div className="price">
-                            <span className="icon-dolar1"></span>
-                            <p>
-                              {idx.price}
-                              <span className="year">/year</span>
-                            </p>
-                          </div>
-                          <p className="days">{idx.apply}</p>
-                        </div>
-                      </div>
-                      <Link
-                        to="jobs-single.html"
-                        className="jobtex-link-item"
-                        tabIndex="0"
-                      ></Link>
-                    </div>
-                  ))}
-                </div>
-              </TabPanel>
+            <div className="content-tab">
               <TabPanel className="inner">
                 <div className="group-col-2">
-                  {data.map((idx) => (
-                    <div className="features-job cl2">
+                  {data.slice(0, 8).map((idx) => (
+                    <div key={idx.id} className="features-job cl2">
                       <div className="job-archive-header">
                         <div className="inner-box">
                           <div className="logo-company">
@@ -225,29 +149,113 @@ function JobSec6(props) {
                     </div>
                   ))}
                 </div>
+
+                <ul className="pagination-job padding">
+                  <li>
+                    <Link to="#">
+                      <i className="icon-keyboard_arrow_left"></i>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="#">1</Link>
+                  </li>
+                  <li className="current">
+                    <Link to="#">2</Link>
+                  </li>
+                  <li>
+                    <Link to="#">3</Link>
+                  </li>
+                  <li>
+                    <Link to="#">
+                      <i className="icon-keyboard_arrow_right"></i>
+                    </Link>
+                  </li>
+                </ul>
+              </TabPanel>
+              <TabPanel className="inner">
+                {data.slice(0, 9).map((idx) => (
+                  <div key={idx.id} className="features-job style-3">
+                    <div className="inner-box">
+                      <div className="company">
+                        <div className="logo-company">
+                          <img src={idx.img} alt="Jobtex" />
+                        </div>
+                        <div className="box-content">
+                          <h4>
+                            <Link to="jobs-single.html">{idx.cate}</Link>
+                          </h4>
+                          <h3>
+                            <Link to="jobs-single.html">{idx.title}</Link>
+                            <span className="icon-bolt"></span>
+                          </h3>
+                          <div className="star">
+                            <span className="icon-star-full"></span>
+                            <span className="icon-star-full"></span>
+                            <span className="icon-star-full"></span>
+                            <span className="icon-star-full"></span>
+                            <span className="icon-star-full"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <ul className="info">
+                        <li>
+                          <span className="icon-map-pin"></span>
+                          {idx.map}
+                        </li>
+                        <li>{idx.time}</li>
+                      </ul>
+                      <div className="category">
+                        <ul className="job-tag">
+                          <li>
+                            <Link to="#"> Full-time</Link>
+                          </li>
+                          <li>
+                            <Link to="#"> Hybrid</Link>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="salary">
+                        <span className="icon-dolar1"></span>
+                        <p>
+                          {idx.price} <span className="year">/year</span>
+                        </p>
+                      </div>
+                      <div className="group-btn">
+                        <span className="icon-heart"></span>
+                        <button>Apply</button>
+                      </div>
+                    </div>
+                    <Link
+                      to="jobs-single.html"
+                      className="jobtex-link-item"
+                      tabIndex="0"
+                    ></Link>
+                  </div>
+                ))}
+
+                <ul className="pagination-job padding">
+                  <li>
+                    <Link to="#">
+                      <i className="icon-keyboard_arrow_left"></i>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="#">1</Link>
+                  </li>
+                  <li className="current">
+                    <Link to="#">2</Link>
+                  </li>
+                  <li>
+                    <Link to="#">3</Link>
+                  </li>
+                  <li>
+                    <Link to="#">
+                      <i className="icon-keyboard_arrow_right"></i>
+                    </Link>
+                  </li>
+                </ul>
               </TabPanel>
             </div>
-            <ul className="pagination-job absolute">
-              <li>
-                <Link to="#">
-                  <i className="icon-keyboard_arrow_left"></i>
-                </Link>
-              </li>
-              <li>
-                <Link to="#">1</Link>
-              </li>
-              <li className="current">
-                <Link to="#">2</Link>
-              </li>
-              <li>
-                <Link to="#">3</Link>
-              </li>
-              <li>
-                <Link to="#">
-                  <i className="icon-keyboard_arrow_right"></i>
-                </Link>
-              </li>
-            </ul>
           </Tabs>
         </div>
       </div>
@@ -255,4 +263,4 @@ function JobSec6(props) {
   );
 }
 
-export default JobSec6;
+export default JobTopmap;

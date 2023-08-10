@@ -473,13 +473,17 @@ function Header(props) {
                                 <NavLink to="/joblist_v1">List Layout</NavLink>
                               </li>
                               <li className="nav-menu-item">
-                                <NavLink to="/joblist_v2">Grid Layout</NavLink>
+                                <NavLink to="/job-grid">Grid Layout</NavLink>
                               </li>
                               <li className="nav-menu-item">
-                                <NavLink to="/joblist_v3">List Sidebar</NavLink>
+                                <NavLink to="/job-list-sidebar">
+                                  List Sidebar
+                                </NavLink>
                               </li>
                               <li className="nav-menu-item">
-                                <NavLink to="/joblist_v4">Grid Sidebar</NavLink>
+                                <NavLink to="/job-grid-sidebar">
+                                  Grid Sidebar
+                                </NavLink>
                               </li>
 
                               <li className="nav-menu-item">
@@ -541,17 +545,17 @@ function Header(props) {
                               </li>
                               <li className="nav-menu-item">
                                 <NavLink to="/employers_v2">
-                                    Grid Layout
+                                  Grid Layout
                                 </NavLink>
                               </li>
                               <li className="nav-menu-item">
                                 <NavLink to="/employers_v3">
-                                    List Sidebar
+                                  List Sidebar
                                 </NavLink>
                               </li>
                               <li className="nav-menu-item">
                                 <NavLink to="/employers_v4">
-                                    Grid Sidebar
+                                  Grid Sidebar
                                 </NavLink>
                               </li>
 
@@ -562,14 +566,10 @@ function Header(props) {
                               </li>
 
                               <li className="nav-menu-item">
-                                <NavLink to="/employers_v6">
-                                  Top Map
-                                </NavLink>
+                                <NavLink to="/employers_v6">Top Map</NavLink>
                               </li>
                               <li className="nav-menu-item">
-                                <NavLink to="/employers_v7">
-                                  Half Map
-                                </NavLink>
+                                <NavLink to="/employers_v7">Half Map</NavLink>
                               </li>
                             </ul>
                           </li>
@@ -626,15 +626,11 @@ function Header(props) {
                                 </NavLink>
                               </li>
                               <li className="nav-menu-item">
-                                <NavLink to="/candidates_v4">
-                                  Top Map
-                                </NavLink>
+                                <NavLink to="/candidates_v4">Top Map</NavLink>
                               </li>
 
                               <li className="nav-menu-item">
-                                <NavLink to="/candidates_v5">
-                                  Half Map
-                                </NavLink>
+                                <NavLink to="/candidates_v5">Half Map</NavLink>
                               </li>
                               <li className="nav-menu-item">
                                 <NavLink to="/candidates_v6">
@@ -709,7 +705,7 @@ function Header(props) {
                           </li>
                           <li className="nav-sub">
                             <Link to="#">
-                            Blog Details
+                              Blog Details
                               <span className="icon-keyboard_arrow_right"></span>{" "}
                             </Link>
                             <ul className="nav-sub-menu">
