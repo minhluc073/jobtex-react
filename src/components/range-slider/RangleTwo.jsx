@@ -7,7 +7,7 @@ function RangeTwo(props) {
     <div className="group-form">
       <div className="group-range-title">
         <label>
-          Radius:
+          Salary:
           <span>{value[0]}$ &nbsp;-</span>
           <span>{value[1]}$</span>
         </label>
