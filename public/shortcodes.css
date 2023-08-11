@@ -3754,14 +3754,14 @@
   display: flex;
 }
 
-.wd-findjob-filer .group-select .nice-select {
+.wd-findjob-filer .group-select .sort-buy .Dropdown-control {
   padding: 12px 16px;
   background: #f1f1f1;
   border-radius: 4px;
   padding-right: 57px;
 }
 
-.wd-findjob-filer .group-select .nice-select:after {
+.wd-findjob-filer .group-select .sort-buy:after {
   border-bottom: 8px solid #b1b1b1;
   border-right: 8px solid #b1b1b1;
   height: 13px;
@@ -3780,11 +3780,11 @@
   transform: rotate(180deg);
 }
 
-.wd-findjob-filer .group-select .nice-select:not(:last-child) {
+.wd-findjob-filer .group-select .sort-buy:not(:last-child) {
   margin-right: 12px;
 }
 
-.wd-findjob-filer .group-select .nice-select .current {
+.wd-findjob-filer .group-select .sort-buy .Dropdown-placeholder.is-selected {
   padding-left: 0;
   font-weight: 400;
   font-size: 14px;
@@ -7545,6 +7545,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 .form-group-2 span,
@@ -7554,9 +7555,13 @@
   z-index: 5;
 }
 
-.job-search-form .form-group-2 .nice-select {
+.job-search-form .form-group-2 .select-location {
   border-right: 1px solid #e5e5e5;
   width: 96%;
+}
+
+.job-search-form .form-group-2 .select-location .Dropdown-placeholder.is-selected {
+  padding-left: 33px;
 }
 
 .job-search-form .form-group-3 .nice-select {
@@ -11666,4 +11671,247 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .temporary-marker span {
   background: #D3D3D3;
+}
+
+/* dropdown-select */
+.react-dropdown {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  clear: both;
+  cursor: pointer;
+  display: block;
+  font-family: inherit;
+  font-weight: normal;
+  outline: none;
+  position: relative;
+  text-align: left !important;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  width: 100%;
+  line-height: 1.3;
+  background: #fff;
+}
+
+.react-dropdown .Dropdown-arrow,
+.filter-radio::after {
+  border-bottom: 2px solid #191919;
+  border-right: 2px solid #191919;
+  content: '';
+  height: 8px;
+  width: 8px;
+  margin-top: -4px;
+  pointer-events: none;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  left: unset !important;
+  -webkit-transform-origin: 66% 66%;
+  -ms-transform-origin: 66% 66%;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+.react-dropdown.is-open .Dropdown-arrow,
+.filter-radio.open::after {
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+
+
+.react-dropdown .Dropdown-placeholder.is-selected,
+.filter-radio p {
+  color: #121212;
+  max-width: 100%;
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  position: relative;
+  display: block;
+  padding-left: 55px;
+}
+
+.react-dropdown .Dropdown-menu {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+  box-sizing: border-box;
+  margin: 4px 0 0 0;
+  opacity: 1;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  -webkit-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform: scale(0.75) translateY(-21px);
+  -ms-transform: scale(0.75) translateY(-21px);
+  transform: scale(0.75) translateY(-21px);
+  -webkit-transition: 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  transition: 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  z-index: 9;
+  width: 100%;
+  max-height: 155px;
+  overflow: auto;
+}
+
+.react-dropdown.is-open .Dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: scale(1) translateY(0);
+  -ms-transform: scale(1) translateY(0);
+  transform: scale(1) translateY(0);
+  animation: fadeInFaq 0.5s;
+}
+
+.react-dropdown .Dropdown-option {
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 1.2;
+  list-style: none;
+  padding: 10px 0;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 29px;
+  text-align: left;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  color: #191919;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.react-dropdown .Dropdown-menu::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+  background-color: #f5f5f5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+
+.react-dropdown .Dropdown-menu::-webkit-scrollbar-thumb {
+  background-color: #a7a7a7;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+
+.react-dropdown .Dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+  height: 4px;
+  background-color: #f5f5f5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+
+.react-dropdown .Dropdown-option:hover,
+.react-dropdown .Dropdown-option.focus,
+.react-dropdown .Dropdown-option.is-selected {
+  background-color: #f6f6f6;
+  width: 100%;
+}
+
+.react-dropdown .Dropdown-option.is-selected {
+  font-weight: bold;
+  color: #14A077;
+}
+
+/* meta-category-job */
+.react-dropdown.meta-category-option .Dropdown-placeholder.is-selected {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #121212;
+  padding: 8px 37px 8px 12px;
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.react-dropdown.meta-category-option .Dropdown-option {
+  padding: 8px 12px;
+}
+
+.react-dropdown.meta-category-option .Dropdown-menu {
+  top: 100%;
+  max-height: 165px;
+}
+
+.react-dropdown.meta-category-option .Dropdown-arrow,
+.sort-buy .Dropdown-arrow {
+  border-color: #202020 transparent transparent;
+  border-style: solid;
+  border-width: 5px 5px 0;
+  content: " ";
+  display: block;
+  height: 0;
+  position: absolute;
+  margin: 0;
+  right: 15px;
+  top: 17px;
+  width: 0;
+  transform: unset;
+
+}
+
+.react-dropdown.meta-category-option.is-open .Dropdown-arrow {
+  top: 15px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.sort-buy .Dropdown-arrow {
+  margin-top: -3px;
+  top: 50%;
+  border-color: #b1b1b1 transparent transparent;
+  border-width: 6px 6px 0;
+  right: 20px;
+}
+
+.sort-buy.is-open .Dropdown-arrow {
+  margin-top: -7px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.select-location .Dropdown-control {
+  padding: 12px 0px;
+}
+
+.filter-radio {
+  padding: 12px 0px;
+  width: 100%;
+}
+
+.filter-radio p {
+  padding-left: 33px;
 }

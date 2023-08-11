@@ -17,7 +17,7 @@ function WidgetCounter(props) {
     <div className={`wd-review-job thumb2 widget-counter ${className}`}>
       <div className="thumb">
         <img
-          src={require("../../assets/images/review/thumb2.png")}
+          src={require("../../assets/images/review/thumb22.png")}
           alt="images"
         />
       </div>

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import CountUp from "react-countup";
+import SelectLocation from "../dropdown";
 
 Banner03.propTypes = {};
 
@@ -33,13 +34,7 @@ function Banner03(props) {
                     </div>
                     <div className="form-group-2">
                       <span className="icon-map-pin"></span>
-                      <select id="select-location" className="select-location">
-                        <option value="">All Location</option>
-                        <option value="">Japan</option>
-                        <option value="">Canada</option>
-                        <option value="">England</option>
-                        <option value="">Mexico</option>
-                      </select>
+                      <SelectLocation />
                     </div>
                     <div className="form-group-4">
                       <button type="submit" className="btn btn-find">

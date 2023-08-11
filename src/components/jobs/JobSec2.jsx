@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import SortBuy from "../dropdown/SortBuy";
 
 JobSec2.propTypes = {};
 
@@ -69,18 +70,7 @@ function JobSec2(props) {
                     <span>1249</span> jobs recommended for you
                   </p>
                 </div>
-                <div className="group-select">
-                  <select>
-                    <option>12 Per Page</option>
-                    <option>1 Per Page</option>
-                    <option>10 Per Page</option>
-                  </select>
-                  <select>
-                    <option>Sort by (Defaut)</option>
-                    <option>New</option>
-                    <option>Last</option>
-                  </select>
-                </div>
+                <SortBuy />
               </div>
             </div>
             <div className="content-tab">

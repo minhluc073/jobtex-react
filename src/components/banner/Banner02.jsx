@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import NiceSelect from "../../utils/niceSelect/NiceSelect";
+import SelectLocation from "../dropdown";
+
+
 
 Banner02.propTypes = {};
 
@@ -11,14 +13,6 @@ function Banner02(props) {
         <div className="row">
           <div className="col-lg-12">
             <div className="content">
-              <NiceSelect
-                id="a-select"
-                placeholder="Select..."
-                className="sampleClass"
-              >
-                <option value="OP1">Option 1</option>
-                <option value="OP2">Option 2</option>
-              </NiceSelect>
               <div className="form-sl stc">
                 <form method="post">
                   <div className="row-group-search home1 st">
@@ -32,17 +26,7 @@ function Banner02(props) {
                     </div>
                     <div className="form-group-2">
                       <span className="icon-map-pin"></span>
-                      <NiceSelect
-                        id="select-location"
-                        className="select-location"
-                        placeholder="All Location"
-                      >
-                        <option>All Location</option>
-                        <option>Japan</option>
-                        <option>Canada</option>
-                        <option>England</option>
-                        <option>Mexico</option>
-                      </NiceSelect>
+                      <SelectLocation />
                     </div>
                     <div className="form-group-4">
                       <button type="submit" className="btn btn-find">

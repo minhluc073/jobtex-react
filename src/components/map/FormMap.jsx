@@ -5,6 +5,7 @@ import lo1 from "../../assets/images/logo-company/cty1.png";
 import lo2 from "../../assets/images/logo-company/cty2.png";
 import lo3 from "../../assets/images/logo-company/cty3.png";
 import "mapbox-gl/dist/mapbox-gl.css";
+import SelectLocation from "../dropdown";
 
 Map.propTypes = {};
 
@@ -55,7 +56,7 @@ function FormMap(props) {
 
             /> */}
         <MapBox
-          // mapLib={import("mapbox-gl")}
+          mapLib={import("mapbox-gl")}
           initialViewState={{
             longitude: -74.000303,
             latitude: 40.706243,
@@ -63,7 +64,7 @@ function FormMap(props) {
           }}
           mapboxAccessToken="pk.eyJ1IjoidGhlbWVzZmxhdCIsImEiOiJjbGt3NGxtYncwa2F2M21saHM3M21uM3h2In0.9NbzjykXil1nELxQ1V8rkA"
           style={{ width: "100%", height: 600 }}
-          mapStyle="mapbox://styles/mapbox/light-v11"
+          mapStyle="mapbox://styles/themesflat/cll6d64hy00m901pd1tbe65ra"
         >
           {marKers.map((item) => {
             return (
@@ -164,13 +165,7 @@ function FormMap(props) {
                   </div>
                   <div className="form-group-2">
                     <span className="icon-map-pin"></span>
-                    <select id="select-location" className="select-location">
-                      <option value="">All Location</option>
-                      <option value="">Japan</option>
-                      <option value="">Canada</option>
-                      <option value="">England</option>
-                      <option value="">Mexico</option>
-                    </select>
+                    <SelectLocation />
                   </div>
                   <div className="form-group-4">
                     <button type="submit" className="btn btn-find">

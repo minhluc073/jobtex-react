@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import VisibilitySensor from "react-visibility-sensor";
-
-import { CircularProgressbarWithChildren } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
+import SelectLocation from "../dropdown";
+import CircleProgess from "../progressBar";
 
 Banner04.propTypes = {};
 
 function Banner04(props) {
-  const percentage = 60;
-
   return (
     <section className="tf-slider sl3 over-flow-hidden">
       <div className="tf-container">
@@ -38,13 +34,7 @@ function Banner04(props) {
                     </div>
                     <div className="form-group-2">
                       <span className="icon-map-pin"></span>
-                      <select id="select-location" className="select-location">
-                        <option value="">All Location</option>
-                        <option value="">Japan</option>
-                        <option value="">Canada</option>
-                        <option value="">England</option>
-                        <option value="">Mexico</option>
-                      </select>
+                      <SelectLocation />
                     </div>
                     <div className="form-group-4">
                       <button type="submit" className="btn btn-find">
@@ -137,20 +127,7 @@ function Banner04(props) {
 
               <div className="chart-box counter">
                 <h6>Candidates</h6>
-                <VisibilitySensor>
-                  {({ isVisible }) => {
-                    const percentage = isVisible ? 60 : 0;
-                    return (
-                      <CircularProgressbarWithChildren
-                        value={percentage}
-                        text={`${percentage}%`}
-                        strokeWidth={10}
-                      >
-                        <div className="text-progress">success</div>
-                      </CircularProgressbarWithChildren>
-                    );
-                  }}
-                </VisibilitySensor>
+                <CircleProgess />
               </div>
             </div>
           </div>

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Sidebar from "./Sidebar";
+import SortBuy from "../dropdown/SortBuy";
 
 JobSec3.propTypes = {};
 
@@ -73,52 +74,7 @@ function JobSec3(props) {
                         <span>1249</span> jobs recommended for you
                       </p>
                     </div>
-                    {/* <div className="group-select">
-                      <select>
-                        <option>12 Per Page</option>
-                        <option>1 Per Page</option>
-                        <option>10 Per Page</option>
-                      </select>
-                      <div className="nice-select" tabIndex="0">
-                        <span className="current">12 Per Page</span>
-                        <ul className="list">
-                          <li
-                            data-value="12 Per Page"
-                            className="option selected"
-                          >
-                            12 Per Page
-                          </li>
-                          <li data-value="1 Per Page" className="option">
-                            1 Per Page
-                          </li>
-                          <li data-value="10 Per Page" className="option">
-                            10 Per Page
-                          </li>
-                        </ul>
-                      </div>
-                      <select>
-                        <option>Sort by (Defaut)</option>
-                        <option>New</option>
-                        <option>Last</option>
-                      </select>
-                      <div className="nice-select" tabIndex="0">
-                        <span className="current">Sort by (Defaut)</span>
-                        <ul className="list">
-                          <li
-                            data-value="Sort by (Defaut)"
-                            className="option selected"
-                          >
-                            Sort by (Defaut)
-                          </li>
-                          <li data-value="New" className="option">
-                            New
-                          </li>
-                          <li data-value="Last" className="option">
-                            Last
-                          </li>
-                        </ul>
-                      </div>
-                    </div> */}
+                    <SortBuy />
                   </div>
                 </div>
                 <div className="content-tab">
