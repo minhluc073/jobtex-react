@@ -11865,7 +11865,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .react-dropdown.meta-category-option .Dropdown-arrow,
-.sort-buy .Dropdown-arrow {
+.sort-buy .Dropdown-arrow,
+.widget-filter .group-input .Dropdown-arrow {
   border-color: #202020 transparent transparent;
   border-style: solid;
   border-width: 5px 5px 0;
@@ -11888,7 +11889,8 @@ input[type="number"]::-webkit-inner-spin-button {
   transform: rotate(180deg);
 }
 
-.sort-buy .Dropdown-arrow {
+.sort-buy .Dropdown-arrow,
+.widget-filter .group-input .Dropdown-arrow {
   margin-top: -3px;
   top: 50%;
   border-color: #b1b1b1 transparent transparent;
@@ -11896,7 +11898,8 @@ input[type="number"]::-webkit-inner-spin-button {
   right: 20px;
 }
 
-.sort-buy.is-open .Dropdown-arrow {
+.sort-buy.is-open .Dropdown-arrow,
+.widget-filter .group-input .is-open .Dropdown-arrow {
   margin-top: -7px;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -11914,4 +11917,31 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .filter-radio p {
   padding-left: 33px;
+}
+
+/* select sidebar */
+.widget-filter .group-input .select-location,
+.select2 {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #121212;
+}
+
+.select2 .Dropdown-control {
+  padding: 12px 12px 12px 15px;
+}
+
+.widget-filter .group-input .select2 .Dropdown-placeholder.is-selected {
+  padding-left: 0;
+}
+
+.widget-filter .group-input .Dropdown-placeholder.is-selected {
+  padding-left: 43px;
+}
+
+.widget-filter .group-input .Dropdown-menu {
+  max-height: unset;
 }

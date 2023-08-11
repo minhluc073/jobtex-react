@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Sidebar from "./Sidebar";
+import SortBuy from "../dropdown/SortBuy";
 import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
@@ -74,16 +75,7 @@ function JobSec5(props) {
                   </p>
                 </div>
                 <div className="group-select">
-                  <select>
-                    <option>12 Per Page</option>
-                    <option>1 Per Page</option>
-                    <option>10 Per Page</option>
-                  </select>
-                  <select>
-                    <option>Sort by (Defaut)</option>
-                    <option>New</option>
-                    <option>Last</option>
-                  </select>
+                  <SortBuy />
                 </div>
               </div>
             </div>

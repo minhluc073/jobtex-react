@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import MapBox, { Marker, Popup } from "react-map-gl";
+import MapBox, {
+  Marker,
+  Popup,
+  NavigationControl,
+  FullscreenControl,
+} from "react-map-gl";
 import lo1 from "../../assets/images/logo-company/cty1.png";
 import lo2 from "../../assets/images/logo-company/cty2.png";
 import lo3 from "../../assets/images/logo-company/cty3.png";
 import "mapbox-gl/dist/mapbox-gl.css";
 import SelectLocation from "../dropdown";
+import { Link } from "react-router-dom";
 
 Map.propTypes = {};
 
@@ -42,26 +48,37 @@ const marKers = [
   },
 ];
 
+const fullscreenControlStyle = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  padding: "10px",
+};
+const navStyle = {
+  position: "absolute",
+  top: 36,
+  left: 0,
+  padding: "10px",
+};
+
 function FormMap(props) {
   const [popupOpen, setPopupOpen] = useState({});
-  console.log("hhh", popupOpen);
+
+  const [viewPort, setViewPort] = useState({
+    longitude: -74.000303,
+    latitude: 40.706243,
+    zoom: 15,
+  });
 
   return (
     <section className="wd-feature-map">
       <div className="tf-slider slider-map style-1">
-        {/* <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613507864!3d-6.194741395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e67356080477!2sPT%20Kulkul%20Teknologi%20Internasional!5e0!3m2!1sen!2sid!4v1601138221085!5m2!1sen!2sid"
-
-              height="600"
-
-            /> */}
         <MapBox
           mapLib={import("mapbox-gl")}
           initialViewState={{
-            longitude: -74.000303,
-            latitude: 40.706243,
-            zoom: 15,
+            ...viewPort,
           }}
+          // onViewportChange={setViewPort}
           mapboxAccessToken="pk.eyJ1IjoidGhlbWVzZmxhdCIsImEiOiJjbGt3NGxtYncwa2F2M21saHM3M21uM3h2In0.9NbzjykXil1nELxQ1V8rkA"
           style={{ width: "100%", height: 600 }}
           mapStyle="mapbox://styles/themesflat/cll6d64hy00m901pd1tbe65ra"
@@ -96,17 +113,30 @@ function FormMap(props) {
                     latitude={item.latitude}
                     anchor="center"
                     onClose={() => setPopupOpen(false)}
+                    closeOnClick={false}
                     closeButton={true}
                     offsetLeft={10}
                   >
-                    <span style={{ fontSize: "1vw", fontFamily: "Poppins" }}>
+                    {/* <span style={{ fontSize: "1vw", fontFamily: "Poppins" }}>
                       {item.name}
-                    </span>
+                    </span> */}
+                    <div>
+                      <img src={item.img} alt="img" />
+                      <Link to="https://docs.mapbox.com/mapbox-gl-js/example/popup/">
+                        {item.name}
+                      </Link>
+                    </div>
                   </Popup>
                 )}
               </div>
             );
           })}
+          <div className="fullscreen" style={fullscreenControlStyle}>
+            <FullscreenControl />
+          </div>
+          {/* <div className="nav" style={navStyle}> */}
+          <NavigationControl style={navStyle} />
+          {/* </div> */}
         </MapBox>
 
         {/* <MapBox
