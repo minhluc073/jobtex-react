@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Header2 from "../components/header/Header2";
 import Footer from "../components/footer";
 import { Link } from "react-router-dom";
+import MapSecJob from "../components/map";
 
 Jobsingle_v1.propTypes = {};
 
@@ -863,18 +864,20 @@ function Jobsingle_v1(props) {
             <div className="col-lg-4">
               <div className="cv-form-details po-sticky job-sg">
                 <div className="map-content">
-                  <iframe src="https://snazzymaps.com/embed/476689"></iframe>
+                  <MapSecJob heightStyle={"100vh"} />
                 </div>
                 <ul className="list-infor">
                   <li>
                     <div className="category">Website</div>
                     <div className="detail">
-                      <Link to="#">avitex.vn</Link>
+                      <Link to="https://themeforest.net/user/themesflat">
+                        Themesflat.vn
+                      </Link>
                     </div>
                   </li>
                   <li>
                     <div className="category">Email</div>
-                    <div className="detail">hi.avitex@gmail.com</div>
+                    <div className="detail">themesflat@gmail.com</div>
                   </li>
                   <li>
                     <div className="category">Industry</div>

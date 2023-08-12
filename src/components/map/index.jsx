@@ -94,7 +94,7 @@ function MapSecJob({ className, heightStyle }) {
   const [viewPort, setViewPort] = useState({
     longitude: -74.000303,
     latitude: 40.706243,
-    zoom: 15,
+    zoom: 14,
   });
 
   return (
@@ -108,7 +108,7 @@ function MapSecJob({ className, heightStyle }) {
           // onViewportChange={setViewPort}
           mapboxAccessToken="pk.eyJ1IjoidGhlbWVzZmxhdCIsImEiOiJjbGt3NGxtYncwa2F2M21saHM3M21uM3h2In0.9NbzjykXil1nELxQ1V8rkA"
           style={{ width: "100%", height: 600 }}
-          mapStyle="mapbox://styles/mapbox/streets-v12"
+          mapStyle="mapbox://styles/themesflat/cll6d64hy00m901pd1tbe65ra"
         >
           {marKers.map((item) => {
             return (
