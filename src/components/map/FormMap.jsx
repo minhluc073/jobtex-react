@@ -6,18 +6,19 @@ import MapBox, {
   NavigationControl,
   FullscreenControl,
 } from "react-map-gl";
-import lo1 from "../../assets/images/logo-company/cty1.png";
-import lo2 from "../../assets/images/logo-company/cty2.png";
-import lo3 from "../../assets/images/logo-company/cty3.png";
+import lo1 from "../../assets/images/logo-company/cty11.png";
+import lo2 from "../../assets/images/logo-company/cty9.png";
+import lo3 from "../../assets/images/logo-company/cty7.png";
+import lo4 from "../../assets/images/logo-company/cty6.png";
+import lo5 from "../../assets/images/logo-company/cty15.png";
+import lo6 from "../../assets/images/logo-company/cty16.png";
 import "mapbox-gl/dist/mapbox-gl.css";
 import SelectLocation from "../dropdown";
 import { Link } from "react-router-dom";
+import "./style.scss";
 
 Map.propTypes = {};
 
-// const Marker= [
-//     {}
-// ]
 const marKers = [
   {
     id: 1,
@@ -40,11 +41,38 @@ const marKers = [
   {
     id: 3,
     title: "TOP Agency, Inc",
-    name: "Full Stack Development",
+    name: "Senior UI/UX Designer",
     address: "Las Vegas, NV 89107, USA",
     longitude: -74.009766,
     latitude: 40.703859,
     img: lo3,
+  },
+  {
+    id: 4,
+    title: "TOP Agency, Inc",
+    name: "Full Stack Development",
+    address: "Las Vegas, NV 89107, USA",
+    longitude: -74.014434,
+    latitude: 40.706828,
+    img: lo4,
+  },
+  {
+    id: 5,
+    title: "TOP Agency, Inc",
+    name: "Senior DevOps Engineer",
+    address: "Las Vegas, NV 89107, USA",
+    longitude: -74.012139,
+    latitude: 40.709024,
+    img: lo5,
+  },
+  {
+    id: 6,
+    title: "TOP Agency, Inc",
+    name: "Social Media Marketing",
+    address: "Las Vegas, NV 89107, USA",
+    longitude: -73.992613,
+    latitude: 40.704015,
+    img: lo6,
   },
 ];
 
@@ -98,11 +126,11 @@ function FormMap(props) {
                     }));
                   }}
                 >
-                  <div className="marker temporary-marker">
+                  <div className="marker marker-logo-cty">
                     <img
                       src={item.img}
                       alt="img"
-                      style={{ width: "30px", height: "30px" }}
+                      style={{ width: "28px", height: "28px" }}
                     />
                   </div>
                 </Marker>
@@ -120,11 +148,20 @@ function FormMap(props) {
                     {/* <span style={{ fontSize: "1vw", fontFamily: "Poppins" }}>
                       {item.name}
                     </span> */}
-                    <div>
+                    <div className="marker-popup">
                       <img src={item.img} alt="img" />
-                      <Link to="https://docs.mapbox.com/mapbox-gl-js/example/popup/">
-                        {item.name}
-                      </Link>
+                      <div className="content">
+                        <h4>{item.title}</h4>
+                        <h3>
+                          <Link to="/Jobsingle_v1">
+                            {item.name}&nbsp;<span className="icon-bolt"></span>
+                          </Link>
+                        </h3>
+                        <p>
+                          <i className="icon-map-pin"></i>&nbsp;
+                          {item.address}
+                        </p>
+                      </div>
                     </div>
                   </Popup>
                 )}
@@ -139,46 +176,6 @@ function FormMap(props) {
           {/* </div> */}
         </MapBox>
 
-        {/* <MapBox
-          mapLib={import("mapbox-gl")}
-          initialViewState={{
-            longitude: -74.000303,
-            latitude: 40.706243,
-            zoom: 15,
-          }}
-          mapboxAccessToken="pk.eyJ1IjoidGhlbWVzZmxhdCIsImEiOiJjbGt3NGxtYncwa2F2M21saHM3M21uM3h2In0.9NbzjykXil1nELxQ1V8rkA"
-          style={{ width: "100%", height: 600 }}
-          mapStyle="mapbox://styles/mapbox/streets-v9"
-        >
-          <Marker
-            longitude={-74.006821}
-            latitude={40.706755}
-            anchor="center"
-            onClick={() => setPopupOpen(true)}
-          >
-            <div className="marker temporary-marker">
-              <img
-                src={lo1}
-                alt="img"
-                style={{ width: "30px", height: "30px" }}
-              />
-            </div>
-          </Marker>
-          {popupOpen && (
-            <Popup
-              longitude={-74.006821}
-              latitude={40.706755}
-              anchor="center"
-              onClose={() => setPopupOpen(false)}
-              closeButton={true}
-              offsetLeft={10}
-            >
-              <span style={{ fontSize: "1vw", fontFamily: "Poppins" }}>
-                Full Stack Development
-              </span>
-            </Popup>
-          )}
-        </MapBox> */}
 
         <div className="tf-container">
           <div className="content">

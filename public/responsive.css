@@ -688,6 +688,11 @@
     top: unset;
   }
 
+  .group-half-map .wd-feature-map.row-height .mapboxgl-map {
+    height: 600px !important;
+
+  }
+
 }
 
 @media only screen and (max-width: 1024px) {

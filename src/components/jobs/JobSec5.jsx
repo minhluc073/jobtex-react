@@ -74,9 +74,7 @@ function JobSec5(props) {
                     <span>1249</span> jobs recommended for you
                   </p>
                 </div>
-                <div className="group-select">
                   <SortBuy />
-                </div>
               </div>
             </div>
             <div className="content-tab style-scroll">
