@@ -9,6 +9,10 @@ import MapSingle from "../components/map/MapSingle";
 import lo1 from "../assets/images/logo-company/cty4.png";
 import StarProgress from "../components/progressBar/StarProgress";
 
+
+
+Jobsingle_v1.propTypes = {};
+
 const marKers = [
   {
     id: 1,
@@ -20,8 +24,6 @@ const marKers = [
     img: lo1,
   },
 ];
-
-Jobsingle_v1.propTypes = {};
 
 function Jobsingle_v1(props) {
   return (
