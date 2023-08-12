@@ -108,7 +108,7 @@ function MapSecJob({ className, heightStyle }) {
           // onViewportChange={setViewPort}
           mapboxAccessToken="pk.eyJ1IjoidGhlbWVzZmxhdCIsImEiOiJjbGt3NGxtYncwa2F2M21saHM3M21uM3h2In0.9NbzjykXil1nELxQ1V8rkA"
           style={{ width: "100%", height: 600 }}
-          mapStyle="mapbox://styles/themesflat/cll6d64hy00m901pd1tbe65ra"
+          mapStyle="mapbox://styles/mapbox/streets-v12"
         >
           {marKers.map((item) => {
             return (
