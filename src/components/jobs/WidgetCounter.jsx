@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import CountUp from "react-countup";
 import { Waypoint } from "react-waypoint";
 
+
 WidgetCounter.propTypes = {};
 
 function WidgetCounter(props) {

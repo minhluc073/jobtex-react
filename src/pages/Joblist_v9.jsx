@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Header2 from "../components/header/Header2";
 import JobSec9 from "../components/jobs/JobSec9";
 import dataJobs from "../assets/fakeData/dataJobs";
+import Gotop from "../components/gotop";
 
 Joblist_v9.propTypes = {};
 
@@ -11,7 +12,7 @@ function Joblist_v9(props) {
     <div>
       <Header2 />
       <JobSec9 data={dataJobs} />
-      {/* <Gotop /> */}
+      <Gotop />
     </div>
   );
 }

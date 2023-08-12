@@ -94,7 +94,7 @@ function MapSecJob({ className, heightStyle }) {
   const [viewPort, setViewPort] = useState({
     longitude: -74.000303,
     latitude: 40.706243,
-    zoom: 14,
+    zoom: 15,
   });
 
   return (

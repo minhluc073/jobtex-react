@@ -11608,7 +11608,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .job-tab-item,
-.review-job-section-four .wd-review-job.animation-tab {
+.review-job-section-four .wd-review-job.animation-tab,
+.job-article .inner-content.animation-tab {
   display: none;
 }
 
@@ -11616,7 +11617,8 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
 }
 
-.review-job-section-four .wd-review-job.react-tabs__tab-panel--selected {
+.review-job-section-four .wd-review-job.react-tabs__tab-panel--selected,
+.job-article .animation-tab.react-tabs__tab-panel--selected {
   display: block;
 }
 
@@ -11630,6 +11632,11 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .animation-tab {
   animation: fadeInFaq 0.8s;
+}
+
+.job-article.single-job .menu-tab li.react-tabs__tab--selected {
+  border-color: #14a077;
+  color: #121212;
 }
 
 @keyframes fadeInFaq {

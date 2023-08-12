@@ -2,8 +2,24 @@ import React from "react";
 import PropTypes from "prop-types";
 import Header2 from "../components/header/Header2";
 import Footer from "../components/footer";
+import Gotop from "../components/gotop";
 import { Link } from "react-router-dom";
-import MapSecJob from "../components/map";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import MapSingle from "../components/map/MapSingle";
+import lo1 from "../assets/images/logo-company/cty4.png";
+import StarProgress from "../components/progressBar/StarProgress";
+
+const marKers = [
+  {
+    id: 1,
+    title: "Rockstar Games New York",
+    name: "Senior UI/UX Designer",
+    address: "Las Vegas, NV 89107, USA",
+    longitude: -74.00122,
+    latitude: 40.71023,
+    img: lo1,
+  },
+];
 
 Jobsingle_v1.propTypes = {};
 
@@ -100,14 +116,14 @@ function Jobsingle_v1(props) {
         <div className="tf-container">
           <div className="row">
             <div className="col-lg-8">
-              <article className="job-article tf-tab single-job">
-                <ul className="menu-tab">
-                  <li className="ct-tab active">About</li>
-                  <li className="ct-tab">Jobs (2)</li>
-                  <li className="ct-tab">reviews</li>
-                </ul>
+              <Tabs className="job-article tf-tab single-job">
+                <TabList className="menu-tab">
+                  <Tab className="ct-tab">About</Tab>
+                  <Tab className="ct-tab">Jobs (2)</Tab>
+                  <Tab className="ct-tab">reviews</Tab>
+                </TabList>
                 <div className="content-tab">
-                  <div className="inner-content">
+                  <TabPanel className="inner-content animation-tab">
                     <h5>Full Job Description</h5>
                     <p>
                       Are you a User Experience Designer with a track record of
@@ -387,7 +403,7 @@ function Jobsingle_v1(props) {
                           <p className="count-rating">(1,968 Ratings)</p>
                         </div>
                         <div className="right-rating">
-                          <ul className="rating-list">
+                          {/* <ul className="rating-list">
                             <li className="rating-details">
                               <span className="number-rating">5</span>
                               <div className="progress-item">
@@ -433,7 +449,8 @@ function Jobsingle_v1(props) {
                               </div>
                               <span className="percent"></span>
                             </li>
-                          </ul>
+                          </ul> */}
+                          <StarProgress />
                         </div>
                       </div>
                       <ul className="client-review">
@@ -838,8 +855,8 @@ function Jobsingle_v1(props) {
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="inner-content">
+                  </TabPanel>
+                  <TabPanel className="inner-content animation-tab">
                     <h5>Full Job Description</h5>
                     <p>
                       Are you a User Experience Designer with a track record of
@@ -848,8 +865,8 @@ function Jobsingle_v1(props) {
                       thinker who can concept and craft smart, world-class
                       campaigns across a variety of mediums?
                     </p>
-                  </div>
-                  <div className="inner-content">
+                  </TabPanel>
+                  <TabPanel className="inner-content animation-tab">
                     <h5>Full Reviews</h5>
                     <p>
                       Are you a User Experience Designer with a track record of
@@ -857,15 +874,13 @@ function Jobsingle_v1(props) {
                       results? Are you a strategic storyteller and systems
                       thinker who can concept and craft smart.
                     </p>
-                  </div>
+                  </TabPanel>
                 </div>
-              </article>
+              </Tabs>
             </div>
             <div className="col-lg-4">
               <div className="cv-form-details po-sticky job-sg">
-                <div className="map-content">
-                  <MapSecJob heightStyle={"100vh"} />
-                </div>
+                <MapSingle marKers={marKers} />
                 <ul className="list-infor">
                   <li>
                     <div className="category">Website</div>
@@ -949,6 +964,7 @@ function Jobsingle_v1(props) {
       </section>
 
       <Footer />
+      <Gotop />
     </div>
   );
 }
