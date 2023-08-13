@@ -12,14 +12,14 @@ Employer_v1.propTypes = {};
 
 function Employer_v1(props) {
   return (
-    <div>
+    <>
       <Header2 />
       <Breadcrumb title="Employers" />
       <Form2 />
 
       <EmpSec1 data={dataEm} />
       <Gotop />
-    </div>
+    </>
   );
 }
 

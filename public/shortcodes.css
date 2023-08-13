@@ -7556,8 +7556,8 @@
 }
 
 .job-search-form .form-group-2 .select-location {
-  border-right: 1px solid #e5e5e5;
-  width: 96%;
+  /* border-right: 1px solid #e5e5e5;
+  width: 96%; */
 }
 
 .job-search-form .form-group-2 .select-location .Dropdown-placeholder.is-selected {
@@ -9632,9 +9632,9 @@ input[type="number"]::-webkit-inner-spin-button {
   padding-left: 32px;
 }
 
-.employers-form .form-group-3 .current,
-.employers-form .form-group-4 .current,
-.employers-form .form-group-5 .current {
+.employers-form .form-group-3 .Dropdown-placeholder.is-selected,
+.employers-form .form-group-4 .Dropdown-placeholder.is-selected,
+.employers-form .form-group-5 .Dropdown-placeholder.is-selected {
   padding-left: 20px;
 }
 
