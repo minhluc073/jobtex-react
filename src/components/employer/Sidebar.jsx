@@ -47,7 +47,7 @@ function Sidebar(props) {
           </div>
         </div>
         <div className="group-form st2">
-          <RangeOne miles="Miles" />
+          <RangeOne miles="Miles" title="Radius:" />
         </div>
         <div className="group-form">
           <label className="title">Company Size</label>

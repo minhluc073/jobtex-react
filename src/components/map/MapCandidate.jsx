@@ -10,7 +10,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import { Link } from "react-router-dom";
 import "./style.scss";
 
-MapSection.propTypes = {};
+MapCandidate.propTypes = {};
 
 const fullscreenControlStyle = {
   position: "absolute",
@@ -25,7 +25,7 @@ const navStyle = {
   padding: "10px",
 };
 
-function MapSection({ markers, className }) {
+function MapCandidate({ markers, className }) {
   const [popupOpen, setPopupOpen] = useState({});
 
   const [viewPort, setViewPort] = useState({
@@ -36,7 +36,7 @@ function MapSection({ markers, className }) {
 
   return (
     <section className={`wd-feature-map ${className ? className : ""}`}>
-      <div className="tf-slider slider-map style-1">
+      <div className="tf-slider slider-map style-1 candidate-map">
         <MapBox
           mapLib={import("mapbox-gl")}
           initialViewState={{
@@ -47,7 +47,7 @@ function MapSection({ markers, className }) {
           style={{ width: "100%", height: 600 }}
           mapStyle="mapbox://styles/themesflat/cll6d64hy00m901pd1tbe65ra"
         >
-          {markers.slice(0, 6).map((item) => {
+          {markers.slice(6, 12).map((item) => {
             return (
               <div key={item.id}>
                 <Marker
@@ -93,10 +93,13 @@ function MapSection({ markers, className }) {
                             {item.name}&nbsp;<span className="icon-bolt"></span>
                           </Link>
                         </h3>
-                        <p>
-                          <i className="icon-map-pin"></i>&nbsp;
-                          {item.address}
-                        </p>
+                        <ul className="info">
+                          <li>{item.cate}</li>
+                          <li>
+                            <i className="icon-map-pin"></i>&nbsp;
+                            {item.address}
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </Popup>
@@ -116,4 +119,4 @@ function MapSection({ markers, className }) {
   );
 }
 
-export default MapSection;
+export default MapCandidate;

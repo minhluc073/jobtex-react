@@ -3729,6 +3729,10 @@
   z-index: 5;
 }
 
+.top-map-jobs2.candi {
+  margin-top: -50px;
+}
+
 .group-half-map.style2 .widget-filter {
   padding: 12px 23px 20px 16px;
 }
@@ -4509,7 +4513,7 @@
   margin-right: 40px;
 }
 
-.group-select-display .menu-tab .ct-tab.active {
+.group-select-display .menu-tab .ct-tab.react-tabs__tab--selected {
   color: #121212;
   border-color: #14a077;
 }
@@ -4808,9 +4812,9 @@
   position: relative;
 }
 
-.job-search-form.style2 .form-group.st span {
+/* .job-search-form.style2 .form-group.st span {
   padding-left: 20px;
-}
+} */
 
 /* .job-search-form.style2 .form-group:first-child {
     width: 177.5px;
@@ -11614,7 +11618,8 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .job-tab-item,
 .review-job-section-four .wd-review-job.animation-tab,
-.job-article .inner-content.animation-tab {
+.job-article .inner-content.animation-tab,
+.inner.animation-tab {
   display: none;
 }
 
@@ -11623,7 +11628,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .review-job-section-four .wd-review-job.react-tabs__tab-panel--selected,
-.job-article .animation-tab.react-tabs__tab-panel--selected {
+.job-article .animation-tab.react-tabs__tab-panel--selected,
+.inner.animation-tab.react-tabs__tab-panel--selected {
   display: block;
 }
 
@@ -11878,7 +11884,9 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .react-dropdown.meta-category-option .Dropdown-arrow,
 .sort-buy .Dropdown-arrow,
-.widget-filter .group-input .Dropdown-arrow {
+.widget-filter .group-input .Dropdown-arrow,
+.candidate-form .react-dropdown .Dropdown-arrow,
+.cv .select .Dropdown-arrow {
   border-color: #202020 transparent transparent;
   border-style: solid;
   border-width: 5px 5px 0;
@@ -11911,14 +11919,17 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .sort-buy.is-open .Dropdown-arrow,
-.widget-filter .group-input .is-open .Dropdown-arrow {
+.widget-filter .group-input .is-open .Dropdown-arrow,
+.candidate-form .react-dropdown.is-open .Dropdown-arrow,
+.cv .select.is-open .Dropdown-arrow {
   margin-top: -7px;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
-.select-location .Dropdown-control {
+.select-location .Dropdown-control,
+.select .Dropdown-control {
   padding: 12px 0px;
 }
 
@@ -11956,4 +11967,27 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .widget-filter .group-input .Dropdown-menu {
   max-height: unset;
+}
+
+.candidate-form .select-location .Dropdown-placeholder.is-selected {
+  padding-left: 32px;
+}
+
+.candidate-form .react-dropdown .Dropdown-arrow,
+.cv .select .Dropdown-arrow {
+  border-color: #b1b1b1 transparent transparent;
+  border-width: 6px 6px 0;
+}
+
+.candidate-form .select .Dropdown-placeholder.is-selected {
+  padding-left: 20px;
+}
+
+.cv .form-group .select .Dropdown-placeholder.is-selected {
+  padding-left: 33px;
+}
+
+.cv .form-group:first-child .select .Dropdown-placeholder.is-selected {
+  padding-left: 0;
+
 }

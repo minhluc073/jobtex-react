@@ -6,75 +6,13 @@ import MapBox, {
   NavigationControl,
   FullscreenControl,
 } from "react-map-gl";
-import lo1 from "../../assets/images/logo-company/cty11.png";
-import lo2 from "../../assets/images/logo-company/cty9.png";
-import lo3 from "../../assets/images/logo-company/cty7.png";
-import lo4 from "../../assets/images/logo-company/cty6.png";
-import lo5 from "../../assets/images/logo-company/cty15.png";
-import lo6 from "../../assets/images/logo-company/cty16.png";
+
 import "mapbox-gl/dist/mapbox-gl.css";
 import SelectLocation from "../dropdown";
 import { Link } from "react-router-dom";
 import "./style.scss";
 
 FormMap.propTypes = {};
-
-const marKers = [
-  {
-    id: 1,
-    title: "TOP Agency, Inc",
-    name: "Full Stack Development",
-    address: "Las Vegas, NV 89107, USA",
-    longitude: -74.006821,
-    latitude: 40.706755,
-    img: lo1,
-  },
-  {
-    id: 2,
-    title: "TOP Agency, Inc",
-    name: "Full Stack Development",
-    address: "Las Vegas, NV 89107, USA",
-    longitude: -74.00423,
-    latitude: 40.705445,
-    img: lo2,
-  },
-  {
-    id: 3,
-    title: "TOP Agency, Inc",
-    name: "Senior UI/UX Designer",
-    address: "Las Vegas, NV 89107, USA",
-    longitude: -74.009766,
-    latitude: 40.703859,
-    img: lo3,
-  },
-  {
-    id: 4,
-    title: "TOP Agency, Inc",
-    name: "Full Stack Development",
-    address: "Las Vegas, NV 89107, USA",
-    longitude: -74.014434,
-    latitude: 40.706828,
-    img: lo4,
-  },
-  {
-    id: 5,
-    title: "TOP Agency, Inc",
-    name: "Senior DevOps Engineer",
-    address: "Las Vegas, NV 89107, USA",
-    longitude: -74.012139,
-    latitude: 40.709024,
-    img: lo5,
-  },
-  {
-    id: 6,
-    title: "TOP Agency, Inc",
-    name: "Social Media Marketing",
-    address: "Las Vegas, NV 89107, USA",
-    longitude: -73.992613,
-    latitude: 40.704015,
-    img: lo6,
-  },
-];
 
 const fullscreenControlStyle = {
   position: "absolute",
@@ -89,7 +27,7 @@ const navStyle = {
   padding: "10px",
 };
 
-function FormMap(props) {
+function FormMap({ markers }) {
   const [popupOpen, setPopupOpen] = useState({});
 
   const [viewPort, setViewPort] = useState({
@@ -111,7 +49,7 @@ function FormMap(props) {
           style={{ width: "100%", height: 600 }}
           mapStyle="mapbox://styles/themesflat/cll6d64hy00m901pd1tbe65ra"
         >
-          {marKers.map((item) => {
+          {markers.slice(0, 6).map((item) => {
             return (
               <div key={item.id}>
                 <Marker

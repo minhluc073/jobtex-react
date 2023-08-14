@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import SelectLocation from "../dropdown";
 import Dropdown from "react-dropdown";
 
@@ -24,11 +23,10 @@ const select4 = [
   { value: "s3", label: "Experience 2" },
 ];
 
-Form3.propTypes = {};
 
-function Form3(props) {
+function FormCandidate(props) {
   return (
-    <section className="form-sticky stc2">
+    <section className="top-map-jobs2 candi">
       <div className="tf-container">
         <div className="candidate-form job-search-form inner-form-map style2">
           <form method="post">
@@ -84,4 +82,4 @@ function Form3(props) {
   );
 }
 
-export default Form3;
+export default FormCandidate;

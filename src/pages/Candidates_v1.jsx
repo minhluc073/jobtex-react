@@ -6,6 +6,7 @@ import Breadcrumb from '../components/breadcrumb';
 import CandiSec1 from '../components/candidates/CandiSec1';
 import dataCandi from '../assets/fakeData/dataCandi';
 import Form3 from '../components/formsearch/Form3';
+import Gotop from '../components/gotop';
 
 Candidates_v1.propTypes = {
     
@@ -20,6 +21,7 @@ function Candidates_v1(props) {
             <CandiSec1 data={dataCandi} />
 
             <Footer />
+            <Gotop />
             
         </div>
     );

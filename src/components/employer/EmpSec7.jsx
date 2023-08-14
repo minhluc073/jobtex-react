@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import MapSecJob from "../map";
-
+import MapSection from "../map";
+import dataMap from "../../assets/fakeData/dataMap";
 import { Link } from "react-router-dom";
 import SortBuy from "../dropdown/SortBuy";
 
@@ -86,7 +86,7 @@ function EmpSec7(props) {
                 </ul>
               </div>
               <div className="content-right">
-                <MapSecJob className={"row-height"} heightStyle={"100vh"} />
+                <MapSection className={"row-height"} markers={dataMap} />
               </div>
             </div>
           </div>

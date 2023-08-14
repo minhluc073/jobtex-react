@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import ReactSlider from "react-slider";
 import "./style.scss";
 function RangeOne(props) {
-  const { miles } = props;
+  const { miles, title } = props;
   const [value, setValue] = useState(25);
 
   return (
     <div className="group-form">
       <div className="group-range-title">
         <label>
-          Radius:
+          {title}
           <span>
             {value}&nbsp;{miles}
           </span>

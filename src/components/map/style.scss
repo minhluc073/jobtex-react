@@ -111,6 +111,27 @@
                 color: #64666c;
                 text-align: left;
             }
+            .info {
+                display: flex;
+                gap: 12px;
+                padding-top: 4px;
+                li {
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 22px;
+                    color: #64666c;
+                    &:first-child {
+                        padding: 4px 12px;
+                        border-radius: 24px;
+                        background: rgba(20, 129, 96, 0.1);
+                        font-size: 12px;
+                        font-weight: 500;
+                        line-height: 16px;
+                        color: #14a077;
+                    }
+                }
+            }
         }
     }
     .mapboxgl-popup-close-button {
@@ -140,6 +161,13 @@
         height: 301px !important;
         .mapboxgl-popup {
             left: 10px;
+        }
+    }
+}
+.candidate-map {
+    .mapboxgl-map {
+        .mapboxgl-popup {
+            left: 12rem;
         }
     }
 }

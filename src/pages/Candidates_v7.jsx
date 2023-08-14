@@ -4,6 +4,7 @@ import Header2 from '../components/header/Header2';
 import Breadcrumb from '../components/breadcrumb';
 import Footer from '../components/footer';
 import CandiSec7 from '../components/candidates/CandiSec7';
+import Gotop from '../components/gotop';
 
 Candidates_v7.propTypes = {
     
@@ -16,7 +17,7 @@ function Candidates_v7(props) {
             <Breadcrumb title='Find Candidates' />
             <CandiSec7 />
             <Footer />
-            
+            <Gotop />
         </div>
     );
 }

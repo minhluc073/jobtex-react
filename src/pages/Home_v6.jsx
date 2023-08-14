@@ -10,6 +10,7 @@ import Location05 from "../components/location/Location05";
 import About from "../components/about";
 import Employer from "../components/employer";
 import dataEm from "../assets/fakeData/dataEmployers";
+import dataMap from "../assets/fakeData/dataMap";
 import Partner from "../components/partner";
 import dataPartner from "../assets/fakeData/dataPartner";
 import Footer from "../components/footer";
@@ -22,7 +23,7 @@ function Home_v6(props) {
     <div>
       <Header2 />
 
-      <FormMap />
+      <FormMap markers={dataMap}/>
 
       <Category data={dataCate} />
       <Job05 data={dataJobs} />

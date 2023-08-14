@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import ReactSlider from "react-slider";
 import "./style.scss";
-function RangeTwo(props) {
+function RangeTwo({title}) {
   const [value, setValue] = useState([17000, 24000]);
   return (
     <div className="group-form">
       <div className="group-range-title">
         <label>
-          Salary:
+          {title}
           <span>{value[0]}$ &nbsp;-</span>
           <span>{value[1]}$</span>
         </label>
