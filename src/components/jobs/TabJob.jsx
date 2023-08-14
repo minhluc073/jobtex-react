@@ -24,10 +24,10 @@ function TabJob(props) {
                         </div>
                         <div className="box-content">
                           <h4>
-                            <Link to="jobs-single.html">{idx.cate}</Link>
+                            <Link to="/Jobsingle_v1">{idx.cate}</Link>
                           </h4>
                           <h3>
-                            <Link to="jobs-single.html">{idx.title}</Link>
+                            <Link to="/Jobsingle_v1">{idx.title}</Link>
                             <span className="icon-bolt"></span>
                           </h3>
                           <ul>
@@ -94,12 +94,12 @@ function TabJob(props) {
                           </div>
                           <div className="box-content">
                             <h4>
-                              <Link to="jobs-single.html">
+                              <Link to="/Jobsingle_v1">
                                 Rockstar Games New York
                               </Link>
                             </h4>
                             <h3>
-                              <Link to="jobs-single.html">
+                              <Link to="/Jobsingle_v1">
                                 Senior UI/UX Designer
                               </Link>
                               <span className="icon-bolt"></span>

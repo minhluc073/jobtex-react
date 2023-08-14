@@ -17,7 +17,7 @@ import SelectLocation from "../dropdown";
 import { Link } from "react-router-dom";
 import "./style.scss";
 
-Map.propTypes = {};
+FormMap.propTypes = {};
 
 const marKers = [
   {
@@ -175,7 +175,6 @@ function FormMap(props) {
           <NavigationControl style={navStyle} />
           {/* </div> */}
         </MapBox>
-
 
         <div className="tf-container">
           <div className="content">

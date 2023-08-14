@@ -558,9 +558,7 @@ function Header2(props) {
                               </li>
 
                               <li className="nav-menu-item">
-                                <NavLink to="/employers_v5">
-                                  Grid Fullwidth
-                                </NavLink>
+                                <NavLink to="/employers_v5">Full width</NavLink>
                               </li>
 
                               <li className="nav-menu-item">

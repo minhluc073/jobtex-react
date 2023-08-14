@@ -88,7 +88,7 @@ function EmpSec1(props) {
                             <span className="icon-star-full"></span>
                           </div>
                           <h3>
-                            <Link to="employers-single.html">{idx.title}</Link>
+                            <Link to="/Employersingle_v1">{idx.title}</Link>
                             &nbsp;
                             <span className="icon-bolt"></span>
                           </h3>
@@ -99,9 +99,7 @@ function EmpSec1(props) {
                         </div>
                         <div className="button-readmore">
                           <span className="icon-heart"></span>
-                          <button className="btn-employer">
-                            0 job openings
-                          </button>
+                          <button className="btn-employer">{idx.job}</button>
                         </div>
                       </div>
                     </div>
@@ -147,7 +145,7 @@ function EmpSec1(props) {
                             <span className="icon-star-full"></span>
                           </div>
                           <h3>
-                            <Link to="employers-single.html">{idx.title}</Link>
+                            <Link to="/Employersingle_v1">{idx.title}</Link>
                             &nbsp;
                             <span className="icon-bolt"></span>
                           </h3>
@@ -159,9 +157,7 @@ function EmpSec1(props) {
 
                         <div className="group-btn">
                           <span className="icon-heart"></span>
-                          <button className="btn-employer">
-                            7 job openings
-                          </button>
+                          <button className="btn-employer">{idx.job}</button>
                         </div>
                       </div>
                     </div>

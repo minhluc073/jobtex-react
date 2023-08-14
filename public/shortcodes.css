@@ -7556,8 +7556,13 @@
 }
 
 .job-search-form .form-group-2 .select-location {
-  /* border-right: 1px solid #e5e5e5;
-  width: 96%; */
+  border-right: 1px solid #e5e5e5;
+  width: 96%;
+}
+
+.job-search-form.employers-form .form-group-2 .select-location {
+  border-right: 0;
+  width: 100%;
 }
 
 .job-search-form .form-group-2 .select-location .Dropdown-placeholder.is-selected {

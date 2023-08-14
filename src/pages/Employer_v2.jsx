@@ -99,6 +99,7 @@ function Employer_v2(props) {
                               <Link to="employers-single.html">
                                 {idx.title}
                               </Link>
+                              &nbsp;
                               <span className="icon-bolt"></span>
                             </h3>
                             <p className="info">
@@ -109,9 +110,7 @@ function Employer_v2(props) {
 
                           <div className="group-btn">
                             <span className="icon-heart"></span>
-                            <button className="btn-employer">
-                              7 job openings
-                            </button>
+                            <button className="btn-employer">{idx.job}</button>
                           </div>
                         </div>
                       </div>
@@ -170,9 +169,7 @@ function Employer_v2(props) {
                           </div>
                           <div className="button-readmore">
                             <span className="icon-heart"></span>
-                            <button className="btn-employer">
-                              0 job openings
-                            </button>
+                            <button className="btn-employer">{idx.job}</button>
                           </div>
                         </div>
                       </div>

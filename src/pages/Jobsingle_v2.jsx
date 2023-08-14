@@ -667,12 +667,12 @@ function Jobsingle_v2(props) {
                             </div>
                             <div className="box-content">
                               <h4>
-                                <Link to="jobs-single.html">
+                                <Link to="/Jobsingle_v1">
                                   Tamari Law Group LLC
                                 </Link>
                               </h4>
                               <h3>
-                                <Link to="jobs-single.html">
+                                <Link to="/Jobsingle_v1">
                                   HR Administration
                                 </Link>
                                 <span className="icon-bolt"></span>
@@ -732,12 +732,12 @@ function Jobsingle_v2(props) {
                             </div>
                             <div className="box-content">
                               <h4>
-                                <Link to="jobs-single.html">
+                                <Link to="/Jobsingle_v1">
                                   Tamari Law Group LLC
                                 </Link>
                               </h4>
                               <h3>
-                                <Link to="jobs-single.html">
+                                <Link to="/Jobsingle_v1">
                                   HR Administration
                                 </Link>
                                 <span className="icon-bolt"></span>
@@ -797,12 +797,12 @@ function Jobsingle_v2(props) {
                             </div>
                             <div className="box-content">
                               <h4>
-                                <Link to="jobs-single.html">
+                                <Link to="/Jobsingle_v1">
                                   Tamari Law Group LLC
                                 </Link>
                               </h4>
                               <h3>
-                                <Link to="jobs-single.html">
+                                <Link to="/Jobsingle_v1">
                                   HR Administration
                                 </Link>
                                 <span className="icon-bolt"></span>

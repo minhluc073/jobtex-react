@@ -89,10 +89,10 @@ function JobSec5(props) {
                           </div>
                           <div className="box-content">
                             <h4>
-                              <Link to="jobs-single.html">{idx.cate}</Link>
+                              <Link to="/Jobsingle_v1">{idx.cate}</Link>
                             </h4>
                             <h3>
-                              <Link to="jobs-single.html"> {idx.title} </Link>
+                              <Link to="/Jobsingle_v1"> {idx.title} </Link>
                               <span className="icon-bolt"></span>
                             </h3>
                             <ul>
@@ -139,7 +139,7 @@ function JobSec5(props) {
                         </div>
                       </div>
                       <Link
-                        to="jobs-single.html"
+                        to="/Jobsingle_v1"
                         className="jobtex-link-item"
                         tabIndex="0"
                       ></Link>
@@ -158,10 +158,10 @@ function JobSec5(props) {
                           </div>
                           <div className="box-content">
                             <h4>
-                              <Link to="jobs-single.html">{idx.cate}</Link>
+                              <Link to="/Jobsingle_v1">{idx.cate}</Link>
                             </h4>
                             <h3>
-                              <Link to="jobs-single.html"> {idx.title} </Link>
+                              <Link to="/Jobsingle_v1"> {idx.title} </Link>
                               <span className="icon-bolt"></span>
                             </h3>
                             <ul>
@@ -208,7 +208,7 @@ function JobSec5(props) {
                         </div>
                       </div>
                       <Link
-                        to="jobs-single.html"
+                        to="/Jobsingle_v1"
                         className="jobtex-link-item"
                         tabIndex="0"
                       ></Link>

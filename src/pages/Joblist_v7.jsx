@@ -4,7 +4,7 @@ import Header2 from "../components/header/Header2";
 import JobTopmap from "../components/jobs/JobTopmap";
 import dataJobs from "../assets/fakeData/dataJobs";
 import Gotop from "../components/gotop";
-import FormMap from "../components/map/FormMap";
+import FormMapJobs from "../components/map/FormMapJobs";
 
 Joblist_v7.propTypes = {};
 
@@ -13,7 +13,7 @@ function Joblist_v7(props) {
     <div>
       <Header2 />
 
-      <FormMap />
+      <FormMapJobs />
       <JobTopmap data={dataJobs} className="inner-jobs-section-two" />
       <Gotop />
     </div>

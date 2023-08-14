@@ -38,7 +38,7 @@ Sidebar.propTypes = {};
 function Sidebar(props) {
   return (
     <div className="widget-filter st2  style-scroll po-sticky">
-      <form action="GET">
+      <form>
         <div className="group-form">
           <label className="title">Search Company</label>
           <div className="group-input search-ip">

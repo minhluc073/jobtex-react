@@ -5,6 +5,7 @@ import Breadcrumb from '../components/breadcrumb';
 import EmpSec3 from '../components/employer/EmpSec3';
 import dataEm from '../assets/fakeData/dataEmployers';
 import Footer from '../components/footer';
+import Gotop from '../components/gotop';
 
 Employer_v3.propTypes = {
     
@@ -17,7 +18,7 @@ function Employer_v3(props) {
             <Breadcrumb title='Employers' />
             <EmpSec3 data={dataEm} />
             <Footer />
-            
+            <Gotop />
         </div>
     );
 }

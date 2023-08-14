@@ -34,10 +34,10 @@ function JobSec9(props) {
                           </div>
                           <div className="box-content">
                             <h4>
-                              <Link to="jobs-single.html">{idx.cate}</Link>
+                              <Link to="/Jobsingle_v1">{idx.cate}</Link>
                             </h4>
                             <h3>
-                              <Link to="jobs-single.html"> {idx.title} </Link>
+                              <Link to="/Jobsingle_v1"> {idx.title} </Link>
                               <span className="icon-bolt"></span>
                             </h3>
                             <ul>
@@ -84,7 +84,7 @@ function JobSec9(props) {
                         </div>
                       </div>
                       <Link
-                        to="jobs-single.html"
+                        to="/Jobsingle_v1"
                         className="jobtex-link-item"
                         tabIndex="0"
                       ></Link>
@@ -114,10 +114,7 @@ function JobSec9(props) {
                 </ul>
               </div>
               <div className="content-right">
-                {/* <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613507864!3d-6.194741395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e67356080477!2sPT%20Kulkul%20Teknologi%20Internasional!5e0!3m2!1sen!2sid!4v1601138221085!5m2!1sen!2sid"
-                  height="300"
-                /> */}
+                
                 <MapSecJob className={"row-height"} heightStyle={'100vh'} />
               </div>
             </div>
