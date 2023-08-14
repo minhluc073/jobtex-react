@@ -9280,9 +9280,17 @@ input[type="number"]::-webkit-inner-spin-button {
 
 }
 
-.list-rating>input:checked~label {
+.list-rating input:checked~label {
   color: #ffb321;
 
+}
+
+.on {
+  color: red;
+}
+
+.off {
+  color: #ccc;
 }
 
 .list-rating:not(:checked)>label:hover,

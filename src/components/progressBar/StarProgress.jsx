@@ -2,13 +2,30 @@ import React, { useState } from "react";
 import { Line } from "rc-progress";
 import { Waypoint } from "react-waypoint";
 import VisibilitySensor from "react-visibility-sensor";
+import { useEffect } from "react";
 
-function StarProgress() {
-  const [viewPortEntered, setViewPortEntered] = useState(false);
+function StarProgress({ targetHeight, percent: _percent }) {
+  // console.log("hhh", targetHeight);
 
-  const onVWEnter = () => {
-    setViewPortEntered(true);
-  };
+  const [percent, setPercent] = useState(0);
+
+  // const [viewPortEntered, setViewPortEntered] = useState(false);
+
+  // const onVWEnter = () => {
+  //   setViewPortEntered(true);
+  // };
+
+  useEffect(() => {
+    const ProgressStar = () => {
+      if (window.pageYOffset > targetHeight) {
+        setPercent(_percent);
+      }
+    };
+
+    window.addEventListener("scroll", ProgressStar);
+
+    return () => window.removeEventListener("scroll", ProgressStar);
+  }, [targetHeight]);
 
   return (
     // <ul className="rating-list">
@@ -59,19 +76,12 @@ function StarProgress() {
     //   </li>
     // </ul>
     <div>
-      <VisibilitySensor>
-        {({ isVisible }) => {
-          const percentage = isVisible ? 90 : 0;
-          return (
-            <Line
-              className="star-progress"
-              percent={50}
-              strokeWidth={4}
-              strokeColor="#D3D3D3"
-            />
-          );
-        }}
-      </VisibilitySensor>
+      <Line
+        className="star-progress"
+        percent={percent}
+        strokeWidth={4}
+        strokeColor="#D3D3D3"
+      />
     </div>
   );
 }

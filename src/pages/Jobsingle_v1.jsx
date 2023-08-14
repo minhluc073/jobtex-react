@@ -8,8 +8,9 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import MapSingle from "../components/map/MapSingle";
 import lo1 from "../assets/images/logo-company/cty4.png";
 import StarProgress from "../components/progressBar/StarProgress";
-
-
+import { useRef } from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 
 Jobsingle_v1.propTypes = {};
 
@@ -26,6 +27,16 @@ const marKers = [
 ];
 
 function Jobsingle_v1(props) {
+  const progressRef = useRef();
+  const [targetHeight, setTargetHeight] = useState(0);
+
+  useEffect(() => {
+    if (progressRef?.current) {
+      const offsetHeight = progressRef?.current?.offsetTop;
+      setTargetHeight(offsetHeight);
+    }
+  }, [progressRef]);
+
   return (
     <div>
       <Header2 />
@@ -404,7 +415,7 @@ function Jobsingle_v1(props) {
                           </ul>
                           <p className="count-rating">(1,968 Ratings)</p>
                         </div>
-                        <div className="right-rating">
+                        <div className="right-rating" ref={progressRef} >
                           {/* <ul className="rating-list">
                             <li className="rating-details">
                               <span className="number-rating">5</span>
@@ -452,7 +463,9 @@ function Jobsingle_v1(props) {
                               <span className="percent"></span>
                             </li>
                           </ul> */}
-                          <StarProgress />
+                          <StarProgress targetHeight={targetHeight} percent={80} />
+
+                          <StarProgress targetHeight={targetHeight} percent={50}/>
                         </div>
                       </div>
                       <ul className="client-review">
