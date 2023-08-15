@@ -13,7 +13,7 @@ function Candidates_v3(props) {
   return (
     <div>
       <Header2 />
-      <Breadcrumb title="Find Candidates" />
+      <Breadcrumb title="Find Candidates" className="breadcrumb-section" />
       <CandiSec3 data={dataCandi} />
       <Footer />
       <Gotop />

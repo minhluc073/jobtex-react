@@ -1,31 +1,32 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-Breadcrumb.propTypes = {
-    
-};
+Breadcrumb.propTypes = {};
 
-function Breadcrumb(props) {
-    const {title} = props
-    return (
-        <section className="bg-f5 breadcrumb-section">
-            <div className="tf-container">
-            <div className="row">
-                <div className="col-lg-12">
-                <div className="page-title">
-                    <div className="widget-menu-link">
-                    <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="#">{title}</Link></li>
-                    </ul>
-                    </div>
-                </div>
-                </div>
+function Breadcrumb({ title, className }) {
+  return (
+    <section className={`bg-f5 ${className ? className : ""}`}>
+      <div className="tf-container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="page-title">
+              <div className="widget-menu-link">
+                <ul>
+                  <li>
+                    <Link to="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link to="#">{title}</Link>
+                  </li>
+                </ul>
+              </div>
             </div>
-            </div>
-        </section>
-    );
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Breadcrumb;

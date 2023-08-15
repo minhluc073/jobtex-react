@@ -13,7 +13,7 @@ function Candidates_v6(props) {
   return (
     <div>
       <Header2 />
-      <Breadcrumb title="Find Candidates" />
+      <Breadcrumb title="Find Candidates" className="breadcrumb-section" />
       <Form3 />
 
       <section className="cadi-available-section">

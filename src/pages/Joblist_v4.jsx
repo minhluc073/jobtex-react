@@ -13,7 +13,7 @@ function Joblist_v4(props) {
   return (
     <div>
       <Header2 />
-      <Breadcrumb title="Find Jobs" />
+      <Breadcrumb title="Find Jobs" className="breadcrumb-section" />
       <JobSec4 data={dataJobs} />
       <Footer />
       <Gotop />

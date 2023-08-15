@@ -64,6 +64,7 @@ import Shopsingle from "./pages/Shopsingle";
 import Shoppingcart from "./pages/Shoppingcart";
 import Checkout from "./pages/Checkout";
 import AboutUs from "./pages/AboutUs";
+import Faqs from "./pages/Faqs";
 
 const App = () => {
   let routes = useRoutes([
@@ -124,7 +125,7 @@ const App = () => {
     { path: "/shoppingcart", element: <Shoppingcart /> },
     { path: "/checkout", element: <Checkout /> },
     { path: "/aboutus", element: <AboutUs /> },
-    { path: "/faqs", element: <AboutUs /> },
+    { path: "/faqs", element: <Faqs /> },
     { path: "/termsofuse", element: <AboutUs /> },
     { path: "/pricing", element: <AboutUs /> },
     { path: "/login", element: <AboutUs /> },

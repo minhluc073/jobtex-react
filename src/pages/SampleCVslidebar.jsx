@@ -13,7 +13,7 @@ function SampleCVslidebar(props) {
   return (
     <div>
       <Header2 />
-      <Breadcrumb title="Sample CV" />
+      <Breadcrumb title="Sample CV" className="breadcrumb-section" />
       <Sidebar data={dataSample} />
       <Footer />
       <Gotop />

@@ -1,30 +1,27 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Header2 from '../components/header/Header2';
-import Breadcrumb from '../components/breadcrumb';
-import Footer from '../components/footer';
-import ShopS1 from '../components/shop/ShopS1';
-import dataProduct from '../assets/fakeData/dataProduct';
+import React from "react";
+import PropTypes from "prop-types";
+import Header2 from "../components/header/Header2";
+import Breadcrumb from "../components/breadcrumb";
+import Footer from "../components/footer";
+import ShopS1 from "../components/shop/ShopS1";
+import dataProduct from "../assets/fakeData/dataProduct";
 import Gotop from "../components/gotop";
 
-Shop.propTypes = {
-    
-};
+Shop.propTypes = {};
 
 function Shop(props) {
-    return (
-        <div>
-            <Header2 />
+  return (
+    <div>
+      <Header2 />
 
-            <Breadcrumb title='Shop' />
+      <Breadcrumb title="Shop" className="breadcrumb-section" />
 
-            <ShopS1 data={dataProduct} />
+      <ShopS1 data={dataProduct} />
 
-            <Footer />
-            <Gotop />
-            
-        </div>
-    );
+      <Footer />
+      <Gotop />
+    </div>
+  );
 }
 
 export default Shop;

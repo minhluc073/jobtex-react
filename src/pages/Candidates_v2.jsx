@@ -14,7 +14,7 @@ function Candidates_v2(props) {
   return (
     <div>
       <Header2 />
-      <Breadcrumb title="Find Candidates" />
+      <Breadcrumb title="Find Candidates" className="breadcrumb-section" />
       <Form3 />
       <CandiSec2 data={dataCandi} />
 

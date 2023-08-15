@@ -13,7 +13,7 @@ function Employer_v4(props) {
   return (
     <div>
       <Header2 />
-      <Breadcrumb title="Employers" />
+      <Breadcrumb title="Employers" className="breadcrumb-section" />
       <EmpSec4 data={dataEm} />
       <Footer />
       <Gotop />

@@ -1,16 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
-Faqs.propTypes = {
-    
-};
+import React from "react";
+import Header2 from "../components/header/Header2";
+import Breadcrumb from "../components/breadcrumb";
+import Footer from "../components/footer";
+import Gotop from "../components/gotop";
 
 function Faqs(props) {
-    return (
-        <div>
-            
-        </div>
-    );
+  return (
+    <>
+      <Header2 />
+      <Breadcrumb title="Accordion" />
+      <Footer />
+      <Gotop />
+    </>
+  );
 }
 
 export default Faqs;

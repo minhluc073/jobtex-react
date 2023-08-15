@@ -17,7 +17,7 @@ function IconBox(props) {
                     <div className="box">
                     <div className="column-6">
                         <div className="img-iconbox">
-                        <img src={img} />
+                        <img src={img} alt='img' />
                         </div>
                     </div>
                     <div className="column-6 background2">

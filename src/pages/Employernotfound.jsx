@@ -27,7 +27,7 @@ function Employernotfound(props) {
   return (
     <div>
       <Header2 />
-      <Breadcrumb title="Employers" />
+      <Breadcrumb title="Employers" className="breadcrumb-section" />
       <section className="inner-employer-section">
         <div className="tf-container">
           <div className="row">

@@ -14,7 +14,7 @@ function Employer_v1(props) {
   return (
     <>
       <Header2 />
-      <Breadcrumb title="Employers" />
+      <Breadcrumb title="Employers" className="breadcrumb-section" />
       <Form2 />
 
       <EmpSec1 data={dataEm} />

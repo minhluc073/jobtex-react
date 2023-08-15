@@ -12,7 +12,7 @@ function SampleCVdetails(props) {
   return (
     <div>
       <Header2 />
-      <Breadcrumb title="CV Details" />
+      <Breadcrumb title="CV Details" className="breadcrumb-section" />
 
       <Details />
 
