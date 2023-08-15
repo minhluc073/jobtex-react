@@ -12,6 +12,7 @@ function Header2(props) {
   const handleDropdown = (index) => {
     setActiveIndex(index);
   };
+  
   return (
     <header id="header" className="header header-default">
       <div className="tf-container ct2">

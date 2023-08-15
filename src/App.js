@@ -65,6 +65,8 @@ import Shoppingcart from "./pages/Shoppingcart";
 import Checkout from "./pages/Checkout";
 import AboutUs from "./pages/AboutUs";
 import Faqs from "./pages/Faqs";
+import Termsofuse from "./pages/Termsofuse";
+import Pricing from "./pages/Pricing";
 
 const App = () => {
   let routes = useRoutes([
@@ -126,8 +128,8 @@ const App = () => {
     { path: "/checkout", element: <Checkout /> },
     { path: "/aboutus", element: <AboutUs /> },
     { path: "/faqs", element: <Faqs /> },
-    { path: "/termsofuse", element: <AboutUs /> },
-    { path: "/pricing", element: <AboutUs /> },
+    { path: "/termsofuse", element: <Termsofuse /> },
+    { path: "/pricing", element: <Pricing /> },
     { path: "/login", element: <AboutUs /> },
     { path: "/createaccount", element: <AboutUs /> },
     { path: "/contactus", element: <AboutUs /> },

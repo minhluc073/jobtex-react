@@ -5336,8 +5336,7 @@
   transition: all 0.3s ease 0s;
 }
 
-.tab-term li.active,
-.tab-term li:hover {
+.tab-term li.react-tabs__tab--selected {
   border-left: 3px solid #14a077;
 }
 
@@ -5785,7 +5784,7 @@
   cursor: pointer;
 }
 
-.group-pricing-v1 .menu-tab li.active,
+.group-pricing-v1 .menu-tab li.react-tabs__tab--selected,
 .group-pricing-v1 .menu-tab li:hover {
   background: #14a077;
   color: #fff;
@@ -6027,6 +6026,10 @@
   width: 100%;
   overflow-x: auto;
   -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.table-res .pricing-table {
+  width: 100%;
 }
 
 /* shop */
@@ -11694,7 +11697,8 @@ input[type="number"]::-webkit-inner-spin-button {
 .job-tab-item,
 .review-job-section-four .wd-review-job.animation-tab,
 .job-article .inner-content.animation-tab,
-.inner.animation-tab {
+.inner.animation-tab,
+.term-content.animation-tab {
   display: none;
 }
 
@@ -11704,7 +11708,8 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .review-job-section-four .wd-review-job.react-tabs__tab-panel--selected,
 .job-article .animation-tab.react-tabs__tab-panel--selected,
-.inner.animation-tab.react-tabs__tab-panel--selected {
+.inner.animation-tab.react-tabs__tab-panel--selected,
+.term-content.react-tabs__tab-panel--selected {
   display: block;
 }
 
