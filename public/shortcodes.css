@@ -5144,12 +5144,77 @@
 }
 
 .flat-accordion .toggle-content {
-  display: none;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: #64666c;
   margin-bottom: -7px;
+}
+
+.accordion-collapse {
+  transition-delay: .8s !important;
+  transition: height .8s ease !important;
+}
+
+.accordion-button {
+  margin-bottom: 18px;
+  padding: 0;
+  border-radius: unset;
+  position: relative;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: capitalize;
+  color: #121212;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.accordion-button:focus {
+  border-color: transparent;
+  box-shadow: unset;
+
+}
+
+.accordion-button:not(.collapsed) {
+  color: #121212;
+  background-color: unset;
+  box-shadow: unset;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 18px;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: unset;
+  content: "-";
+  transform: unset;
+
+}
+
+.accordion-button::after {
+  content: "+";
+  background-image: unset;
+  font-size: 30px;
+  font-weight: 300;
+  transform: unset;
+}
+
+.accordion-body {
+  padding: 0;
+  /* padding: 0px 28px 20px 27px; */
+}
+
+
+.flat-accordion .accordion-item {
+  border: 1px solid #b1b1b1;
+  border-radius: 8px;
+  padding: 21px 28px 20px 27px;
+  margin-bottom: 21px;
 }
 
 .flat-accordion .flat-toggle {
@@ -5167,11 +5232,11 @@
   text-transform: capitalize;
   color: #121212;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease 0s;
+  /* -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s; */
 }
 
 .flat-accordion .flat-toggle .toggle-title.active {
