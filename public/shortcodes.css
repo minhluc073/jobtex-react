@@ -5157,7 +5157,7 @@
 }
 
 .accordion-button {
-  margin-bottom: 18px;
+  /* margin-bottom: 18px; */
   padding: 0;
   border-radius: unset;
   position: relative;
@@ -5199,9 +5199,11 @@
 .accordion-button::after {
   content: "+";
   background-image: unset;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 300;
   transform: unset;
+  width: unset;
+  height: unset;
 }
 
 .accordion-body {
