@@ -4,10 +4,25 @@ import Header2 from "../components/header/Header2";
 import Footer from "../components/footer";
 import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { useRef } from "react";
+import { useState } from "react";
+import { useEffect } from "react";
+import Progress from "../components/progressBar/DonutProgress";
+import Gotop from "../components/gotop";
 
 Candidatesingle_v1.propTypes = {};
 
 function Candidatesingle_v1(props) {
+  const progressRef = useRef();
+  const [targetHeight, setTargetHeight] = useState(0);
+
+  useEffect(() => {
+    if (progressRef?.current) {
+      const offsetHeight = progressRef?.current?.offsetTop;
+      setTargetHeight(offsetHeight);
+    }
+  }, [progressRef]);
+
   return (
     <div>
       <Header2 />
@@ -145,16 +160,14 @@ function Candidatesingle_v1(props) {
                       </div>
                     </div>
 
-                    <div className="group-skill group-col-2">
+                    <div className="group-skill group-col-2" ref={progressRef}>
                       <div className="inner cl2">
                         <h5>management skills</h5>
                         <div className="wd-cv-skill">
                           <div className="progress-item">
                             <div className="progress-heading">
                               <div className="heading-progress">HTML & cSS</div>
-                              <div className="donat-bg" data-percent="60%">
-                                <div className="custom-donat"></div>
-                              </div>
+                              <Progress targetHeight={targetHeight} done="60" />
                             </div>
                           </div>
                         </div>
@@ -162,9 +175,7 @@ function Candidatesingle_v1(props) {
                           <div className="progress-item">
                             <div className="progress-heading">
                               <div className="heading-progress">word</div>
-                              <div className="donat-bg" data-percent="90%">
-                                <div className="custom-donat"></div>
-                              </div>
+                              <Progress targetHeight={targetHeight} done="90" />
                             </div>
                           </div>
                         </div>
@@ -172,9 +183,7 @@ function Candidatesingle_v1(props) {
                           <div className="progress-item">
                             <div className="progress-heading">
                               <div className="heading-progress">Excel</div>
-                              <div className="donat-bg" data-percent="90%">
-                                <div className="custom-donat"></div>
-                              </div>
+                              <Progress targetHeight={targetHeight} done="90" />
                             </div>
                           </div>
                         </div>
@@ -185,9 +194,7 @@ function Candidatesingle_v1(props) {
                           <div className="progress-item">
                             <div className="progress-heading">
                               <div className="heading-progress">Figma</div>
-                              <div className="donat-bg" data-percent="80%">
-                                <div className="custom-donat"></div>
-                              </div>
+                              <Progress targetHeight={targetHeight} done="80" />
                             </div>
                           </div>
                         </div>
@@ -195,9 +202,7 @@ function Candidatesingle_v1(props) {
                           <div className="progress-item">
                             <div className="progress-heading">
                               <div className="heading-progress">Photoshop</div>
-                              <div className="donat-bg" data-percent="70%">
-                                <div className="custom-donat"></div>
-                              </div>
+                              <Progress targetHeight={targetHeight} done="70" />
                             </div>
                           </div>
                         </div>
@@ -207,9 +212,7 @@ function Candidatesingle_v1(props) {
                               <div className="heading-progress">
                                 Ilustration
                               </div>
-                              <div className="donat-bg" data-percent="90%">
-                                <div className="custom-donat"></div>
-                              </div>
+                              <Progress targetHeight={targetHeight} done="90" />
                             </div>
                           </div>
                         </div>
@@ -434,6 +437,7 @@ function Candidatesingle_v1(props) {
       </section>
 
       <Footer />
+      <Gotop />
     </div>
   );
 }

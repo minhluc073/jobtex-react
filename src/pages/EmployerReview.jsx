@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Header2 from "../components/header/Header2";
 import Footer from "../components/footer";
 import Gotop from "../components/gotop";
+import { Rating } from "react-simple-star-rating";
 
 EmployerReview.propTypes = {};
 
 function EmployerReview(props) {
+  const [rating, setRating] = useState(0);
+  const handleRating = (rate) => {
+    setRating(rate);
+  };
+
   return (
     <div>
       <Header2 />
@@ -37,17 +43,8 @@ function EmployerReview(props) {
                 <h3>
                   Please rate your overall interview experience at the company
                 </h3>
-                <div class="list-rating">
-                  <input type="radio" id="star5" name="rate" value="5" />
-                  <label for="star5" title="text"></label>
-                  <input type="radio" id="star4" name="rate" value="4" />
-                  <label for="star4" title="text"></label>
-                  <input type="radio" id="star3" name="rate" value="3" />
-                  <label for="star3" title="text"></label>
-                  <input type="radio" id="star2" name="rate" value="2" />
-                  <label for="star2" title="text"></label>
-                  <input type="radio" id="star1" name="rate" value="1" />
-                  <label for="star1" title="text"></label>
+                <div>
+                  <Rating initialValue={3} onClick={handleRating} />
                 </div>
               </div>
               <div className="form-notes">

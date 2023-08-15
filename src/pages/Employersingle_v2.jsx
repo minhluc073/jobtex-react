@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 import Header2 from "../components/header/Header2";
 import Footer from "../components/footer";
@@ -7,6 +7,8 @@ import Gotop from "../components/gotop";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import MapSingle from "../components/map/MapSingle";
 import lo1 from "../assets/images/logo-company/cty4.png";
+import { Rating } from "react-simple-star-rating";
+import StarProgress from "../components/progressBar/StarProgress";
 
 const marKers = [
   {
@@ -23,6 +25,21 @@ const marKers = [
 Employersingle_v2.propTypes = {};
 
 function Employersingle_v2(props) {
+  const [rating, setRating] = useState(0);
+  const handleRating = (rate) => {
+    setRating(rate);
+  };
+
+  const progressRef = useRef();
+  const [targetHeight, setTargetHeight] = useState(0);
+
+  useEffect(() => {
+    if (progressRef?.current) {
+      const offsetHeight = progressRef?.current?.offsetTop;
+      setTargetHeight(offsetHeight);
+    }
+  }, [progressRef]);
+
   return (
     <div>
       <Header2 />
@@ -369,52 +386,47 @@ function Employersingle_v2(props) {
                           </ul>
                           <p className="count-rating">(1,968 Ratings)</p>
                         </div>
-                        <div className="right-rating">
+                        <div className="right-rating" ref={progressRef}>
                           <ul className="rating-list">
                             <li className="rating-details">
                               <span className="number-rating">5</span>
-                              <div className="progress-item">
-                                <div className="donat-bg" data-percent="60%">
-                                  <div className="custom-donat"></div>
-                                </div>
-                              </div>
-                              <span className="percent"></span>
+                              <StarProgress
+                                targetHeight={targetHeight}
+                                percent={60}
+                              />
+                              <span className="percent">60%</span>
                             </li>
                             <li className="rating-details">
                               <span className="number-rating">4</span>
-                              <div className="progress-item">
-                                <div className="donat-bg" data-percent="20%">
-                                  <div className="custom-donat"></div>
-                                </div>
-                              </div>
-                              <span className="percent"></span>
+                              <StarProgress
+                                targetHeight={targetHeight}
+                                percent={20}
+                              />
+                              <span className="percent">20%</span>
                             </li>
                             <li className="rating-details">
                               <span className="number-rating">3</span>
-                              <div className="progress-item">
-                                <div className="donat-bg" data-percent="10%">
-                                  <div className="custom-donat"></div>
-                                </div>
-                              </div>
-                              <span className="percent"></span>
+                              <StarProgress
+                                targetHeight={targetHeight}
+                                percent={10}
+                              />
+                              <span className="percent">10%</span>
                             </li>
                             <li className="rating-details">
                               <span className="number-rating">2</span>
-                              <div className="progress-item">
-                                <div className="donat-bg" data-percent="7%">
-                                  <div className="custom-donat"></div>
-                                </div>
-                              </div>
-                              <span className="percent"></span>
+                              <StarProgress
+                                targetHeight={targetHeight}
+                                percent={7}
+                              />
+                              <span className="percent">7%</span>
                             </li>
                             <li className="rating-details">
                               <span className="number-rating last">1</span>
-                              <div className="progress-item">
-                                <div className="donat-bg" data-percent="3%">
-                                  <div className="custom-donat"></div>
-                                </div>
-                              </div>
-                              <span className="percent"></span>
+                              <StarProgress
+                                targetHeight={targetHeight}
+                                percent={3}
+                              />
+                              <span className="percent">3%</span>
                             </li>
                           </ul>
                         </div>
@@ -630,43 +642,7 @@ function Employersingle_v2(props) {
                             <h3>Be the first to review</h3>
                             <div className="group-rating">
                               <label>Your Rating:</label>
-                              <div class="list-rating">
-                                <input
-                                  type="radio"
-                                  id="star5"
-                                  name="rate"
-                                  value="5"
-                                />
-                                <label for="star5" title="text"></label>
-                                <input
-                                  type="radio"
-                                  id="star4"
-                                  name="rate"
-                                  value="4"
-                                />
-                                <label for="star4" title="text"></label>
-                                <input
-                                  type="radio"
-                                  id="star3"
-                                  name="rate"
-                                  value="3"
-                                />
-                                <label for="star3" title="text"></label>
-                                <input
-                                  type="radio"
-                                  id="star2"
-                                  name="rate"
-                                  value="2"
-                                />
-                                <label for="star2" title="text"></label>
-                                <input
-                                  type="radio"
-                                  id="star1"
-                                  name="rate"
-                                  value="1"
-                                />
-                                <label for="star1" title="text"></label>
-                              </div>
+                              <Rating initialValue={4} onClick={handleRating} />
                             </div>
                           </div>
                         </div>

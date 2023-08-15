@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import Header2 from "../components/header/Header2";
 import Footer from "../components/footer";
@@ -8,6 +8,7 @@ import MapSingle from "../components/map/MapSingle";
 import Gotop from "../components/gotop";
 import lo1 from "../assets/images/logo-company/cty4.png";
 import { Rating } from "react-simple-star-rating";
+import StarProgress from "../components/progressBar/StarProgress";
 
 const marKers = [
   {
@@ -28,6 +29,16 @@ function Employersingle_v1(props) {
   const handleRating = (rate) => {
     setRating(rate);
   };
+
+  const progressRef = useRef();
+  const [targetHeight, setTargetHeight] = useState(0);
+
+  useEffect(() => {
+    if (progressRef?.current) {
+      const offsetHeight = progressRef?.current?.offsetTop;
+      setTargetHeight(offsetHeight);
+    }
+  }, [progressRef]);
 
   return (
     <div>
@@ -375,52 +386,47 @@ function Employersingle_v1(props) {
                           </ul>
                           <p className="count-rating">(1,968 Ratings)</p>
                         </div>
-                        <div className="right-rating">
-                          <ul className="rating-list progress-star">
+                        <div className="right-rating" ref={progressRef}>
+                          <ul className="rating-list">
                             <li className="rating-details">
                               <span className="number-rating">5</span>
-                              <div className="progress-item">
-                                <div className="donat-bg" data-percent="60%">
-                                  <div className="custom-donat"></div>
-                                </div>
-                              </div>
-                              <span className="percent"></span>
+                              <StarProgress
+                                targetHeight={targetHeight}
+                                percent={60}
+                              />
+                              <span className="percent">60%</span>
                             </li>
                             <li className="rating-details">
                               <span className="number-rating">4</span>
-                              <div className="progress-item">
-                                <div className="donat-bg" data-percent="20%">
-                                  <div className="custom-donat"></div>
-                                </div>
-                              </div>
-                              <span className="percent"></span>
+                              <StarProgress
+                                targetHeight={targetHeight}
+                                percent={20}
+                              />
+                              <span className="percent">20%</span>
                             </li>
                             <li className="rating-details">
                               <span className="number-rating">3</span>
-                              <div className="progress-item">
-                                <div className="donat-bg" data-percent="10%">
-                                  <div className="custom-donat"></div>
-                                </div>
-                              </div>
-                              <span className="percent"></span>
+                              <StarProgress
+                                targetHeight={targetHeight}
+                                percent={10}
+                              />
+                              <span className="percent">10%</span>
                             </li>
                             <li className="rating-details">
                               <span className="number-rating">2</span>
-                              <div className="progress-item">
-                                <div className="donat-bg" data-percent="7%">
-                                  <div className="custom-donat"></div>
-                                </div>
-                              </div>
-                              <span className="percent"></span>
+                              <StarProgress
+                                targetHeight={targetHeight}
+                                percent={7}
+                              />
+                              <span className="percent">7%</span>
                             </li>
                             <li className="rating-details">
                               <span className="number-rating last">1</span>
-                              <div className="progress-item">
-                                <div className="donat-bg" data-percent="3%">
-                                  <div className="custom-donat"></div>
-                                </div>
-                              </div>
-                              <span className="percent"></span>
+                              <StarProgress
+                                targetHeight={targetHeight}
+                                percent={3}
+                              />
+                              <span className="percent">3%</span>
                             </li>
                           </ul>
                         </div>
@@ -636,12 +642,7 @@ function Employersingle_v1(props) {
                             <h3>Be the first to review</h3>
                             <div className="group-rating">
                               <label>Your Rating:</label>
-                              <div>
-                                <Rating
-                                  initialValue={4}
-                                  onClick={handleRating}
-                                />
-                              </div>
+                              <Rating initialValue={4} onClick={handleRating} />
                             </div>
                           </div>
                         </div>

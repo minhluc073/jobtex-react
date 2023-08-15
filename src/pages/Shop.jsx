@@ -5,6 +5,7 @@ import Breadcrumb from '../components/breadcrumb';
 import Footer from '../components/footer';
 import ShopS1 from '../components/shop/ShopS1';
 import dataProduct from '../assets/fakeData/dataProduct';
+import Gotop from "../components/gotop";
 
 Shop.propTypes = {
     
@@ -20,6 +21,7 @@ function Shop(props) {
             <ShopS1 data={dataProduct} />
 
             <Footer />
+            <Gotop />
             
         </div>
     );

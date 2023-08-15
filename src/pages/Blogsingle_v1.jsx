@@ -4,6 +4,8 @@ import Footer from '../components/footer';
 import Blog01 from '../components/blog/Blog01';
 import dataBlog from '../assets/fakeData/dataBlog';
 import { Link } from 'react-router-dom';
+import Gotop from "../components/gotop";
+
 
 Blogsingle_v1.propTypes = {
     
@@ -191,7 +193,7 @@ function Blogsingle_v1(props) {
             </section>
             <Blog01 data={dataBlog} />
             <Footer />
-            
+            <Gotop />
         </div>
     );
 }

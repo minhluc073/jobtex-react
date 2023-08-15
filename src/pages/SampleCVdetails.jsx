@@ -1,27 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Header2 from '../components/header/Header2';
-import Breadcrumb from '../components/breadcrumb';
-import Footer from '../components/footer';
-import Details from '../components/sampleCV/Details';
+import React from "react";
+import PropTypes from "prop-types";
+import Header2 from "../components/header/Header2";
+import Breadcrumb from "../components/breadcrumb";
+import Footer from "../components/footer";
+import Details from "../components/sampleCV/Details";
+import Gotop from "../components/gotop";
 
-SampleCVdetails.propTypes = {
-    
-};
+SampleCVdetails.propTypes = {};
 
 function SampleCVdetails(props) {
-    return (
-        <div>
-             <Header2 />
-             <Breadcrumb title='CV Details' />
+  return (
+    <div>
+      <Header2 />
+      <Breadcrumb title="CV Details" />
 
-             <Details />
+      <Details />
 
-             <Footer />
-
-            
-        </div>
-    );
+      <Footer />
+      <Gotop />
+    </div>
+  );
 }
 
 export default SampleCVdetails;

@@ -4,10 +4,23 @@ import Header2 from "../components/header/Header2";
 import Footer from "../components/footer";
 import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import Gotop from "../components/gotop";
+import Progress from "../components/progressBar/DonutProgress";
+import { useRef, useState, useEffect } from "react";
 
 Candidatesingle_v2.propTypes = {};
 
 function Candidatesingle_v2(props) {
+  const progressRef = useRef();
+  const [targetHeight, setTargetHeight] = useState(0);
+
+  useEffect(() => {
+    if (progressRef?.current) {
+      const offsetHeight = progressRef?.current?.offsetTop;
+      setTargetHeight(offsetHeight);
+    }
+  }, [progressRef]);
+
   return (
     <div>
       <Header2 />
@@ -148,16 +161,17 @@ function Candidatesingle_v2(props) {
                       </div>
                     </div>
 
-                    <div className="group-skill group-col-2">
+                    <div className="group-skill group-col-2" ref={progressRef}>
                       <div className="inner cl2">
                         <h5>management skills</h5>
                         <div className="wd-cv-skill">
                           <div className="progress-item">
                             <div className="progress-heading">
                               <div className="heading-progress">HTML & cSS</div>
-                              <div className="donat-bg" data-percent="60%">
-                                <div className="custom-donat"></div>
-                              </div>
+                              <Progress
+                                targetHeight={targetHeight}
+                                done="60"
+                              />
                             </div>
                           </div>
                         </div>
@@ -165,9 +179,10 @@ function Candidatesingle_v2(props) {
                           <div className="progress-item">
                             <div className="progress-heading">
                               <div className="heading-progress">word</div>
-                              <div className="donat-bg" data-percent="90%">
-                                <div className="custom-donat"></div>
-                              </div>
+                              <Progress
+                                targetHeight={targetHeight}
+                                done="90"
+                              />
                             </div>
                           </div>
                         </div>
@@ -175,9 +190,10 @@ function Candidatesingle_v2(props) {
                           <div className="progress-item">
                             <div className="progress-heading">
                               <div className="heading-progress">Excel</div>
-                              <div className="donat-bg" data-percent="90%">
-                                <div className="custom-donat"></div>
-                              </div>
+                              <Progress
+                                targetHeight={targetHeight}
+                                done="90"
+                              />
                             </div>
                           </div>
                         </div>
@@ -188,9 +204,10 @@ function Candidatesingle_v2(props) {
                           <div className="progress-item">
                             <div className="progress-heading">
                               <div className="heading-progress">Figma</div>
-                              <div className="donat-bg" data-percent="80%">
-                                <div className="custom-donat"></div>
-                              </div>
+                              <Progress
+                                targetHeight={targetHeight}
+                                done="80"
+                              />
                             </div>
                           </div>
                         </div>
@@ -198,9 +215,10 @@ function Candidatesingle_v2(props) {
                           <div className="progress-item">
                             <div className="progress-heading">
                               <div className="heading-progress">Photoshop</div>
-                              <div className="donat-bg" data-percent="70%">
-                                <div className="custom-donat"></div>
-                              </div>
+                              <Progress
+                                targetHeight={targetHeight}
+                                done="70"
+                              />
                             </div>
                           </div>
                         </div>
@@ -210,9 +228,10 @@ function Candidatesingle_v2(props) {
                               <div className="heading-progress">
                                 Ilustration
                               </div>
-                              <div className="donat-bg" data-percent="90%">
-                                <div className="custom-donat"></div>
-                              </div>
+                              <Progress
+                                targetHeight={targetHeight}
+                                done="90"
+                              />
                             </div>
                           </div>
                         </div>
@@ -254,7 +273,6 @@ function Candidatesingle_v2(props) {
                       </div>
                       <ul className="thumb-menu menu-tab2">
                         <li className="ct-tab2">
-                          {" "}
                           <a
                             className="lightbox-gallery"
                             href="images/review/thumbv4.jpg"
@@ -263,10 +281,9 @@ function Candidatesingle_v2(props) {
                               src={require("../assets/images/review/thumbv4.jpg")}
                               alt="images"
                             />
-                          </a>{" "}
+                          </a>
                         </li>
                         <li className="ct-tab2">
-                          {" "}
                           <a
                             className="lightbox-gallery"
                             href="images/review/thumbv1.jpg"
@@ -437,6 +454,7 @@ function Candidatesingle_v2(props) {
       </section>
 
       <Footer />
+      <Gotop />
     </div>
   );
 }
