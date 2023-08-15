@@ -5204,6 +5204,7 @@
   transform: unset;
   width: unset;
   height: unset;
+  margin-top: -14px;
 }
 
 .accordion-body {
