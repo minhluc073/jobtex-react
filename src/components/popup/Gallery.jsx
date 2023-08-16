@@ -14,7 +14,7 @@ const photos = [
   { src: img3, width: 800, height: 450 },
 ];
 
-function Gallary() {
+function Gallery() {
   const [index, setIndex] = useState(-1);
   return (
     <>
@@ -34,4 +34,4 @@ function Gallary() {
   );
 }
 
-export default Gallary;
+export default Gallery;

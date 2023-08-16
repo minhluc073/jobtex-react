@@ -10,7 +10,7 @@ import lo1 from "../assets/images/logo-company/cty4.png";
 import StarProgress from "../components/progressBar/StarProgress";
 import { useRef, useState, useEffect } from "react";
 import Video from "../components/popup/Video";
-import Gallary from "../components/popup/Gallary";
+import Gallery from "../components/popup/Gallery";
 
 Jobsingle_v1.propTypes = {};
 
@@ -351,7 +351,7 @@ function Jobsingle_v1(props) {
                           </div>
                         </div>
                       </div>
-                      <Gallary />
+                      <Gallery />
                     </div>
 
                     <div className="job-rating">

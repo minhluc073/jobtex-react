@@ -10,7 +10,7 @@ import Gotop from "../components/gotop";
 import StarProgress from "../components/progressBar/StarProgress";
 import { useRef, useState, useEffect } from "react";
 import Video from "../components/popup/Video";
-import Gallary from "../components/popup/Gallary";
+import Gallery from "../components/popup/Gallery";
 
 Jobsingle_v2.propTypes = {};
 
@@ -344,7 +344,7 @@ function Jobsingle_v2(props) {
                           </div>
                         </div>
                       </div>
-                      <Gallary />
+                      <Gallery />
                     </div>
                     <div className="job-rating">
                       <h6>reviews</h6>

@@ -7,6 +7,8 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Gotop from "../components/gotop";
 import Progress from "../components/progressBar/DonutProgress";
 import { useRef, useState, useEffect } from "react";
+import Video from "../components/popup/Video";
+import Gallery from "../components/popup/Gallery";
 
 Candidatesingle_v2.propTypes = {};
 
@@ -168,10 +170,7 @@ function Candidatesingle_v2(props) {
                           <div className="progress-item">
                             <div className="progress-heading">
                               <div className="heading-progress">HTML & cSS</div>
-                              <Progress
-                                targetHeight={targetHeight}
-                                done="60"
-                              />
+                              <Progress targetHeight={targetHeight} done="60" />
                             </div>
                           </div>
                         </div>
@@ -179,10 +178,7 @@ function Candidatesingle_v2(props) {
                           <div className="progress-item">
                             <div className="progress-heading">
                               <div className="heading-progress">word</div>
-                              <Progress
-                                targetHeight={targetHeight}
-                                done="90"
-                              />
+                              <Progress targetHeight={targetHeight} done="90" />
                             </div>
                           </div>
                         </div>
@@ -190,10 +186,7 @@ function Candidatesingle_v2(props) {
                           <div className="progress-item">
                             <div className="progress-heading">
                               <div className="heading-progress">Excel</div>
-                              <Progress
-                                targetHeight={targetHeight}
-                                done="90"
-                              />
+                              <Progress targetHeight={targetHeight} done="90" />
                             </div>
                           </div>
                         </div>
@@ -204,10 +197,7 @@ function Candidatesingle_v2(props) {
                           <div className="progress-item">
                             <div className="progress-heading">
                               <div className="heading-progress">Figma</div>
-                              <Progress
-                                targetHeight={targetHeight}
-                                done="80"
-                              />
+                              <Progress targetHeight={targetHeight} done="80" />
                             </div>
                           </div>
                         </div>
@@ -215,10 +205,7 @@ function Candidatesingle_v2(props) {
                           <div className="progress-item">
                             <div className="progress-heading">
                               <div className="heading-progress">Photoshop</div>
-                              <Progress
-                                targetHeight={targetHeight}
-                                done="70"
-                              />
+                              <Progress targetHeight={targetHeight} done="70" />
                             </div>
                           </div>
                         </div>
@@ -228,10 +215,7 @@ function Candidatesingle_v2(props) {
                               <div className="heading-progress">
                                 Ilustration
                               </div>
-                              <Progress
-                                targetHeight={targetHeight}
-                                done="90"
-                              />
+                              <Progress targetHeight={targetHeight} done="90" />
                             </div>
                           </div>
                         </div>
@@ -247,65 +231,11 @@ function Candidatesingle_v2(props) {
                               src={require("../assets/images/review/thumbv3.jpg")}
                               alt="images"
                             />
-                            <Link
-                              to="https://www.youtube.com/watch?v=MLpWrANjFbI"
-                              className="lightbox-image"
-                            >
-                              <svg
-                                width="56"
-                                height="56"
-                                viewBox="0 0 56 56"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M27.5795 50.5623C40.2726 50.5623 50.5624 40.2725 50.5624 27.5794C50.5624 14.8863 40.2726 4.59656 27.5795 4.59656C14.8865 4.59656 4.59668 14.8863 4.59668 27.5794C4.59668 40.2725 14.8865 50.5623 27.5795 50.5623Z"
-                                  fill="#EB4D4D"
-                                ></path>
-                                <path
-                                  d="M20.9141 27.5794V24.1779C20.9141 19.7882 24.0167 18.0185 27.8089 20.2019L30.7507 21.9026L33.6925 23.6034C37.4847 25.7867 37.4847 29.3721 33.6925 31.5554L30.7507 33.2562L27.8089 34.9569C24.0167 37.1403 20.9141 35.3476 20.9141 30.9809V27.5794Z"
-                                  fill="white"
-                                ></path>
-                              </svg>
-                            </Link>
+                            <Video />
                           </div>
                         </div>
                       </div>
-                      <ul className="thumb-menu menu-tab2">
-                        <li className="ct-tab2">
-                          <a
-                            className="lightbox-gallery"
-                            href="images/review/thumbv4.jpg"
-                          >
-                            <img
-                              src={require("../assets/images/review/thumbv4.jpg")}
-                              alt="images"
-                            />
-                          </a>
-                        </li>
-                        <li className="ct-tab2">
-                          <a
-                            className="lightbox-gallery"
-                            href="images/review/thumbv1.jpg"
-                          >
-                            <img
-                              src={require("../assets/images/review/thumbv1.jpg")}
-                              alt="images"
-                            />
-                          </a>
-                        </li>
-                        <li className="ct-tab2">
-                          <a
-                            className="lightbox-gallery"
-                            href="images/review/thumbv2.jpg"
-                          >
-                            <img
-                              src={require("../assets/images/review/thumbv2.jpg")}
-                              alt="images"
-                            />
-                          </a>
-                        </li>
-                      </ul>
+                      <Gallery />
                     </div>
 
                     <div className="form-candidate">

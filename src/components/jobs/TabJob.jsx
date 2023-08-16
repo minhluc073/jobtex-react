@@ -155,7 +155,7 @@ function TabJob(props) {
                       </div>
                     </div>
                   </div>
-                  <div className="inner-content">
+                  <div className="inner-content home2">
                     <h5>Full Job Description</h5>
                     <p>
                       Are you a User Experience Designer with a track record of
