@@ -7,6 +7,7 @@ import Gotop from "../components/gotop";
 import MapSection from "../components/map";
 import dataMap from "../assets/fakeData/dataMap";
 import FormJobs from "../components/jobs/FormJobs";
+import Footer from "../components/footer";
 
 Joblist_v7.propTypes = {};
 
@@ -17,6 +18,7 @@ function Joblist_v7(props) {
       <MapSection markers={dataMap} />
       <FormJobs />
       <JobTopmap data={dataJobs} className="inner-jobs-section-two" />
+      <Footer />
       <Gotop />
     </div>
   );

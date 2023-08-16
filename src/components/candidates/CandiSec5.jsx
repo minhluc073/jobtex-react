@@ -9,6 +9,8 @@ CandiSec5.propTypes = {};
 
 function CandiSec5(props) {
   const { data } = props;
+  const { handlePopup } = props;
+
   return (
     <section>
       <div className="tf-container ctn-full">
@@ -17,9 +19,9 @@ function CandiSec5(props) {
             <div className="group-half-map">
               <div className="content-left stc">
                 <div className="wd-findjob-filer">
-                  <a className="button-filter">
+                  <Link className="button-filter" onClick={handlePopup}>
                     <i className="icon-filter"></i> Filters
-                  </a>
+                  </Link>
                   <SortBuy />
                 </div>
                 <p className="nofi-job">

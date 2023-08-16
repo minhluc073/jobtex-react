@@ -9,6 +9,7 @@ JobSec9.propTypes = {};
 
 function JobSec9(props) {
   const { data } = props;
+  const { handlePopup } = props;
   return (
     <section>
       <div className="tf-container ctn-full">
@@ -17,9 +18,9 @@ function JobSec9(props) {
             <div className="group-half-map st1">
               <div className="content-left">
                 <div className="wd-findjob-filer">
-                  <a className="button-filter">
+                  <Link className="button-filter" onClick={handlePopup}>
                     <i className="icon-filter"></i> Filters
-                  </a>
+                  </Link>
                   <SortBuy />
                 </div>
                 <p className="nofi-job">
@@ -115,10 +116,7 @@ function JobSec9(props) {
                 </ul>
               </div>
               <div className="content-right">
-                <MapSection
-                  className={"row-height"}
-                  markers={dataMap}
-                />
+                <MapSection className={"row-height"} markers={dataMap} />
               </div>
             </div>
           </div>

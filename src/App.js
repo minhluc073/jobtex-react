@@ -67,6 +67,11 @@ import AboutUs from "./pages/AboutUs";
 import Faqs from "./pages/Faqs";
 import Termsofuse from "./pages/Termsofuse";
 import Pricing from "./pages/Pricing";
+import Login from "./pages/Login";
+import CreateAccount from "./pages/CreateAccount";
+import ContactUs from "./pages/ContactUs";
+import { useEffect } from "react";
+import ScrollToTop from "./ScrollToTop";
 
 const App = () => {
   let routes = useRoutes([
@@ -130,9 +135,9 @@ const App = () => {
     { path: "/faqs", element: <Faqs /> },
     { path: "/termsofuse", element: <Termsofuse /> },
     { path: "/pricing", element: <Pricing /> },
-    { path: "/login", element: <AboutUs /> },
-    { path: "/createaccount", element: <AboutUs /> },
-    { path: "/contactus", element: <AboutUs /> },
+    { path: "/login", element: <Login /> },
+    { path: "/createaccount", element: <CreateAccount /> },
+    { path: "/contactus", element: <ContactUs /> },
   ]);
   return routes;
 };
@@ -140,7 +145,8 @@ const App = () => {
 const AppWrapper = () => {
   return (
     <Router>
-      <div className="wd-popup-form">
+      <ScrollToTop />
+      {/* <div className="wd-popup-form">
         <div className="modal-menu__backdrop"></div>
         <div className="content">
           <div className="content-left">
@@ -948,7 +954,7 @@ const AppWrapper = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <App />
     </Router>

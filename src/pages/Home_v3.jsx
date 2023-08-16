@@ -17,10 +17,19 @@ import About from "../components/about";
 import Banner03 from "../components/banner/Banner03";
 import Job03 from "../components/jobs/Job03";
 import Gotop from "../components/gotop";
+import { useEffect } from "react";
 
 Home_v3.propTypes = {};
 
 function Home_v3(props) {
+  useEffect(() => {
+    const WOW = require("wowjs");
+    window.wow = new WOW.WOW({
+      live: false,
+    });
+    window.wow.init();
+  }, []);
+
   return (
     <div>
       <Header2 />

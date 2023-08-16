@@ -9,6 +9,8 @@ import MapSingle from "../components/map/MapSingle";
 import Gotop from "../components/gotop";
 import StarProgress from "../components/progressBar/StarProgress";
 import { useRef, useState, useEffect } from "react";
+import Video from "../components/popup/Video";
+import Gallary from "../components/popup/Gallary";
 
 Jobsingle_v2.propTypes = {};
 
@@ -91,30 +93,33 @@ function Jobsingle_v2(props) {
                 <div className="content-right">
                   <div className="top">
                     <Link to="#" className="share">
-                      <i className="icon-share2"></i>
+                      <i className="icon-share2" />
                     </Link>
                     <Link to="#" className="wishlist">
-                      <i className="icon-heart"></i>
+                      <i className="icon-heart" />
                     </Link>
-                    <a className="btn btn-popup">
-                      <i className="icon-send"></i>Apply Now
-                    </a>
+                    <Link to="#" className="btn btn-popup">
+                      <i className="icon-send" />
+                      Apply Now
+                    </Link>
                   </div>
-                  <div className="gr-rating">
-                    <p>32 days left to apply</p>
-                    <ul className="list-star">
-                      <li className="icon-star-full"></li>
-                      <li className="icon-star-full"></li>
-                      <li className="icon-star-full"></li>
-                      <li className="icon-star-full"></li>
-                      <li className="icon-star-full"></li>
-                    </ul>
-                  </div>
-                  <div className="price">
-                    <span className="icon-dollar"></span>
-                    <p>
-                      $83,000 - $110,000 <span className="year">/year</span>
-                    </p>
+                  <div className="bottom">
+                    <div className="gr-rating">
+                      <p>32 days left to apply</p>
+                      <ul className="list-star">
+                        <li className="icon-star-full" />
+                        <li className="icon-star-full" />
+                        <li className="icon-star-full" />
+                        <li className="icon-star-full" />
+                        <li className="icon-star-full" />
+                      </ul>
+                    </div>
+                    <div className="price">
+                      <span className="icon-dollar" />
+                      <p>
+                        $83,000 - $110,000 <span className="year">/year</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -310,7 +315,6 @@ function Jobsingle_v2(props) {
                         </ul>
                       </div>
                       <Link to="#" className="frag-btn">
-                        {" "}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="14"
@@ -324,8 +328,8 @@ function Jobsingle_v2(props) {
                             d="M0 3C0 2.20435 0.316071 1.44129 0.87868 0.87868C1.44129 0.316071 2.20435 0 3 0H13C13.1857 0 13.3678 0.0517147 13.5257 0.149349C13.6837 0.246984 13.8114 0.386681 13.8944 0.552786C13.9775 0.718892 14.0126 0.904844 13.996 1.08981C13.9793 1.27477 13.9114 1.45143 13.8 1.6L11.25 5L13.8 8.4C13.9114 8.54857 13.9793 8.72523 13.996 8.91019C14.0126 9.09516 13.9775 9.28111 13.8944 9.44721C13.8114 9.61332 13.6837 9.75302 13.5257 9.85065C13.3678 9.94829 13.1857 10 13 10H3C2.73478 10 2.48043 10.1054 2.29289 10.2929C2.10536 10.4804 2 10.7348 2 11V14C2 14.2652 1.89464 14.5196 1.70711 14.7071C1.51957 14.8946 1.26522 15 1 15C0.734784 15 0.48043 14.8946 0.292893 14.7071C0.105357 14.5196 0 14.2652 0 14V3Z"
                             fill="#64666C"
                           />
-                        </svg>{" "}
-                        Report job{" "}
+                        </svg>
+                        Report job
                       </Link>
                     </div>
                     <div className="video-thumb">
@@ -336,67 +340,11 @@ function Jobsingle_v2(props) {
                               src={require("../assets/images/review/thumbv3.jpg")}
                               alt="images"
                             />
-                            <Link
-                              to="https://www.youtube.com/watch?v=MLpWrANjFbI"
-                              className="lightbox-image"
-                            >
-                              <svg
-                                width="56"
-                                height="56"
-                                viewBox="0 0 56 56"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M27.5795 50.5623C40.2726 50.5623 50.5624 40.2725 50.5624 27.5794C50.5624 14.8863 40.2726 4.59656 27.5795 4.59656C14.8865 4.59656 4.59668 14.8863 4.59668 27.5794C4.59668 40.2725 14.8865 50.5623 27.5795 50.5623Z"
-                                  fill="#EB4D4D"
-                                ></path>
-                                <path
-                                  d="M20.9141 27.5794V24.1779C20.9141 19.7882 24.0167 18.0185 27.8089 20.2019L30.7507 21.9026L33.6925 23.6034C37.4847 25.7867 37.4847 29.3721 33.6925 31.5554L30.7507 33.2562L27.8089 34.9569C24.0167 37.1403 20.9141 35.3476 20.9141 30.9809V27.5794Z"
-                                  fill="white"
-                                ></path>
-                              </svg>
-                            </Link>
+                            <Video />
                           </div>
                         </div>
                       </div>
-                      <ul className="thumb-menu menu-tab2">
-                        <li className="ct-tab2">
-                          {" "}
-                          <a
-                            className="lightbox-gallery"
-                            href="images/review/thumbv4.jpg"
-                          >
-                            <img
-                              src={require("../assets/images/review/thumbv4.jpg")}
-                              alt="images"
-                            />
-                          </a>{" "}
-                        </li>
-                        <li className="ct-tab2">
-                          {" "}
-                          <a
-                            className="lightbox-gallery"
-                            href="images/review/thumbv1.jpg"
-                          >
-                            <img
-                              src={require("../assets/images/review/thumbv1.jpg")}
-                              alt="images"
-                            />
-                          </a>
-                        </li>
-                        <li className="ct-tab2">
-                          <a
-                            className="lightbox-gallery"
-                            href="images/review/thumbv2.jpg"
-                          >
-                            <img
-                              src={require("../assets/images/review/thumbv2.jpg")}
-                              alt="images"
-                            />
-                          </a>
-                        </li>
-                      </ul>
+                      <Gallary />
                     </div>
                     <div className="job-rating">
                       <h6>reviews</h6>

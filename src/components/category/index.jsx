@@ -26,7 +26,10 @@ function Category(props) {
           </div>
 
           <div className="col-md-12">
-            <div className="group-category-job wow fadeInUp">
+            <div
+              className="group-category-job wow fadeInUp"
+              data-wow-delay=".2s"
+            >
               {data.map((idx) => (
                 <div key={idx.id} className={`job-category-box ${idx.active}`}>
                   <div className="job-category-header">

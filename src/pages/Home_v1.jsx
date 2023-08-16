@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import Banner01 from "../components/banner/Banner01";
 import Category from "../components/category";
@@ -19,6 +19,15 @@ import Gotop from "../components/gotop";
 Home_v1.propTypes = {};
 
 function Home_v1(props) {
+
+  useEffect(() => {
+    const WOW = require("wowjs");
+    window.wow = new WOW.WOW({
+      live: false,
+    });
+    window.wow.init();
+  }, []);
+  
   return (
     <>
       <Header />

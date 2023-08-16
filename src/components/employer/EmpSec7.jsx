@@ -9,6 +9,7 @@ EmpSec7.propTypes = {};
 
 function EmpSec7(props) {
   const { data } = props;
+  const { handlePopup } = props;
   return (
     <section>
       <div className="tf-container ctn-full">
@@ -17,9 +18,9 @@ function EmpSec7(props) {
             <div className="group-half-map">
               <div className="content-left">
                 <div className="wd-findjob-filer mb1">
-                  <a className="button-filter">
+                  <Link className="button-filter" onClick={handlePopup}>
                     <i className="icon-filter"></i> Filters
-                  </a>
+                  </Link>
                   <SortBuy />
                 </div>
                 <p className="nofi-job">

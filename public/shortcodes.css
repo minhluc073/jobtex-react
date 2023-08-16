@@ -5593,7 +5593,7 @@
 }
 
 .wd-form-login .menu-tab li:hover,
-.wd-form-login .menu-tab li.active {
+.wd-form-login .menu-tab li.react-tabs__tab--selected {
   background: rgba(20, 129, 96, 0.1);
   border-radius: 4px;
   color: #14a077;
@@ -12086,4 +12086,22 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: blue;
   border-radius: 50%;
   stroke: blue;
+}
+
+.play-btn.popup-video {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* transition: .3s linear; */
+  cursor: pointer;
+}
+
+.modal-video,
+.modal-video-movie-wrap {
+  animation: unset !important;
 }

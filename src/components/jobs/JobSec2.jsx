@@ -9,6 +9,7 @@ JobSec2.propTypes = {};
 function JobSec2(props) {
   const { data } = props;
   const { className } = props;
+  const { handlePopup } = props;
   return (
     <section className={`inner-jobs-section ${className}`}>
       <div className="tf-container">
@@ -17,9 +18,9 @@ function JobSec2(props) {
             <div className="wd-meta-select-job">
               <div className="wd-findjob-filer">
                 <div className="group-select-display">
-                  <a className="button-filter st2">
+                  <Link className="button-filter st2" onClick={handlePopup}>
                     <i className="icon-filter"></i> Filters
-                  </a>
+                  </Link>
                   <TabList className="inner menu-tab">
                     <Tab className="btn-display">
                       <svg
