@@ -4,9 +4,23 @@ import "../../../node_modules/react-modal-video/css/modal-video.css";
 
 export default function Video({ text }) {
   const [isOpen, setOpen] = useState(false);
+
+  const handleZindex = () => {
+    const zIn = document.querySelector("#zIndex");
+    zIn?.classList?.add("zIdex");
+
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    const zIn = document.querySelector("#zIndex");
+    zIn?.classList?.remove("zIdex");
+    setOpen(false);
+  };
+
   return (
     <>
-      <div onClick={() => setOpen(true)} className="play-btn popup-video">
+      <div onClick={() => handleZindex()} className="play-btn popup-video">
         <svg
           width="56"
           height="56"
@@ -31,7 +45,7 @@ export default function Video({ text }) {
         autoplay
         isOpen={isOpen}
         videoId="1iIZeIy7TqM"
-        onClose={() => setOpen(false)}
+        onClose={() => handleClose()}
       />
     </>
   );

@@ -172,9 +172,9 @@ const AppWrapper = () => {
             </form>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="menu-mobile-popup">
+      {/* <div className="menu-mobile-popup">
         <div className="modal-menu__backdrop"></div>
         <div className="widget-filter">
           <div className="mobile-header">

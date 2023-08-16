@@ -12106,6 +12106,33 @@ input[type="number"]::-webkit-inner-spin-button {
   animation: unset !important;
 }
 
-/* .zIdex {
-  z-index: 88;
-} */
+.zIdex {
+  z-index: 100;
+}
+.logo-none {
+  display: none;
+  width: 149px;
+}
+
+.header-default.is-fixed.is-small .site-logo {
+  display: none;
+}
+
+.header-default.is-fixed.is-small .logo-none {
+  display: block;
+}
+
+/* active */
+.home1active .menu-item-has-children:first-child .sub-menu-bar li .nav1 {
+  color: #14a077;
+}
+
+#menu-primary-menu .sub-menu-bar li .active,
+.nav-menu-item .active {
+  color: #14a077 !important;
+
+}
+
+.ReactCollapse--collapse {
+  transition: height 1000ms;
+}

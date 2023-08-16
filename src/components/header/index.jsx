@@ -1,20 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import logo from "../../assets/images/logo-white.png";
+import logo2 from "../../assets/images/logo.png";
 import avt from "../../assets/images/user/avatar/image-01.jpg";
 import { Link, NavLink } from "react-router-dom";
 
 Header.propTypes = {};
 
-function Header(props) {
+function Header({ clname = "", handleMobile }) {
   const [activeIndex, setActiveIndex] = useState(null);
   const handleDropdown = (index) => {
     setActiveIndex(index);
   };
+
+  const [scroll, setScroll] = useState(0);
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      const scrollCheck = window.scrollY > 100;
+      if (scrollCheck !== scroll) {
+        setScroll(scrollCheck);
+      }
+    });
+  }, []);
+
   return (
     <header
       id="header"
-      className="header header-default style-absolute header-fixed"
+      className={`header header-default style-absolute header-fixed ${
+        scroll ? "is-fixed is-small" : ""
+      }`}
     >
       <div className="tf-container ct2">
         <div className="row">
@@ -27,6 +42,12 @@ function Header(props) {
                       className="site-logo"
                       id="trans-logo"
                       src={logo}
+                      alt="Image"
+                    />
+                    <img
+                      className="logo-none"
+                      id="trans-logo"
+                      src={logo2}
                       alt="Image"
                     />
                   </Link>
@@ -416,19 +437,23 @@ function Header(props) {
                   </div>
                 </div>
               </div>
-              <div className="header-ct-center">
+              <div className={`header-ct-center ${clname}`}>
                 <div className="nav-wrap">
                   <nav id="main-nav" className="main-nav">
                     <ul id="menu-primary-menu" className="menu">
-                      <li className="menu-item menu-item-has-children ">
+                      <li className="menu-item menu-item-has-children">
                         <Link to="#">Home </Link>
                         <div className="menu-bar">
                           <ul className="sub-menu-bar">
                             <li className="menu-item">
-                              <NavLink to="/">Home Page 01 </NavLink>
+                              <NavLink to="/" className="nav1">
+                                Home Page 01{" "}
+                              </NavLink>
                             </li>
                             <li className="menu-item">
-                              <NavLink to="/home_v2">Home Page 02 </NavLink>
+                              <NavLink to="/home_v2" className="nav2">
+                                Home Page 02{" "}
+                              </NavLink>
                             </li>
                             <li className="menu-item">
                               <NavLink to="/home_v3">Home Page 03 </NavLink>
@@ -460,7 +485,7 @@ function Header(props) {
                           </ul>
                         </div>
                       </li>
-                      <li className="menu-item menu-item-has-children">
+                      <li className="menu-item menu-item-has-children ">
                         <Link to="#">Find jobs </Link>
                         <ul className="sub-menu st1">
                           <li className="nav-sub">
@@ -918,7 +943,7 @@ function Header(props) {
                   </Link>
                 </div>
               </div>
-              <div className="nav-filter">
+              <div className="nav-filter" onClick={handleMobile}>
                 <div className="nav-mobile">
                   <span></span>
                 </div>

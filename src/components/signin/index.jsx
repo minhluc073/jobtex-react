@@ -1,22 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import img from "../../assets/images/review/google.png";
 import img2 from "../../assets/images/review/tweet.png";
-import { useEffect } from "react";
 
 function SignIn() {
-  useEffect(() => {
-    Array.from(document.querySelectorAll("form .auth-pass-inputgroup")).forEach(
-      function (e) {
-        Array.from(e.querySelectorAll(".password-addon")).forEach(function (r) {
-          r.addEventListener("click", function (r) {
-            var o = e.querySelector(".password-input");
-            "password" === o.type ? (o.type = "text") : (o.type = "password");
-          });
-        });
-      }
-    );
-  });
+  const [showPass, setShowPass] = useState(false);
 
   return (
     <section className="account-section">
@@ -49,15 +37,18 @@ function SignIn() {
                 </label>
                 <div className="inputs-group auth-pass-inputgroup">
                   <input
-                    type="password"
+                    type={showPass ? "text" : "password"}
                     className="input-form password-input"
                     placeholder="Password"
                     id="password-input"
                     required
                   />
                   <Link
-                    className="icon-eye-off password-addon"
+                    className={`password-addon ${
+                      showPass ? "icon-eye" : "icon-eye-off"
+                    }`}
                     id="password-addon"
+                    onClick={() => setShowPass(!showPass)}
                   />
                 </div>
               </div>

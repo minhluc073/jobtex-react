@@ -162,7 +162,6 @@ function Jobsingle_v1(props) {
                     <h6>The Work You'll Do:</h6>
                     <ul className="list-dot">
                       <li>
-                        {" "}
                         Support the Creative Directors and Associate Creative
                         Directors of experience design to concept and oversee
                         the production of bold, innovative, award-winning
