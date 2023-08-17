@@ -460,7 +460,7 @@ function HeaderHome2({ clname = "", handleMobile }) {
                   <div className="name">
                     Candidates<span className="icon-keyboard_arrow_down"></span>
                   </div>
-                  <div className="sub-account">
+                  {/* <div className="sub-account">
                     <div className="sub-account-item">
                       <Link to="dashboard/candidates-dashboard.html">
                         <span className="icon-dashboard"></span>Dashboard
@@ -523,12 +523,10 @@ function HeaderHome2({ clname = "", handleMobile }) {
                         <span className="icon-log-out"></span> Log Out
                       </Link>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="header-customize-item button">
-                  <Link to="dashboard/candidates-dashboard.html">
-                    Upload Resume
-                  </Link>
+                  <Link to="/">Upload Resume</Link>
                 </div>
               </div>
               <div className="nav-filter" onClick={handleMobile}>

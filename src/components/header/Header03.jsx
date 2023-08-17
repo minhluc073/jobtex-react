@@ -19,16 +19,16 @@ function Header03({ clname = "", handleMobile }) {
               <div className="header-ct-left">
                 <ul className="usefull-link">
                   <li>
-                    <Link to="employers-list.html">For Employers</Link>
+                    <Link to="/employers_v1">For Employers</Link>
                   </li>
                   <li>
-                    <Link to="candidate.html">For Candidates</Link>
+                    <Link to="/candidates_v1">For Candidates</Link>
                   </li>
                 </ul>
               </div>
               <div className="header-ct-center">
                 <div id="logo" className="logo">
-                  <Link to="index.html">
+                  <Link to="/">
                     <img className="site-logo" src={logo} alt="Image" />
                   </Link>
                 </div>
@@ -401,7 +401,7 @@ function Header03({ clname = "", handleMobile }) {
               </div>
               <div className="header-ct-right">
                 <div className="header-customize-item help">
-                  <Link to="term-of-use.html">
+                  <Link to="/termofuse">
                     <span className="icon-help-circle"></span>
                   </Link>
                 </div>
@@ -460,7 +460,7 @@ function Header03({ clname = "", handleMobile }) {
                   </div>
                 </div>
                 <div className="header-customize-item login">
-                  <Link to="login.html">
+                  <Link to="/login">
                     <span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -488,10 +488,10 @@ function Header03({ clname = "", handleMobile }) {
                   </Link>
                   <ul className="item-login">
                     <li>
-                      <Link to="login.html">Login</Link>
+                      <Link to="/login">Login</Link>
                     </li>
                     <li>
-                      <Link to="create-account.html">register</Link>
+                      <Link to="/createaccount">register</Link>
                     </li>
                   </ul>
                 </div>
