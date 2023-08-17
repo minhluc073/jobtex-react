@@ -72,6 +72,8 @@ import CreateAccount from "./pages/CreateAccount";
 import ContactUs from "./pages/ContactUs";
 import { useEffect } from "react";
 import ScrollToTop from "./ScrollToTop";
+import { useState } from "react";
+import Preloader from "./components/preloader";
 
 const App = () => {
   let routes = useRoutes([
@@ -143,10 +145,20 @@ const App = () => {
 };
 
 const AppWrapper = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
   return (
-    <Router>
-      <ScrollToTop />
-      {/* <div className="wd-popup-form">
+    <>
+      {!loading ? (
+        <Router>
+          <ScrollToTop />
+          {/* <div className="wd-popup-form">
         <div className="modal-menu__backdrop"></div>
         <div className="content">
           <div className="content-left">
@@ -174,7 +186,7 @@ const AppWrapper = () => {
         </div>
       </div> */}
 
-      {/* <div className="menu-mobile-popup">
+          {/* <div className="menu-mobile-popup">
         <div className="modal-menu__backdrop"></div>
         <div className="widget-filter">
           <div className="mobile-header">
@@ -956,8 +968,12 @@ const AppWrapper = () => {
         </div>
       </div> */}
 
-      <App />
-    </Router>
+          <App />
+        </Router>
+      ) : (
+        <Preloader />
+      )}
+    </>
   );
 };
 
