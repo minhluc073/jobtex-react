@@ -32,72 +32,71 @@ const select6 = [
 function Popupcandi({ handlePopup }) {
   return (
     <div className="sidebar-popup">
-      <div className="modal-menu__backdrop" onClick={handlePopup}>
-        <div className="widget-filter">
-          <form>
-            <div className="group-form">
-              <label className="title">Search by Keywords</label>
-              <div className="group-input search-ip">
-                <button>
-                  <i className="icon-search"></i>
-                </button>
-                <input type="text" placeholder="Keywork" required />
-              </div>
+      <div className="modal-menu__backdrop" onClick={handlePopup}></div>
+      <div className="widget-filter">
+        <form>
+          <div className="group-form">
+            <label className="title">Search by Keywords</label>
+            <div className="group-input search-ip">
+              <button>
+                <i className="icon-search"></i>
+              </button>
+              <input type="text" placeholder="Keywork" required />
             </div>
-            <div className="group-form">
-              <label className="title">Location</label>
-              <div className="group-input has-icon">
-                <i className="icon-map-pin"></i>
-                <SelectLocation />
-              </div>
+          </div>
+          <div className="group-form">
+            <label className="title">Location</label>
+            <div className="group-input has-icon">
+              <i className="icon-map-pin"></i>
+              <SelectLocation />
             </div>
-            <div className="group-form">
-              <label className="title">Job Title</label>
-              <div className="group-input">
-                <Dropdown
-                  options={select1}
-                  className="react-dropdown select2"
-                  value={select1[0]}
-                />
-              </div>
+          </div>
+          <div className="group-form">
+            <label className="title">Job Title</label>
+            <div className="group-input">
+              <Dropdown
+                options={select1}
+                className="react-dropdown select2"
+                value={select1[0]}
+              />
             </div>
+          </div>
 
-            <div className="group-form st2">
-              <RangeOne miles="Years old" title="Age:" />
+          <div className="group-form st2">
+            <RangeOne miles="Years old" title="Age:" />
+          </div>
+          <div className="group-form">
+            <label className="title">Salary Estimate</label>
+            <div className="group-input">
+              <Dropdown
+                options={select2}
+                className="react-dropdown select2"
+                value={select2[0]}
+              />
             </div>
-            <div className="group-form">
-              <label className="title">Salary Estimate</label>
-              <div className="group-input">
-                <Dropdown
-                  options={select2}
-                  className="react-dropdown select2"
-                  value={select2[0]}
-                />
-              </div>
+          </div>
+          <div className="group-form">
+            <label className="title">Experrience</label>
+            <div className="group-input">
+              <Dropdown
+                options={select3}
+                className="react-dropdown select2"
+                value={select3[0]}
+              />
             </div>
-            <div className="group-form">
-              <label className="title">Experrience</label>
-              <div className="group-input">
-                <Dropdown
-                  options={select3}
-                  className="react-dropdown select2"
-                  value={select3[0]}
-                />
-              </div>
+          </div>
+          <div className="group-form">
+            <label className="title">Qualification </label>
+            <div className="group-input">
+              <Dropdown
+                options={select4}
+                className="react-dropdown select2"
+                value={select4[0]}
+              />
             </div>
-            <div className="group-form">
-              <label className="title">Qualification </label>
-              <div className="group-input">
-                <Dropdown
-                  options={select4}
-                  className="react-dropdown select2"
-                  value={select4[0]}
-                />
-              </div>
-            </div>
-            <button type="submit">Find Employers</button>
-          </form>
-        </div>
+          </div>
+          <button type="submit">Find Employers</button>
+        </form>
       </div>
     </div>
   );
