@@ -371,7 +371,7 @@ function TabJob(props) {
                       <Gallery />
                     </div>
 
-                    <div className="job-rating">
+                    {/* <div className="job-rating">
                       <h6>reviews</h6>
                       <div className="rating-review">
                         <div className="left-rating">
@@ -385,7 +385,7 @@ function TabJob(props) {
                           </ul>
                           <p className="count-rating">(1,968 Ratings)</p>
                         </div>
-                        {/* <div className="right-rating" ref={progressRef}>
+                        <div className="right-rating" ref={progressRef}>
                           <ul className="rating-list">
                             <li className="rating-details">
                               <span className="number-rating">5</span>
@@ -428,7 +428,7 @@ function TabJob(props) {
                               <span className="percent">3%</span>
                             </li>
                           </ul>
-                        </div> */}
+                        </div>
                       </div>
                       <ul className="client-review">
                         <li className="client-item">
@@ -633,7 +633,7 @@ function TabJob(props) {
                       <Link to="Joblist_v1" className="btn-load">
                         See more reviews (719)
                       </Link>
-                    </div>
+                    </div> */}
                     <div className="related-job">
                       <h6>Related Jobs</h6>
                       <div className="features-job mg-bt-0">

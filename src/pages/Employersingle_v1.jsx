@@ -1178,7 +1178,7 @@ function Employersingle_v1(props) {
               </Tabs>
             </div>
             <div className="col-lg-4">
-              <div className="cv-form-details po-sticky job-sg">
+              <div className="cv-form-details po-sticky job-sg single-stick">
                 <MapSingle marKers={marKers} />
                 <ul className="list-infor">
                   <li>
