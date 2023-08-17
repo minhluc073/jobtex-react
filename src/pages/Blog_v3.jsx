@@ -530,7 +530,7 @@ function Blog_v3(props) {
           </div>
         </div>
       </div>
-      <Header4 clname="actBlog3" handleMobile={handleMobile} />
+      <Header2 clname="actBlog3" handleMobile={handleMobile} />
       <Breadcrumb title="Blog Grid" />
       <BlogSec3 data={dataBlog} />
       <Footer />

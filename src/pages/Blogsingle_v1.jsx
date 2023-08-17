@@ -527,7 +527,7 @@ function Blogsingle_v1(props) {
           </div>
         </div>
       </div>
-      <Header4 clname="actBlog4" handleMobile={handleMobile} />
+      <Header2 clname="actBlog4" handleMobile={handleMobile} />
       <section className="blog-detail-section">
         <div className="tf-container">
           <div className="wrap-blog-detail blog-detail blog-detail-side-bar-content">

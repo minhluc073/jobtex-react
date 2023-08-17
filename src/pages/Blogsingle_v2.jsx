@@ -528,7 +528,7 @@ function Blogsingle_v2(props) {
           </div>
         </div>
       </div>
-      <Header4 clname="actBlog5" handleMobile={handleMobile} />
+      <Header2 clname="actBlog5" handleMobile={handleMobile} />
       <section className="blog-detail-01 page-title"></section>
       <section>
         <div className="tf-container ">
