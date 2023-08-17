@@ -11,6 +11,7 @@ import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Header4 from "../components/header/Header4";
 
 Blog_v3.propTypes = {};
 
@@ -41,7 +42,7 @@ function Blog_v3(props) {
       ? getMobile.classList.add("modal-menu--open")
       : getMobile.classList.remove("modal-menu--open");
   };
-  
+
   return (
     <>
       <div className="menu-mobile-popup">
@@ -529,7 +530,7 @@ function Blog_v3(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header4 clname="actBlog3" handleMobile={handleMobile} />
       <Breadcrumb title="Blog Grid" />
       <BlogSec3 data={dataBlog} />
       <Footer />

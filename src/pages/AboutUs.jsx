@@ -535,7 +535,7 @@ function AboutUs(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header2 clname="actPage5" handleMobile={handleMobile} />
       <Breadcrumb title="About Us" />
       <Review />
       <BannerCounter />

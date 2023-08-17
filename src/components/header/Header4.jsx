@@ -692,20 +692,20 @@ function Header4({ clname = "", handleMobile }) {
                           <li className="nav-sub subnav2">
                             <Link to="#">
                               Blog Details
-                              <span className="icon-keyboard_arrow_right"></span>{" "}
+                              <span className="icon-keyboard_arrow_right"></span>
                             </Link>
                             <ul className="nav-sub-menu">
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem1">
                                 <Link to="/blogsingle_v1">
                                   Blog Details - V1
                                 </Link>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem2">
                                 <Link to="/blogsingle_v2">
                                   Blog Details - V2
                                 </Link>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem3">
                                 <Link to="/blogsingle_v3">
                                   Blog Details Sidebar
                                 </Link>
@@ -717,45 +717,45 @@ function Header4({ clname = "", handleMobile }) {
                       <li className="menu-item menu-item-has-children sub6">
                         <Link to="#">Pages</Link>
                         <ul className="sub-menu st1">
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav1">
                             <Link to="#">
                               Shop
                               <span className="icon-keyboard_arrow_right"></span>{" "}
                             </Link>
                             <ul className="nav-sub-menu">
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem1">
                                 <Link to="/shop">Shop List</Link>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem2">
                                 <Link to="/shopsingle">Shop Single</Link>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem3">
                                 <Link to="/shoppingcart">Shopping Cart</Link>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem4">
                                 <Link to="/checkout">Checkout</Link>
                               </li>
                             </ul>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav2">
                             <Link to="/aboutus">About Us</Link>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav3">
                             <Link to="/faqs">FAQS</Link>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav4">
                             <Link to="/termsofuse">Terms Of Use</Link>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav5">
                             <Link to="/pricing">Pricing</Link>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav6">
                             <Link to="/login">Login</Link>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav7">
                             <Link to="/createaccount">Create Account</Link>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav8">
                             <Link to="/contactus">Contact Us</Link>
                           </li>
                         </ul>
@@ -829,7 +829,7 @@ function Header4({ clname = "", handleMobile }) {
                   <div className="name">
                     Candidates<span className="icon-keyboard_arrow_down"></span>
                   </div>
-                  <div className="sub-account">
+                  {/* <div className="sub-account">
                     <div className="sub-account-item">
                       <Link to="dashboard/candidates-dashboard.html">
                         <span className="icon-dashboard"></span>Dashboard
@@ -892,12 +892,10 @@ function Header4({ clname = "", handleMobile }) {
                         <span className="icon-log-out"></span> Log Out
                       </Link>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="header-customize-item button">
-                  <Link to="dashboard/candidates-dashboard.html">
-                    Upload Resume
-                  </Link>
+                  <Link to="/">Upload Resume</Link>
                 </div>
               </div>
               <div className="nav-filter" onClick={handleMobile}>

@@ -11,6 +11,7 @@ import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Header4 from "../components/header/Header4";
 
 Blog_v2.propTypes = {};
 
@@ -528,7 +529,7 @@ function Blog_v2(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header4 clname="actBlog2" handleMobile={handleMobile} />
       <Breadcrumb title="Blog Grid" />
       <BlogSec2 data={dataBlog} />
       <Footer />

@@ -9,6 +9,7 @@ import Gotop from "../components/gotop";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
+import Header4 from "../components/header/Header4";
 
 Shoppingcart.propTypes = {};
 
@@ -531,7 +532,7 @@ function Shoppingcart(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile}/>
+      <Header2 clname="actPage3" handleMobile={handleMobile}/>
 
       <Breadcrumb title="Shopping Cart" className="breadcrumb-section" />
 

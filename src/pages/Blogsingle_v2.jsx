@@ -9,6 +9,7 @@ import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
 import { useState } from "react";
+import Header4 from "../components/header/Header4";
 
 Blogsingle_v2.propTypes = {};
 
@@ -527,7 +528,7 @@ function Blogsingle_v2(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header4 clname="actBlog5" handleMobile={handleMobile} />
       <section className="blog-detail-01 page-title"></section>
       <section>
         <div className="tf-container ">

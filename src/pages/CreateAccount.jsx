@@ -525,7 +525,7 @@ function CreateAccount(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header2 clname="actPage10" handleMobile={handleMobile} />
       <Breadcrumb title="Login" />
       <SignUp />
       <Footer />

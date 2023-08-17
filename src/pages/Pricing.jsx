@@ -526,7 +526,7 @@ function Pricing(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header2 clname="actPage8" handleMobile={handleMobile} />
       <Breadcrumb title="Pricing" className="breadcrumb-section" />
       <Pricing1 />
       <Pricing2 />

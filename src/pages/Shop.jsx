@@ -11,6 +11,7 @@ import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Header4 from "../components/header/Header4";
 
 Shop.propTypes = {};
 
@@ -529,7 +530,7 @@ function Shop(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header2 clname="actPage1" handleMobile={handleMobile} />
 
       <Breadcrumb title="Shop" className="breadcrumb-section" />
 

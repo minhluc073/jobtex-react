@@ -10,6 +10,7 @@ import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Header4 from "../components/header/Header4";
 
 Termsofuse.propTypes = {};
 
@@ -528,7 +529,7 @@ function Termsofuse(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header4 clname="actPage7" handleMobile={handleMobile} />
       <Breadcrumb title="Term Of Use" />
       <Term />
       <Footer />

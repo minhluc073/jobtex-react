@@ -526,7 +526,7 @@ function ContactUs(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header2 clname="actPage11" handleMobile={handleMobile} />
       <MapSection markers={dataMap} />
       <Contact />
       <Footer />

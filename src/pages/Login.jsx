@@ -525,7 +525,7 @@ function Login(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header2 clname="actPage9" handleMobile={handleMobile} />
       <Breadcrumb title="Login" />
       <SignIn />
       <Footer />

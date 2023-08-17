@@ -9,6 +9,7 @@ import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
 import { useState } from "react";
+import Header4 from "../components/header/Header4";
 
 Checkout.propTypes = {};
 
@@ -527,7 +528,7 @@ function Checkout(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header2 clname="actPage4" handleMobile={handleMobile} />
       <Breadcrumb title="Shop" className="breadcrumb-section" />
       <section className="checkout-section">
         <div className="tf-container">

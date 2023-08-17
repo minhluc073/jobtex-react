@@ -10,6 +10,7 @@ import { Rating } from "react-simple-star-rating";
 import Gotop from "../components/gotop";
 import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
+import Header4 from "../components/header/Header4";
 
 Shopsingle.propTypes = {};
 
@@ -552,7 +553,7 @@ function Shopsingle(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header2 clname="actPage2" handleMobile={handleMobile} />
       <Breadcrumb title="Shop Details" className="breadcrumb-section" />
       <section className="shop-deltail-section">
         <div className="tf-container st3">

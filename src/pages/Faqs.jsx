@@ -10,6 +10,7 @@ import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Header4 from "../components/header/Header4";
 
 function Faqs(props) {
   const [toggle, setToggle] = useState({
@@ -525,7 +526,7 @@ function Faqs(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header2 clname="actPage6" handleMobile={handleMobile} />
       <Breadcrumb title="Accordion" />
       <FaqItem data={dataFaq} />
       <Footer />
