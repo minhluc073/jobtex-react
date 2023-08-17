@@ -545,7 +545,7 @@ function Home_v9(props) {
           </div>
         </div>
       </div>
-      <Header03 handleMobile={handleMobile} />
+      <Header03 clname="act1" handleMobile={handleMobile} />
       <Banner09 />
       <Couter />
       <Category data={dataCate} />

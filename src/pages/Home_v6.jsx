@@ -546,7 +546,7 @@ function Home_v6(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header2 clname="act1" handleMobile={handleMobile} />
 
       <FormMap markers={dataMap} />
 

@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 import logo from "../../assets/images/logo.png";
 import avt from "../../assets/images/user/avatar/image-01.jpg";
 import { Link, NavLink } from "react-router-dom";
 
-HeaderHome2.propTypes = {};
+Header4.propTypes = {};
 
-function HeaderHome2({ clname = "", handleMobile }) {
+function Header4({ clname = "", handleMobile }) {
   const [activeIndex, setActiveIndex] = useState(null);
   const handleDropdown = (index) => {
     setActiveIndex(index);
@@ -15,7 +15,7 @@ function HeaderHome2({ clname = "", handleMobile }) {
 
   return (
     <header id="header" className="header header-default">
-      <div className="tf-container">
+      <div className="tf-container ct2">
         <div className="row">
           <div className="col-md-12">
             <div className="sticky-area-wrap">
@@ -30,14 +30,396 @@ function HeaderHome2({ clname = "", handleMobile }) {
                     />
                   </Link>
                 </div>
+                <div className="categories">
+                  <Link to="#">
+                    <span className="icon-grid"></span>Categories
+                  </Link>
+                  <div className="sub-categorie">
+                    <ul className="pop-up">
+                      <li>
+                        <Link to="#">
+                          <span className="icon-categorie-1"></span>Design &
+                          Creative
+                        </Link>
+                        <div className="group-menu-category">
+                          <div className="menu left">
+                            <h6>Top Categories</h6>
+                            <ul>
+                              <li>
+                                <Link to="/joblist_v1">Design & Creative</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">Digital marketing</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">Development & IT</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">Music & Audio</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">
+                                  Finance & Accounting
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">Programming & Tech</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">video & Animation</Link>
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="menu right">
+                            <h6>Top Skills</h6>
+                            <ul>
+                              <li>
+                                <Link to="/jobsingle_v1">Adobe Photoshop</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">adobe XD</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">
+                                  Android Developer
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">Figma</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">CSS, Html</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">BA</Link>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <Link to="#">
+                          <span className="icon-categorie-8"></span>Digital
+                          Marketing
+                        </Link>
+                        <div className="group-menu-category">
+                          <div className="menu left">
+                            <h6>Top Categories</h6>
+                            <ul>
+                              <li>
+                                <Link to="/joblist_v1">Digital marketing</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">Design & Creative</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">
+                                  Finance & Accounting
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">Development & IT</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">Programming & Tech</Link>
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="menu right">
+                            <h6>Top Skills</h6>
+                            <ul>
+                              <li>
+                                <Link to="/jobsingle_v1">adobe XD</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">Figma</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">BA</Link>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <Link to="#">
+                          <span className="icon-categorie-2"></span>Development
+                          & IT
+                        </Link>
+                        <div className="group-menu-category">
+                          <div className="menu left">
+                            <h6>Top Categories</h6>
+                            <ul>
+                              <li>
+                                <Link to="/joblist_v1">Design & Creative</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">Development & IT</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">Music & Audio</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">video & Animation</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">
+                                  Finance & Accounting
+                                </Link>
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="menu right">
+                            <h6>Top Skills</h6>
+                            <ul>
+                              <li>
+                                <Link to="/jobsingle_v1">adobe XD</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">
+                                  Android Developer
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">Adobe Photoshop</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">CSS, Html</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">BA</Link>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <Link to="#">
+                          <span className="icon-categorie-3"></span>Music &
+                          Audio
+                        </Link>
+                        <div className="group-menu-category">
+                          <div className="menu left">
+                            <h6>Top Categories</h6>
+                            <ul>
+                              <li>
+                                <Link to="/joblist_v1">Digital marketing</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">Design & Creative</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">video & Animation</Link>
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="menu right">
+                            <h6>Top Skills</h6>
+                            <ul>
+                              <li>
+                                <Link to="/jobsingle_v1">
+                                  Android Developer
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">Adobe Photoshop</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">adobe XD</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">Figma</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">BA</Link>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <Link to="#">
+                          <span className="icon-categorie-4"></span>Finance &
+                          Accounting
+                        </Link>
+                        <div className="group-menu-category">
+                          <div className="menu left">
+                            <h6>Top Categories</h6>
+                            <ul>
+                              <li>
+                                <Link to="/joblist_v1">Development & IT</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">Design & Creative</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">Programming & Tech</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">Music & Audio</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">
+                                  Finance & Accounting
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">video & Animation</Link>
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="menu right">
+                            <h6>Top Skills</h6>
+                            <ul>
+                              <li>
+                                <Link to="/jobsingle_v1">adobe XD</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">Figma</Link>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <Link to="#">
+                          <span className="icon-categorie-5"></span>Programming
+                          & Tech
+                        </Link>
+                        <div className="group-menu-category">
+                          <div className="menu left">
+                            <h6>Top Categories</h6>
+                            <ul>
+                              <li>
+                                <Link to="/joblist_v1">Design & Creative</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">Digital marketing</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">Music & Audio</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">
+                                  Finance & Accounting
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">Programming & Tech</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">video & Animation</Link>
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="menu right">
+                            <h6>Top Skills</h6>
+                            <ul>
+                              <li>
+                                <Link to="/jobsingle_v1">Adobe Photoshop</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">adobe XD</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">Figma</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">CSS, Html</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">BA</Link>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <Link to="#">
+                          <span className="icon-categorie-6"></span>Video &
+                          Animation
+                        </Link>
+                        <div className="group-menu-category">
+                          <div className="menu left">
+                            <h6>Top Categories</h6>
+                            <ul>
+                              <li>
+                                <Link to="/joblist_v1">Design & Creative</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">Digital marketing</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">Programming & Tech</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">video & Animation</Link>
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="menu right">
+                            <h6>Top Skills</h6>
+                            <ul>
+                              <li>
+                                <Link to="/jobsingle_v1">Adobe Photoshop</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">CSS, Html</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">BA</Link>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <Link to="#">
+                          <span className="icon-categorie-7"></span>Writing &
+                          translation
+                        </Link>
+                        <div className="group-menu-category">
+                          <div className="menu left">
+                            <h6>Top Categories</h6>
+                            <ul>
+                              <li>
+                                <Link to="/joblist_v1">
+                                  Finance & Accounting
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">Programming & Tech</Link>
+                              </li>
+                              <li>
+                                <Link to="/joblist_v1">video & Animation</Link>
+                              </li>
+                            </ul>
+                          </div>
+                          <div className="menu right">
+                            <h6>Top Skills</h6>
+                            <ul>
+                              <li>
+                                <Link to="/jobsingle_v1">Figma</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">CSS, Html</Link>
+                              </li>
+                              <li>
+                                <Link to="/jobsingle_v1">BA</Link>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div className="header-ct-center st-1">
+              <div className="header-ct-center">
                 <div className="nav-wrap">
                   <nav id="main-nav" className="main-nav">
-                    <ul id="menu-primary-menu" className="menu">
-                      <li
-                        className={`menu-item menu-item-has-children ${clname}`}
-                      >
+                    <ul id="menu-primary-menu" className={`menu ${clname}`}>
+                      <li className="menu-item menu-item-has-children sub1">
                         <Link to="#">Home </Link>
                         <div className="menu-bar">
                           <ul className="sub-menu-bar">
@@ -77,68 +459,68 @@ function HeaderHome2({ clname = "", handleMobile }) {
                           </ul>
                         </div>
                       </li>
-                      <li className="menu-item menu-item-has-children">
+                      <li className="menu-item menu-item-has-children sub2">
                         <Link to="#">Find jobs </Link>
                         <ul className="sub-menu st1">
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav1">
                             <Link to="#">
                               Jobs Listing
                               <span className="icon-keyboard_arrow_right"></span>
                             </Link>
                             <ul className="nav-sub-menu">
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem1">
                                 <NavLink to="/joblist_v1">List Layout</NavLink>
                               </li>
-                              <li className="nav-menu-item">
-                                <NavLink to="/job-grid">List Sidebar</NavLink>
+                              <li className="nav-menu-item subitem2">
+                                <NavLink to="/job-grid">Grid Layout</NavLink>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem3">
                                 <NavLink to="/job-list-sidebar">
-                                  Grid Layout
+                                  List Sidebar
                                 </NavLink>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem4">
                                 <NavLink to="/job-grid-sidebar">
                                   Grid Sidebar
                                 </NavLink>
                               </li>
 
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem5">
                                 <NavLink to="/joblist_v5">
                                   List Sidebar Fullwidth
                                 </NavLink>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem6">
                                 <NavLink to="/joblist_v6">
                                   Grid Sidebar Fullwidth
                                 </NavLink>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem7">
                                 <NavLink to="/joblist_v7">Top Map</NavLink>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem8">
                                 <NavLink to="/joblist_v8">
                                   Top Map Sidebar
                                 </NavLink>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem9">
                                 <NavLink to="/joblist_v9">
                                   Half Map - V1
                                 </NavLink>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem10">
                                 <NavLink to="/joblist_v10">
                                   Half Map - V2
                                 </NavLink>
                               </li>
                             </ul>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav2">
                             <NavLink to="/jobsingle_v1">
                               Jobs Single - V1
                             </NavLink>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav3">
                             <NavLink to="/jobsingle_v2">
                               Jobs Single - V2
                             </NavLink>
@@ -146,10 +528,10 @@ function HeaderHome2({ clname = "", handleMobile }) {
                         </ul>
                       </li>
 
-                      <li className="menu-item menu-item-has-children">
+                      <li className="menu-item menu-item-has-children sub3">
                         <Link to="#">Employers</Link>
                         <ul className="sub-menu st1">
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav1">
                             <Link to="#">
                               Employers Listing
                               <span className="icon-keyboard_arrow_right"></span>
@@ -177,9 +559,7 @@ function HeaderHome2({ clname = "", handleMobile }) {
                               </li>
 
                               <li className="nav-menu-item">
-                                <NavLink to="/employers_v5">
-                                  Grid Fullwidth
-                                </NavLink>
+                                <NavLink to="/employers_v5">Full width</NavLink>
                               </li>
 
                               <li className="nav-menu-item">
@@ -190,38 +570,33 @@ function HeaderHome2({ clname = "", handleMobile }) {
                               </li>
                             </ul>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav2">
                             <NavLink to="/employersingle_v1">
                               Employers Single - V1
                             </NavLink>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav3">
                             <NavLink to="/employersingle_v2">
                               Employers Single - V2
                             </NavLink>
                           </li>
 
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav4">
                             <NavLink to="/employerreview">
                               Employers Reviews
                             </NavLink>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav5">
                             <NavLink to="/employernotfound">
                               Employers Not Found
                             </NavLink>
                           </li>
-                          <li className="nav-sub">
-                            <NavLink to="/employerdashboard">
-                              Employer Dashboard
-                            </NavLink>
-                          </li>
                         </ul>
                       </li>
-                      <li className="menu-item menu-item-has-children">
+                      <li className="menu-item menu-item-has-children sub4">
                         <Link to="#">Candidates</Link>
                         <ul className="sub-menu st1">
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav1">
                             <Link to="#">
                               Candidates Listing
                               <span className="icon-keyboard_arrow_right"></span>
@@ -261,7 +636,7 @@ function HeaderHome2({ clname = "", handleMobile }) {
                               </li>
                             </ul>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav2">
                             <Link to="#">
                               Sample CV
                               <span className="icon-keyboard_arrow_right"></span>
@@ -282,45 +657,39 @@ function HeaderHome2({ clname = "", handleMobile }) {
                               </li>
                             </ul>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav3">
                             <NavLink to="/candidatesingle_v1">
                               Candidate Single - V1
                             </NavLink>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav4">
                             <NavLink to="/candidatesingle_v2">
                               Candidate Single - V2
                             </NavLink>
                           </li>
-
-                          <li className="nav-sub">
-                            <NavLink to="/candidatedashboard">
-                              Candidates Dashboard
-                            </NavLink>
-                          </li>
                         </ul>
                       </li>
-                      <li className="menu-item menu-item-has-children">
+                      <li className="menu-item menu-item-has-children sub5">
                         <Link to="#">Blog</Link>
                         <ul className="sub-menu st1">
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav1">
                             <Link to="#">
                               Blog Listing
                               <span className="icon-keyboard_arrow_right"></span>
                             </Link>
                             <ul className="nav-sub-menu">
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem1">
                                 <Link to="/blog_v1">Blog List </Link>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem2">
                                 <Link to="/blog_v2">Blog Grid</Link>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem3">
                                 <Link to="/blog_v3">Blog Masonry</Link>
                               </li>
                             </ul>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav2">
                             <Link to="#">
                               Blog Details
                               <span className="icon-keyboard_arrow_right"></span>{" "}
@@ -345,7 +714,7 @@ function HeaderHome2({ clname = "", handleMobile }) {
                           </li>
                         </ul>
                       </li>
-                      <li className="menu-item menu-item-has-children">
+                      <li className="menu-item menu-item-has-children sub6">
                         <Link to="#">Pages</Link>
                         <ul className="sub-menu st1">
                           <li className="nav-sub">
@@ -395,7 +764,7 @@ function HeaderHome2({ clname = "", handleMobile }) {
                   </nav>
                 </div>
               </div>
-              <div className="header-ct-right st-1">
+              <div className="header-ct-right">
                 <div className="header-customize-item help">
                   <Link to="/termsofuse">
                     <span className="icon-help-circle"></span>
@@ -544,4 +913,4 @@ function HeaderHome2({ clname = "", handleMobile }) {
   );
 }
 
-export default HeaderHome2;
+export default Header4;

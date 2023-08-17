@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Header2 from "../components/header/Header2";
 import JobTopmap from "../components/jobs/JobTopmap";
 import dataJobs from "../assets/fakeData/dataJobs";
 import Gotop from "../components/gotop";
@@ -13,6 +12,7 @@ import { Link } from "react-router-dom";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
+import Header4 from "../components/header/Header4";
 
 Joblist_v7.propTypes = {};
 
@@ -531,7 +531,7 @@ function Joblist_v7(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header4 clname="actJob1" handleMobile={handleMobile} />
       <MapSection markers={dataMap} />
       <FormJobs />
       <JobTopmap data={dataJobs} className="inner-jobs-section-two" />

@@ -528,7 +528,7 @@ function Candidates_v6(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header2 clname="actCan1" handleMobile={handleMobile} />
       <Breadcrumb title="Find Candidates" className="breadcrumb-section" />
       <Form3 />
 

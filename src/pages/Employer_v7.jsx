@@ -1,16 +1,15 @@
 import React from "react";
 
-import Header2 from "../components/header/Header2";
 import EmpSec7 from "../components/employer/EmpSec7";
 import dataEm from "../assets/fakeData/dataEmployers";
 import Gotop from "../components/gotop";
-import PopupJob from "../components/popup/PopupEm";
 import { useState } from "react";
 import PopupEm from "../components/popup/PopupEm";
 import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
+import Header4 from "../components/header/Header4";
 
 function Employer_v7(props) {
   const [isShow, setShow] = useState(false);
@@ -537,7 +536,7 @@ function Employer_v7(props) {
         </div>
       </div>
       <PopupEm isShow={isShow} handlePopup={handlePopup} />
-      <Header2 handleMobile={handleMobile} />
+      <Header4 clname="actEm1" handleMobile={handleMobile} />
       <EmpSec7 data={dataEm} isShow={isShow} handlePopup={handlePopup} />
       <Gotop />
     </>

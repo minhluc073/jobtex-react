@@ -547,7 +547,7 @@ function Home_v10(props) {
           </div>
         </div>
       </div>
-      <Header handleMobile={handleMobile} />
+      <Header clname="act1" handleMobile={handleMobile} />
       <Banner10 />
       <Jobs data={dataJobs} className="jobs-section-two" />
       <Location04 data={dataLocation} />

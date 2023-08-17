@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Breadcrumb from "../components/breadcrumb";
-import Header2 from "../components/header/Header2";
 import JobSec2 from "../components/jobs/JobSec2";
 import dataJobs from "../assets/fakeData/dataJobs";
 import Footer from "../components/footer";
@@ -12,6 +11,7 @@ import { Link } from "react-router-dom";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
+import Header4 from "../components/header/Header4";
 
 Joblist_v2.propTypes = {};
 
@@ -539,7 +539,7 @@ function Joblist_v2(props) {
         </div>
       </div>
       <PopupJob isShow={isShow} handlePopup={handlePopup} />
-      <Header2 handleMobile={handleMobile} />
+      <Header4 clname="actJob1" handleMobile={handleMobile} />
       <Breadcrumb title="Find Jobs" className="breadcrumb-section" />
 
       <FormSearch />

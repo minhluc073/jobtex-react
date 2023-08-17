@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Header2 from "../components/header/Header2";
 import Breadcrumb from "../components/breadcrumb";
 import EmpSec3 from "../components/employer/EmpSec3";
 import dataEm from "../assets/fakeData/dataEmployers";
@@ -11,6 +10,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { useState } from "react";
 import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
+import Header4 from "../components/header/Header4";
 
 Employer_v3.propTypes = {};
 
@@ -529,7 +529,7 @@ function Employer_v3(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header4 clname="actEm1" handleMobile={handleMobile} />
       <Breadcrumb title="Employers" className="breadcrumb-section" />
       <EmpSec3 data={dataEm} />
       <Footer />

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Header2 from "../components/header/Header2";
 import CandiSec5 from "../components/candidates/CandiSec5";
 import dataCandi from "../assets/fakeData/dataCandi";
 import Gotop from "../components/gotop";
@@ -8,6 +7,7 @@ import { Link } from "react-router-dom";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
+import Header4 from "../components/header/Header4";
 
 function Candidates_v5(props) {
   const [toggle, setToggle] = useState({
@@ -535,7 +535,7 @@ function Candidates_v5(props) {
         </div>
       </div>
       <Popupcandi handlePopup={handlePopup} />
-      <Header2 handleMobile={handleMobile} />
+      <Header4 clname="actCan1" handleMobile={handleMobile} />
       <CandiSec5 data={dataCandi} handlePopup={handlePopup} />
       <Gotop />
     </>

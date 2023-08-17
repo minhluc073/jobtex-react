@@ -546,7 +546,7 @@ function Home_v1(props) {
         </div>
       </div>
 
-      <Header clname="home1active" handleMobile={handleMobile} />
+      <Header clname="act1" handleMobile={handleMobile} />
       <Banner01 />
 
       <Category data={dataCate} />

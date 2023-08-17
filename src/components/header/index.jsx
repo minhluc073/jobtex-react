@@ -437,11 +437,11 @@ function Header({ clname = "", handleMobile }) {
                   </div>
                 </div>
               </div>
-              <div className={`header-ct-center ${clname}`}>
+              <div className="header-ct-center">
                 <div className="nav-wrap">
                   <nav id="main-nav" className="main-nav">
                     <ul id="menu-primary-menu" className="menu">
-                      <li className="menu-item menu-item-has-children">
+                      <li className={`menu-item menu-item-has-children ${clname}`}>
                         <Link to="#">Home </Link>
                         <div className="menu-bar">
                           <ul className="sub-menu-bar">
@@ -553,7 +553,6 @@ function Header({ clname = "", handleMobile }) {
                           </li>
                         </ul>
                       </li>
-
                       <li className="menu-item menu-item-has-children">
                         <Link to="#">Employers</Link>
                         <ul className="sub-menu st1">

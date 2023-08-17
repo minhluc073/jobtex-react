@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import Header2 from "../components/header/Header2";
 import Footer from "../components/footer";
 import Gotop from "../components/gotop";
 import { Rating } from "react-simple-star-rating";
@@ -8,6 +7,7 @@ import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
+import Header2 from "../components/header/Header2";
 
 EmployerReview.propTypes = {};
 
@@ -531,7 +531,7 @@ function EmployerReview(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header2 clname="actEm4" handleMobile={handleMobile} />
 
       <section>
         <div className="wrap-form-rating-page">

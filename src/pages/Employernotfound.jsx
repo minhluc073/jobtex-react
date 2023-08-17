@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import Header2 from "../components/header/Header2";
 import Breadcrumb from "../components/breadcrumb";
 import Footer from "../components/footer";
 import SortBuy from "../components/dropdown/SortBuy";
@@ -13,6 +12,7 @@ import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
+import Header2 from "../components/header/Header2";
 
 const select1 = [
   { value: "s1", label: "Design & Creative " },
@@ -542,7 +542,7 @@ function Employernotfound(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header2 clname="actEm5" handleMobile={handleMobile} />
       <Breadcrumb title="Employers" className="breadcrumb-section" />
       <section className="inner-employer-section">
         <div className="tf-container">

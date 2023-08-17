@@ -956,7 +956,7 @@ input[type="color"],
   margin-left: 41px;
 }
 
-#main-nav #menu-primary-menu>li.current-item>a::after,
+#main-nav #menu-primary-menu>li.act1>a::after,
 #main-nav #menu-primary-menu>li>a:hover::after {
   width: 100%;
   left: 0;

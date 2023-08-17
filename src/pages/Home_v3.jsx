@@ -550,7 +550,7 @@ function Home_v3(props) {
         </div>
       </div>
 
-      <Header2 handleMobile={handleMobile}/>
+      <Header2 clname="act1" handleMobile={handleMobile}/>
       <Banner03 />
 
       <Partner data={dataPartner} />

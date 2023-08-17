@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Header2 from "../components/header/Header2";
 import Breadcrumb from "../components/breadcrumb";
 import Sample from "../components/sampleCV/Sample";
 import Form from "../components/sampleCV/Form";
@@ -12,6 +11,7 @@ import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Header4 from "../components/header/Header4";
 
 SampleCV.propTypes = {};
 
@@ -531,7 +531,7 @@ function SampleCV(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header4 clname="actCan2" handleMobile={handleMobile} />
       <Breadcrumb title="Sample CV" className="breadcrumb-section" />
 
       <Form />

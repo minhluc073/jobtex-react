@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 import logo from "../../assets/images/logo.png";
@@ -7,14 +7,28 @@ import { Link, NavLink } from "react-router-dom";
 
 Header2.propTypes = {};
 
-function Header2({ handleMobile }) {
+function Header2({ clname = "", handleMobile }) {
   const [activeIndex, setActiveIndex] = useState(null);
   const handleDropdown = (index) => {
     setActiveIndex(index);
   };
 
+  const [scroll, setScroll] = useState(0);
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      const scrollCheck = window.scrollY > 100;
+      if (scrollCheck !== scroll) {
+        setScroll(scrollCheck);
+      }
+    });
+  }, []);
+
   return (
-    <header id="header" className="header header-default">
+    <header
+      id="header"
+      className={`header header-default ${scroll ? "is-fixed is-small" : ""}`}
+    >
       <div className="tf-container ct2">
         <div className="row">
           <div className="col-md-12">
@@ -418,8 +432,8 @@ function Header2({ handleMobile }) {
               <div className="header-ct-center">
                 <div className="nav-wrap">
                   <nav id="main-nav" className="main-nav">
-                    <ul id="menu-primary-menu" className="menu">
-                      <li className="menu-item menu-item-has-children">
+                    <ul id="menu-primary-menu" className={`menu ${clname}`}>
+                      <li className="menu-item menu-item-has-children sub1">
                         <Link to="#">Home </Link>
                         <div className="menu-bar">
                           <ul className="sub-menu-bar">
@@ -459,68 +473,68 @@ function Header2({ handleMobile }) {
                           </ul>
                         </div>
                       </li>
-                      <li className="menu-item menu-item-has-children">
+                      <li className="menu-item menu-item-has-children sub2">
                         <Link to="#">Find jobs </Link>
                         <ul className="sub-menu st1">
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav1">
                             <Link to="#">
                               Jobs Listing
                               <span className="icon-keyboard_arrow_right"></span>
                             </Link>
                             <ul className="nav-sub-menu">
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem1">
                                 <NavLink to="/joblist_v1">List Layout</NavLink>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem2">
                                 <NavLink to="/job-grid">Grid Layout</NavLink>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem3">
                                 <NavLink to="/job-list-sidebar">
                                   List Sidebar
                                 </NavLink>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem4">
                                 <NavLink to="/job-grid-sidebar">
                                   Grid Sidebar
                                 </NavLink>
                               </li>
 
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem5">
                                 <NavLink to="/joblist_v5">
                                   List Sidebar Fullwidth
                                 </NavLink>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem6">
                                 <NavLink to="/joblist_v6">
                                   Grid Sidebar Fullwidth
                                 </NavLink>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem7">
                                 <NavLink to="/joblist_v7">Top Map</NavLink>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem8">
                                 <NavLink to="/joblist_v8">
                                   Top Map Sidebar
                                 </NavLink>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem9">
                                 <NavLink to="/joblist_v9">
                                   Half Map - V1
                                 </NavLink>
                               </li>
-                              <li className="nav-menu-item">
+                              <li className="nav-menu-item subitem10">
                                 <NavLink to="/joblist_v10">
                                   Half Map - V2
                                 </NavLink>
                               </li>
                             </ul>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav2">
                             <NavLink to="/jobsingle_v1">
                               Jobs Single - V1
                             </NavLink>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav3">
                             <NavLink to="/jobsingle_v2">
                               Jobs Single - V2
                             </NavLink>
@@ -528,10 +542,10 @@ function Header2({ handleMobile }) {
                         </ul>
                       </li>
 
-                      <li className="menu-item menu-item-has-children">
+                      <li className="menu-item menu-item-has-children sub3">
                         <Link to="#">Employers</Link>
                         <ul className="sub-menu st1">
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav1">
                             <Link to="#">
                               Employers Listing
                               <span className="icon-keyboard_arrow_right"></span>
@@ -570,38 +584,33 @@ function Header2({ handleMobile }) {
                               </li>
                             </ul>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav2">
                             <NavLink to="/employersingle_v1">
                               Employers Single - V1
                             </NavLink>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav3">
                             <NavLink to="/employersingle_v2">
                               Employers Single - V2
                             </NavLink>
                           </li>
 
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav4">
                             <NavLink to="/employerreview">
                               Employers Reviews
                             </NavLink>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav5">
                             <NavLink to="/employernotfound">
                               Employers Not Found
                             </NavLink>
                           </li>
-                          <li className="nav-sub">
-                            <NavLink to="/employerdashboard">
-                              Employer Dashboard
-                            </NavLink>
-                          </li>
                         </ul>
                       </li>
-                      <li className="menu-item menu-item-has-children">
+                      <li className="menu-item menu-item-has-children sub4">
                         <Link to="#">Candidates</Link>
                         <ul className="sub-menu st1">
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav1">
                             <Link to="#">
                               Candidates Listing
                               <span className="icon-keyboard_arrow_right"></span>
@@ -641,7 +650,7 @@ function Header2({ handleMobile }) {
                               </li>
                             </ul>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav2">
                             <Link to="#">
                               Sample CV
                               <span className="icon-keyboard_arrow_right"></span>
@@ -662,25 +671,19 @@ function Header2({ handleMobile }) {
                               </li>
                             </ul>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav3">
                             <NavLink to="/candidatesingle_v1">
                               Candidate Single - V1
                             </NavLink>
                           </li>
-                          <li className="nav-sub">
+                          <li className="nav-sub subnav4">
                             <NavLink to="/candidatesingle_v2">
                               Candidate Single - V2
                             </NavLink>
                           </li>
-
-                          <li className="nav-sub">
-                            <NavLink to="/candidatedashboard">
-                              Candidates Dashboard
-                            </NavLink>
-                          </li>
                         </ul>
                       </li>
-                      <li className="menu-item menu-item-has-children">
+                      <li className="menu-item menu-item-has-children sub5">
                         <Link to="#">Blog</Link>
                         <ul className="sub-menu st1">
                           <li className="nav-sub">
@@ -725,7 +728,7 @@ function Header2({ handleMobile }) {
                           </li>
                         </ul>
                       </li>
-                      <li className="menu-item menu-item-has-children">
+                      <li className="menu-item menu-item-has-children sub6">
                         <Link to="#">Pages</Link>
                         <ul className="sub-menu st1">
                           <li className="nav-sub">

@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Header2 from "../components/header/Header2";
 import Breadcrumb from "../components/breadcrumb";
 import data from "../assets/fakeData/dataEmployers";
 import { Link } from "react-router-dom";
@@ -11,6 +10,7 @@ import SortBuy from "../components/dropdown/SortBuy";
 import { useState } from "react";
 import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
+import Header4 from "../components/header/Header4";
 
 Employer_v2.propTypes = {};
 
@@ -529,7 +529,7 @@ function Employer_v2(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header4 clname="actEm1" handleMobile={handleMobile} />
       <Breadcrumb title="Employers" className="breadcrumb-section" />
       <Form2 />
 

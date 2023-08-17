@@ -12,6 +12,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { useState } from "react";
 import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
+import Header4 from "../components/header/Header4";
 
 Employer_v5.propTypes = {};
 
@@ -530,7 +531,7 @@ function Employer_v5(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header4 clname="actEm1" handleMobile={handleMobile} />
       <Breadcrumb title="Employers" className="breadcrumb-section" />
       <Form2 />
       <EmpSec5 data={dataEm} />

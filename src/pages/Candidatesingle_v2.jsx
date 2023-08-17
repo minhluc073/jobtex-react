@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Header2 from "../components/header/Header2";
 import Footer from "../components/footer";
 import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
@@ -11,6 +10,7 @@ import Video from "../components/popup/Video";
 import Gallery from "../components/popup/Gallery";
 import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
+import Header4 from "../components/header/Header4";
 
 Candidatesingle_v2.propTypes = {};
 
@@ -538,7 +538,7 @@ function Candidatesingle_v2(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header4 clname="actCan4" handleMobile={handleMobile} />
 
       <section className="wrapper-author-page-title stc2 ">
         <div className="tf-container">

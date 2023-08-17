@@ -545,7 +545,7 @@ function Home_v4(props) {
         </div>
       </div>
 
-      <Header2 handleMobile={handleMobile} />
+      <Header2 clname="act1" handleMobile={handleMobile} />
 
       <Banner04 />
 

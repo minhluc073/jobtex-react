@@ -12117,24 +12117,79 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 149px;
 }
 
-.header-default.is-fixed.is-small .site-logo {
+.header.style-absolute.is-fixed.is-small .site-logo {
   display: none !important;
 }
 
-.header-default.is-fixed.is-small .logo-none {
+.header.style-absolute.is-fixed.is-small .logo-none {
   display: block;
 }
 
 /* active */
-.home1active .menu-item-has-children:first-child .sub-menu-bar li .nav1 {
+/* .home1active .menu-item-has-children:first-child .sub-menu-bar li .nav1 {
   color: #14a077;
-}
+} */
 
 #menu-primary-menu .sub-menu-bar li .active,
 .nav-menu-item .active {
   color: #14a077 !important;
 
 }
+
+#menu-primary-menu.act1 .sub1>a,
+.act1>a,
+#menu-primary-menu.actJob1 .sub2>a,
+#menu-primary-menu.actJob2 .sub2>a,
+#menu-primary-menu.actJob3 .sub2>a,
+#menu-primary-menu.actJob1 .subnav1>a,
+#menu-primary-menu.actJob2 .subnav2>a,
+#menu-primary-menu.actJob3 .subnav3>a,
+#menu-primary-menu.actEm1 .sub3>a,
+#menu-primary-menu.actEm2 .sub3>a,
+#menu-primary-menu.actEm3 .sub3>a,
+#menu-primary-menu.actEm3 .sub3>a,
+#menu-primary-menu.actEm4 .sub3>a,
+#menu-primary-menu.actEm5 .sub3>a,
+#menu-primary-menu.actCan1 .sub4>a,
+#menu-primary-menu.actCan2 .sub4>a,
+#menu-primary-menu.actCan3 .sub4>a,
+#menu-primary-menu.actCan4 .sub4>a,
+#menu-primary-menu.actBlog1 .sub5>a,
+#menu-primary-menu.actBlog2 .sub5>a,
+#menu-primary-menu.actEm1 .subnav1>a,
+#menu-primary-menu.actEm2 .subnav2>a,
+#menu-primary-menu.actEm3 .subnav3>a,
+#menu-primary-menu.actEm4 .subnav4>a,
+#menu-primary-menu.actEm5 .subnav5>a,
+#menu-primary-menu.actCan1 .subnav1>a,
+#menu-primary-menu.actCan2 .subnav2>a,
+#menu-primary-menu.actCan3 .subnav3>a,
+#menu-primary-menu.actCan4 .subnav4>a,
+#menu-primary-menu.actBlog1 .subnav1>a,
+#menu-primary-menu.actBlog2 .subnav2>a {
+  color: #14a077 !important;
+}
+
+#main-nav #menu-primary-menu.act1 .sub1>a::after,
+#main-nav #menu-primary-menu>li.act1>a::after,
+#main-nav #menu-primary-menu.actJob1 .sub2>a::after,
+#main-nav #menu-primary-menu.actJob2 .sub2>a::after,
+#main-nav #menu-primary-menu.actJob3 .sub2>a::after,
+#main-nav #menu-primary-menu.actEm1 .sub3>a::after,
+#main-nav #menu-primary-menu.actEm2 .sub3>a::after,
+#main-nav #menu-primary-menu.actEm3 .sub3>a::after,
+#main-nav #menu-primary-menu.actEm4 .sub3>a::after,
+#main-nav #menu-primary-menu.actEm5 .sub3>a::after,
+#main-nav #menu-primary-menu.actCan1 .sub4>a::after,
+#main-nav #menu-primary-menu.actCan2 .sub4>a::after,
+#main-nav #menu-primary-menu.actCan3 .sub4>a::after,
+#main-nav #menu-primary-menu.actCan4 .sub4>a::after {
+  background: #14a077 !important;
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
 
 .ReactCollapse--collapse {
   transition: height 500ms;

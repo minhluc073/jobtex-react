@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Header2 from "../components/header/Header2";
 import Footer from "../components/footer";
 import Breadcrumb from "../components/breadcrumb";
 import CandiSec1 from "../components/candidates/CandiSec1";
@@ -12,6 +11,7 @@ import { Link } from "react-router-dom";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
+import Header4 from "../components/header/Header4";
 
 Candidates_v1.propTypes = {};
 
@@ -529,7 +529,7 @@ function Candidates_v1(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header4 clname="actCan1" handleMobile={handleMobile} />
       <Breadcrumb title="Find Candidates" className="breadcrumb-section" />
       <Form3 />
       <CandiSec1 data={dataCandi} />

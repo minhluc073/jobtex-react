@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Breadcrumb from "../components/breadcrumb";
-import Header2 from "../components/header/Header2";
+import Header4 from "../components/header/Header4";
 import JobSec1 from "../components/jobs/JobSec1";
 import dataJobs from "../assets/fakeData/dataJobs";
 import Footer from "../components/footer";
@@ -43,7 +43,6 @@ function Joblist_v1(props) {
       : getMobile.classList.remove("modal-menu--open");
   };
 
- 
   return (
     <>
       <div className="menu-mobile-popup">
@@ -531,7 +530,7 @@ function Joblist_v1(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header4 clname="actJob1" handleMobile={handleMobile} />
       <Breadcrumb title="Find Jobs" className="breadcrumb-section" />
 
       <FormSearch />

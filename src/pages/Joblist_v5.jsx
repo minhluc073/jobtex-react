@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Header2 from "../components/header/Header2";
+import Header4 from "../components/header/Header4";
 import JobSec5 from "../components/jobs/JobSec5";
 import dataJobs from "../assets/fakeData/dataJobs";
 import Gotop from "../components/gotop";
@@ -527,7 +527,7 @@ function Joblist_v5(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header4 clname="actJob1" handleMobile={handleMobile} />
       <JobSec5 data={dataJobs} />
       <Gotop />
     </>

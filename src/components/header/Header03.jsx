@@ -5,7 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 
 Header03.propTypes = {};
 
-function Header03({ handleMobile }) {
+function Header03({ clname = "", handleMobile }) {
   const [activeIndex, setActiveIndex] = useState(null);
   const handleDropdown = (index) => {
     setActiveIndex(index);
@@ -35,7 +35,9 @@ function Header03({ handleMobile }) {
                 <div className="nav-wrap">
                   <nav id="main-nav" className="main-nav">
                     <ul id="menu-primary-menu" className="menu">
-                      <li className="menu-item menu-item-has-children">
+                      <li
+                        className={`menu-item menu-item-has-children ${clname}`}
+                      >
                         <Link to="#">Home </Link>
                         <div className="menu-bar">
                           <ul className="sub-menu-bar">

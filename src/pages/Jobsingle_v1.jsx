@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Header2 from "../components/header/Header2";
 import Footer from "../components/footer";
 import Gotop from "../components/gotop";
 import { Link } from "react-router-dom";
@@ -13,6 +12,7 @@ import Video from "../components/popup/Video";
 import Gallery from "../components/popup/Gallery";
 import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
+import Header4 from "../components/header/Header4";
 
 Jobsingle_v1.propTypes = {};
 
@@ -64,8 +64,6 @@ function Jobsingle_v1(props) {
       setTargetHeight(offsetHeight);
     }
   }, [progressRef]);
-
-
 
   return (
     <>
@@ -554,7 +552,7 @@ function Jobsingle_v1(props) {
           </div>
         </div>
       </div>
-      <Header2 handleMobile={handleMobile} />
+      <Header4 clname="actJob2" handleMobile={handleMobile} />
 
       <section className="single-job-thumb">
         <img
