@@ -11698,7 +11698,8 @@ input[type="number"]::-webkit-inner-spin-button {
 .review-job-section-four .wd-review-job.animation-tab,
 .job-article .inner-content.animation-tab,
 .inner.animation-tab,
-.term-content.animation-tab {
+.term-content.animation-tab,
+.animation-tab {
   display: none;
 }
 
@@ -11709,7 +11710,8 @@ input[type="number"]::-webkit-inner-spin-button {
 .review-job-section-four .wd-review-job.react-tabs__tab-panel--selected,
 .job-article .animation-tab.react-tabs__tab-panel--selected,
 .inner.animation-tab.react-tabs__tab-panel--selected,
-.term-content.react-tabs__tab-panel--selected {
+.term-content.react-tabs__tab-panel--selected,
+.animation-tab.react-tabs__tab-panel--selected {
   display: block;
 }
 
@@ -12109,13 +12111,14 @@ input[type="number"]::-webkit-inner-spin-button {
 .zIdex {
   z-index: 100;
 }
+
 .logo-none {
   display: none;
   width: 149px;
 }
 
 .header-default.is-fixed.is-small .site-logo {
-  display: none;
+  display: none !important;
 }
 
 .header-default.is-fixed.is-small .logo-none {
@@ -12134,5 +12137,9 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .ReactCollapse--collapse {
-  transition: height 1000ms;
+  transition: height 500ms;
 }
+
+/* .main-nav.mobile #menu-primary-menu>li>a:hover {
+  color: #121212;
+} */

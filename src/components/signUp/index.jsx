@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 
 function SignUp() {
+  const [showPass, setShowPass] = useState(false);
+  const [showPass2, setShowPass2] = useState(false);
+
   return (
     <section className="account-section">
       <div className="tf-container">
@@ -33,13 +36,18 @@ function SignUp() {
                     </label>
                     <div className="inputs-group auth-pass-inputgroup">
                       <input
-                        type="password"
+                        type={`${showPass ? "text" : "password"}`}
                         className="input-form password-input"
                         defaultValue="userabcdefg123"
                         placeholder="Password"
                         required
                       />
-                      <Link className="icon-eye-off password-addon" />
+                      <Link
+                        className={`password-addon ${
+                          showPass ? "icon-eye" : "icon-eye-off"
+                        }`}
+                        onClick={() => setShowPass(!showPass)}
+                      />
                     </div>
                   </div>
                   <div className="ip">
@@ -48,13 +56,18 @@ function SignUp() {
                     </label>
                     <div className="inputs-group auth-pass-inputgroup">
                       <input
-                        type="password"
+                        type={`${showPass2 ? "text" : "password"}`}
                         className="input-form password-input"
                         defaultValue="userabcdefg123"
                         placeholder="Password"
                         required
                       />
-                      <Link className="icon-eye-off password-addon" />
+                      <Link
+                        className={`password-addon ${
+                          showPass2 ? "icon-eye" : "icon-eye-off"
+                        }`}
+                        onClick={() => setShowPass2(!showPass2)}
+                      />
                     </div>
                   </div>
                   <div className="group-ant-choice st">

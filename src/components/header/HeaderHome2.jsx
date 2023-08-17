@@ -7,11 +7,12 @@ import { Link, NavLink } from "react-router-dom";
 
 HeaderHome2.propTypes = {};
 
-function HeaderHome2(props) {
+function HeaderHome2({ handleMobile }) {
   const [activeIndex, setActiveIndex] = useState(null);
   const handleDropdown = (index) => {
-    setActiveIndex(index);
+    setActiveIndex(index);  
   };
+
   return (
     <header id="header" className="header header-default">
       <div className="tf-container">
@@ -528,7 +529,7 @@ function HeaderHome2(props) {
                   </Link>
                 </div>
               </div>
-              <div className="nav-filter">
+              <div className="nav-filter" onClick={handleMobile}>
                 <div className="nav-mobile">
                   <span></span>
                 </div>

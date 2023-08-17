@@ -5,7 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 
 Header03.propTypes = {};
 
-function Header03(props) {
+function Header03({ handleMobile }) {
   const [activeIndex, setActiveIndex] = useState(null);
   const handleDropdown = (index) => {
     setActiveIndex(index);
@@ -494,7 +494,7 @@ function Header03(props) {
                   </ul>
                 </div>
               </div>
-              <div className="nav-filter">
+              <div className="nav-filter" onClick={handleMobile}>
                 <div className="nav-mobile">
                   <span></span>
                 </div>
