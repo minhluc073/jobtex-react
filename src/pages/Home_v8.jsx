@@ -551,15 +551,15 @@ function Home_v8(props) {
       <Header clname="act1" handleMobile={handleMobile} />
       <Banner08 />
 
-      <Category data={dataCate} />
+      <Category data={dataCate} className="job-category-section" />
 
-      <Jobs data={dataJobs} />
+      <Jobs data={dataJobs} className="jobs-section" />
 
       <BoxIcon />
 
-      <Employer data={dataEm} />
+      <Employer data={dataEm} className="employer-section" />
 
-      <Testimonials data={dataTestimonials} />
+      <Testimonials data={dataTestimonials} className="testimonials-section" />
 
       <Partner data={dataPartner} />
 

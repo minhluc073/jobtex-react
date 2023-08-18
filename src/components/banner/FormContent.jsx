@@ -17,7 +17,7 @@ function FormContent(props) {
         </p>
       </div>
       <div className="form-sl">
-        <form method="post">
+        <form action="/job-list-sidebar">
           <div className="row-group-search home1">
             <div className="form-group-1">
               <input
@@ -40,19 +40,19 @@ function FormContent(props) {
       </div>
       <ul className="list-category text-white">
         <li>
-          <Link to="about-us.html">Designer</Link>
+          <Link to="/aboutus">Designer</Link>
         </li>
         <li className="current">
-          <Link to="about-us.html">Developer</Link>
+          <Link to="/aboutus">Developer</Link>
         </li>
         <li>
-          <Link to="about-us.html">Tester</Link>
+          <Link to="/aboutus">Tester</Link>
         </li>
         <li>
-          <Link to="about-us.html">Writing</Link>
+          <Link to="/aboutus">Writing</Link>
         </li>
         <li>
-          <Link to="about-us.html">Project Manager</Link>
+          <Link to="/aboutus">Project Manager</Link>
         </li>
       </ul>
     </div>

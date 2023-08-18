@@ -7,9 +7,10 @@ JobStyle4.propTypes = {};
 
 function JobStyle4(props) {
   const { data } = props;
+  const { className } = props;
 
   return (
-    <section className="jobs-section-two ">
+    <section className={className}>
       <div className="tf-container">
         <div className="tf-title style-2">
           <div className="group-title">

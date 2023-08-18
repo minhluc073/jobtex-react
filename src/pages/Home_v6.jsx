@@ -550,7 +550,7 @@ function Home_v6(props) {
 
       <FormMap markers={dataMap} />
 
-      <Category data={dataCate} />
+      <Category data={dataCate} className="job-category-section" />
       <Job05 data={dataJobs} />
 
       <Location05 />

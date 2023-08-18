@@ -4,7 +4,6 @@ import Header03 from "../components/header/Header03";
 import Banner09 from "../components/banner/Banner09";
 import Couter from "../components/couter";
 import Category from "../components/category";
-import Jobs from "../components/jobs";
 import dataJobs from "../assets/fakeData/dataJobs";
 import dataCate from "../assets/fakeData/dataCategory";
 import Box09 from "../components/boxicon/Box09";
@@ -20,6 +19,7 @@ import { Link } from "react-router-dom";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
+import JobStyle4 from "../components/jobs/JobStyle4";
 
 Home_v9.propTypes = {};
 
@@ -548,11 +548,12 @@ function Home_v9(props) {
       <Header03 clname="act1" handleMobile={handleMobile} />
       <Banner09 />
       <Couter />
-      <Category data={dataCate} />
+      <Category data={dataCate} className="job-category-section" />
 
-      <Jobs data={dataJobs} />
+      <JobStyle4 data={dataJobs} className='jobs-section-four' />
+
       <Box09 />
-      <ReviewJob09 />
+      <ReviewJob09 className="over-flow-hidden review-job-section-five" />
       <GetApp className="bg-get-app" />
       <Partner data={dataPartner} />
 

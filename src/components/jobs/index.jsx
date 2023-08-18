@@ -14,7 +14,7 @@ function Jobs(props) {
     text: "Find the job that’s perfect for you. about 800+ new jobs everyday",
   });
   return (
-    <section className={`jobs-section-three ${className}`}>
+    <section className={className}>
       <div className="tf-container">
         <div className="tf-title style-2">
           <div className="group-title ">

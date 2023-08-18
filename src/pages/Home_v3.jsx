@@ -550,12 +550,12 @@ function Home_v3(props) {
         </div>
       </div>
 
-      <Header2 clname="act1" handleMobile={handleMobile}/>
+      <Header2 clname="act1" handleMobile={handleMobile} />
       <Banner03 />
 
       <Partner data={dataPartner} />
 
-      <Category data={dataCate} />
+      <Category data={dataCate} className="job-category-section-two" />
 
       <Job03 data={dataJobs} />
 
@@ -563,7 +563,7 @@ function Home_v3(props) {
 
       <About />
 
-      <Employer data={dataEm} />
+      <Employer data={dataEm} className="employer-section-two" />
 
       <Footer />
       <Gotop />

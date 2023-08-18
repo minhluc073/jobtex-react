@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {  Pagination } from "swiper";
+import { Pagination } from "swiper";
 import "swiper/css/bundle";
 
 Testimonials.propTypes = {};
@@ -16,7 +16,7 @@ function Testimonials(props) {
   });
 
   return (
-    <section className={`testimonials-section ${className} `}>
+    <section className={className}>
       <div className="wrap-testimonials over-flow-hidden">
         <div className="tf-container">
           <div className="row">

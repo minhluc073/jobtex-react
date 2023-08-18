@@ -9,6 +9,7 @@ TabJob.propTypes = {};
 
 function TabJob(props) {
   const { data } = props;
+  const { handlePopup } = props;
 
   return (
     <section className="tab-section">
@@ -29,7 +30,7 @@ function TabJob(props) {
                             <Link to="/Jobsingle_v1">{idx.cate}</Link>
                           </h4>
                           <h3>
-                            <Link to="/Jobsingle_v1">{idx.title}</Link>
+                            <Link to="/Jobsingle_v1">{idx.title}</Link>&nbsp;
                             <span className="icon-bolt"></span>
                           </h3>
                           <ul>
@@ -104,6 +105,7 @@ function TabJob(props) {
                               <Link to="/Jobsingle_v1">
                                 Senior UI/UX Designer
                               </Link>
+                              &nbsp;
                               <span className="icon-bolt"></span>
                             </h3>
                             <ul>
@@ -118,10 +120,13 @@ function TabJob(props) {
                             </ul>
                             <div className="button-readmore">
                               <span className="icon-heart"></span>
-                              <a className="btn-apply btn-popup">
+                              <Link
+                                className="btn-apply btn-popup"
+                                onClick={handlePopup}
+                              >
                                 <span className="icon-send"></span>
                                 Apply Now
-                              </a>
+                              </Link>
                             </div>
                           </div>
                         </div>

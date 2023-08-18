@@ -6,7 +6,8 @@ import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 function SignUp() {
   const [showPass, setShowPass] = useState(false);
   const [showPass2, setShowPass2] = useState(false);
-
+  const [showPass3, setShowPass3] = useState(false);
+  const [showPass4, setShowPass4] = useState(false);
   return (
     <section className="account-section">
       <div className="tf-container">
@@ -79,7 +80,7 @@ function SignUp() {
                   <button type="submit">Register</button>
                   <div className="sign-up">
                     Already have an account?
-                    <Link to="/login">Login Here</Link>
+                    <Link to="/login">&nbsp;Login Here</Link>
                   </div>
                 </form>
               </TabPanel>
@@ -101,13 +102,18 @@ function SignUp() {
                     </label>
                     <div className="inputs-group auth-pass-inputgroup">
                       <input
-                        type="password"
+                        type={`${showPass3 ? "text" : "password"}`}
                         className="input-form password-input"
                         defaultValue="userabcdefg123"
                         placeholder="Password"
                         required
                       />
-                      <Link className="icon-eye-off password-addon" />
+                      <Link
+                        className={`password-addon ${
+                          showPass3 ? "icon-eye" : "icon-eye-off"
+                        }`}
+                        onClick={() => setShowPass3(!showPass3)}
+                      />
                     </div>
                   </div>
                   <div className="ip">
@@ -116,13 +122,18 @@ function SignUp() {
                     </label>
                     <div className="inputs-group auth-pass-inputgroup">
                       <input
-                        type="password"
+                        type={`${showPass4 ? "text" : "password"}`}
                         className="input-form password-input"
                         defaultValue="userabcdefg123"
                         placeholder="Password"
                         required
                       />
-                      <Link className="icon-eye-off password-addon" />
+                      <Link
+                        className={`password-addon ${
+                          showPass4 ? "icon-eye" : "icon-eye-off"
+                        }`}
+                        onClick={() => setShowPass4(!showPass4)}
+                      />
                     </div>
                   </div>
                   <div className="group-ant-choice st">
@@ -133,7 +144,8 @@ function SignUp() {
                   </div>
                   <button>Register</button>
                   <div className="sign-up">
-                    Already have an account?<Link to="/login">Login Here</Link>
+                    Already have an account?
+                    <Link to="/login">&nbsp;Login Here</Link>
                   </div>
                 </form>
               </TabPanel>

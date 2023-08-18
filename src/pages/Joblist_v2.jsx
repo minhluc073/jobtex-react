@@ -22,6 +22,7 @@ function Joblist_v2(props) {
   });
   const [isShowMobile, setShowMobile] = useState(false);
   const [isShow, setShow] = useState(false);
+  
   const handlePopup = () => {
     const getPopUp = document.querySelector(".sidebar-popup");
     setShow(!isShow);

@@ -553,7 +553,7 @@ function Home_v10(props) {
       <Location04 data={dataLocation} />
       <GetApp />
       <BoxIcon />
-      <ReviewJob09 />
+      <ReviewJob09 className="review-job-section-six" />
       <Employer data={dataEm} className="employer-section-four" />
       <Partner data={dataPartner} />
 
@@ -561,6 +561,7 @@ function Home_v10(props) {
       <Gotop />
     </>
   );
+  // over-flow-hidden
 }
 
 export default Home_v10;

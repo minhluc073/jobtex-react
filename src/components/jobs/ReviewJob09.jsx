@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 
 ReviewJob09.propTypes = {};
 
-function ReviewJob09(props) {
+function ReviewJob09({ className }) {
   return (
-    <section className="over-flow-hidden review-job-section-five">
+    <section className={className}>
       <div className="tf-container">
         <div className="tf-title style-2">
           <div className="group-title">

@@ -548,16 +548,16 @@ function Checkout(props) {
                   <div className="group-input">
                     <div className="ip">
                       <label>First Name</label>
-                      <input type="text" placeholder="Tony Nguyen |" value="" />
+                      <input type="text" defaultValue="Tony Nguyen |" />
                     </div>
                     <div className="ip">
                       <label>Last Name</label>
-                      <input type="text" placeholder="Last Name" value="" />
+                      <input type="text" defaultValue="Last Name" />
                     </div>
                   </div>
                   <div className="group-input-st1">
                     <label>Country/Region</label>
-                    <input type="text" placeholder="United State" value="" />
+                    <input type="text" defaultValue="United State" />
                   </div>
                   <div className="group-input-st1">
                     <label>Town/City</label>
@@ -664,9 +664,9 @@ function Checkout(props) {
                 </div>
                 <div className="wd-payment">
                   <h5>Payment Method</h5>
-                  <form className="bg-checkout" method="post">
+                  <form className="bg-checkout">
                     <div className="group-input">
-                      <input type="radio" checked name="radio" />
+                      <input type="radio" defaultChecked name="radio" />
                       <div className="inner-right">
                         <label>Direct bank transfer</label>
                         <p>

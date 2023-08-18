@@ -15,7 +15,7 @@ function Employer(props) {
   const { className } = props;
 
   return (
-    <section className={`employer-section ${className} `}>
+    <section className={className}>
       <div className="tf-container">
         <div className="wd-employer">
           <div className="tf-title">

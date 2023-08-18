@@ -7,12 +7,14 @@ Category.propTypes = {};
 
 function Category(props) {
   const { data } = props;
+  const { className } = props;
+
   const [dataBlock] = useState({
     title: "Browse by category",
     text: "Recruitment Made Easy in 100 seconds",
   });
   return (
-    <section className="job-category-section">
+    <section className={className}>
       <div className="tf-container">
         <div className="row">
           <div className="col-md-12">

@@ -549,7 +549,7 @@ function Home_v4(props) {
 
       <Banner04 />
 
-      <JobStyle4 data={dataJobs} />
+      <JobStyle4 data={dataJobs} className="jobs-section-two" />
 
       <IconBox />
 

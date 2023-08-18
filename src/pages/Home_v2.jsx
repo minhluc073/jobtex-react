@@ -21,6 +21,16 @@ function Home_v2(props) {
   });
   const [isShowMobile, setShowMobile] = useState(false);
 
+  const [isShow, setShow] = useState(false);
+
+  const handlePopup = () => {
+    const getPopUp = document.querySelector(".wd-popup-job-apply");
+    setShow(!isShow);
+    !isShow
+      ? getPopUp.classList.add("modal-menu--open")
+      : getPopUp.classList.remove("modal-menu--open");
+  };
+
   const handleToggle = (key) => {
     if (toggle.key === key) {
       setToggle({
@@ -44,6 +54,28 @@ function Home_v2(props) {
 
   return (
     <>
+      <div className="wd-popup-job-apply">
+        <div className="modal-menu__backdrop" onClick={handlePopup} />
+        <div className="content">
+          <h6>Apply For This Job</h6>
+          <form>
+            <label className="label-text">
+              Email<span>*</span>
+            </label>
+            <input type="text" placeholder="Email" required />
+            <div className="group-radio">
+              <input type="radio" />
+              <label>
+                You accept our <Link href="#">Terms</Link> and{" "}
+                <Link href="#">Conditions</Link> and{" "}
+                <Link href="#">Privacy Policy</Link>{" "}
+              </label>
+            </div>
+            <button>Login</button>
+          </form>
+        </div>
+      </div>
+
       <div className="menu-mobile-popup">
         <div className="modal-menu__backdrop" onClick={handleMobile}></div>
         <div className="widget-filter">
@@ -536,7 +568,7 @@ function Home_v2(props) {
 
       <MetaCategory />
 
-      <TabJob data={dataJobs} />
+      <TabJob data={dataJobs} handlePopup={handlePopup} />
       <Footer />
 
       <Gotop />

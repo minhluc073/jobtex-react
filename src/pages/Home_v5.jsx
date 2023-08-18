@@ -549,7 +549,7 @@ function Home_v5(props) {
       <Header2 clname="act1" handleMobile={handleMobile} />
       <Banner05 />
       <Partner data={dataPartner} />
-      <Category data={dataCate} />
+      <Category data={dataCate} className="job-category-section-three" />
       <Job05 data={dataJobs} />
 
       <Location05 />

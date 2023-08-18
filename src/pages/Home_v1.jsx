@@ -19,6 +19,7 @@ import { Collapse } from "react-collapse";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import PopUpForm from "../components/popup";
 
 Home_v1.propTypes = {};
 
@@ -28,6 +29,7 @@ function Home_v1(props) {
     status: false,
   });
   const [isShowMobile, setShowMobile] = useState(false);
+  const [isShowPopUp, setShowPopUp] = useState(false);
 
   const handleToggle = (key) => {
     if (toggle.key === key) {
@@ -58,8 +60,17 @@ function Home_v1(props) {
     window.wow.init();
   }, []);
 
+  useEffect(() => {
+    const getPopup = document.querySelector(".wd-popup-form");
+    setTimeout(() => {
+      getPopup.classList.add("modal-menu--open");
+    }, 3000);
+  }, []);
+
   return (
     <>
+      <PopUpForm />
+
       <div className="menu-mobile-popup">
         <div className="modal-menu__backdrop" onClick={handleMobile}></div>
         <div className="widget-filter">
@@ -549,15 +560,15 @@ function Home_v1(props) {
       <Header clname="act1" handleMobile={handleMobile} />
       <Banner01 />
 
-      <Category data={dataCate} />
+      <Category data={dataCate} className="job-category-section" />
 
-      <Jobs data={dataJobs} />
+      <Jobs data={dataJobs} className="jobs-section-three" />
 
       <BoxIcon />
 
-      <Employer data={dataEm} />
+      <Employer data={dataEm} className="employer-section" />
 
-      <Testimonials data={dataTestimonials} />
+      <Testimonials data={dataTestimonials} className="testimonials-section" />
 
       <Partner data={dataPartner} />
 

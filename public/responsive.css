@@ -10,6 +10,16 @@
 
 @media only screen and (max-width: 1600px) {
 
+  #main-nav #menu-primary-menu .menu-item-has-children .menu-bar li a,
+  #main-nav #menu-primary-menu>li .sub-menu li a {
+    padding: 10px 15px;
+  }
+
+  #main-nav #menu-primary-menu>li .sub-menu,
+  .header-ct-center #main-nav #menu-primary-menu>li .sub-menu.st1 .nav-sub-menu {
+    min-width: 210px;
+
+  }
 
   .sticky-area-wrap .header-ct-center.st-1 {
     justify-content: center;
@@ -79,6 +89,13 @@
   }
 }
 
+@media only screen and (max-width: 1440px) {
+  #main-nav #menu-primary-menu>li .sub-menu {
+    left: unset;
+    right: -50px;
+  }
+}
+
 @media only screen and (max-width: 1400px) {
   .blog.wrap-blog.stc .wrap-post {
     display: flex;
@@ -116,21 +133,9 @@
     left: -80px;
   }
 
-  #main-nav #menu-primary-menu>li .sub-menu {
-    left: unset;
-    right: -50px;
-  }
 
-  #main-nav #menu-primary-menu .menu-item-has-children .menu-bar li a,
-  #main-nav #menu-primary-menu>li .sub-menu li a {
-    padding: 10px 15px;
-  }
 
-  #main-nav #menu-primary-menu>li .sub-menu,
-  .header-ct-center #main-nav #menu-primary-menu>li .sub-menu.st1 .nav-sub-menu {
-    min-width: 210px;
 
-  }
 
   .tf-slider .heading h2 {
     padding-right: 200px;
@@ -691,6 +696,19 @@
   .group-half-map .wd-feature-map.row-height .mapboxgl-map {
     height: 600px !important;
 
+  }
+
+  .cv .form-group .select .Dropdown-placeholder.is-selected {
+    padding-left: 0;
+  }
+
+  .cv .select-location .Dropdown-control,
+  .cv .select .Dropdown-control {
+    padding: 12px;
+  }
+
+  .candidate-form .select-location .Dropdown-placeholder.is-selected {
+    padding-left: 40px;
   }
 
 }

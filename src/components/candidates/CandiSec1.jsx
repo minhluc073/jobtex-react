@@ -87,6 +87,7 @@ function CandiSec1(props) {
                             </h4>
                             <h3>
                               <Link to="/Candidatesingle_v1">{idx.name}</Link>
+                              &nbsp;
                               <span className="icon-bolt"></span>
                             </h3>
                             <ul className="career-info">
@@ -165,6 +166,7 @@ function CandiSec1(props) {
                           </h4>
                           <h3>
                             <Link to="/Candidatesingle_v1">{idx.name}y</Link>
+                            &nbsp;
                             <span className="icon-bolt"></span>
                           </h3>
                           <ul className="career-info">
