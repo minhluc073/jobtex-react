@@ -605,9 +605,9 @@ function Shopsingle(props) {
                     </ul>
                   </div>
                   <h5 className="price">$9.00</h5>
-                  <form method="get">
-                    <div className="group-ip group-col-3">
-                      <div className="quantity cl3">
+                  <form>
+                    <div className="group-ip stc">
+                      <div className="quantity">
                         <span
                           className="btn-quantity minus-btn"
                           onClick={handleMinis}
@@ -627,12 +627,11 @@ function Shopsingle(props) {
                           <i className="icon-plus"></i>
                         </span>
                       </div>
-                      <div className="cl3">
+
+                      <div class="box-btn">
                         <button>Add to cart</button>
-                      </div>
-                      <div className="cl3">
-                        <Link to="#" className="heart-btn">
-                          <i className="icon-heart"></i>
+                        <Link to="#" class="heart-btn">
+                          <i class="icon-heart"></i>
                         </Link>
                       </div>
                     </div>

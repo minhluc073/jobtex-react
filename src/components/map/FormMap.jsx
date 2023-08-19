@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import MapBox, {
-  Marker,
-  Popup,
-  NavigationControl,
-  FullscreenControl,
-} from "react-map-gl";
+import MapBox, { Marker, Popup, NavigationControl } from "react-map-gl";
 
 import "mapbox-gl/dist/mapbox-gl.css";
 import SelectLocation from "../dropdown";
@@ -14,12 +9,6 @@ import "./style.scss";
 
 FormMap.propTypes = {};
 
-const fullscreenControlStyle = {
-  position: "absolute",
-  top: 0,
-  left: 0,
-  padding: "10px",
-};
 const navStyle = {
   position: "absolute",
   top: 36,
@@ -44,10 +33,11 @@ function FormMap({ markers }) {
           initialViewState={{
             ...viewPort,
           }}
-          // onViewportChange={setViewPort}
+          onViewportChange={(viewPort) => setViewPort(viewPort)}
           mapboxAccessToken="pk.eyJ1IjoidGhlbWVzZmxhdCIsImEiOiJjbGt3NGxtYncwa2F2M21saHM3M21uM3h2In0.9NbzjykXil1nELxQ1V8rkA"
           style={{ width: "100%", height: 600 }}
           mapStyle="mapbox://styles/themesflat/cll6d64hy00m901pd1tbe65ra"
+          scrollZoom={false}
         >
           {markers.slice(0, 6).map((item) => {
             return (
@@ -106,11 +96,9 @@ function FormMap({ markers }) {
               </div>
             );
           })}
-          <div className="fullscreen" style={fullscreenControlStyle}>
-            <FullscreenControl />
-          </div>
-          {/* <div className="nav" style={navStyle}> */}
-          <NavigationControl style={navStyle} />
+
+          {/* <div style={navStyle}> */}
+          <NavigationControl position="top-left" />
           {/* </div> */}
         </MapBox>
 

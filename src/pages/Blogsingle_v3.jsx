@@ -690,7 +690,7 @@ function Blogsingle_v3(props) {
                     </ul>
                   </div>
                 </div>
-                <div className="nav-links">
+                <div className="nav-links stc">
                   <div className="post-navigation previous-post">
                     <div className="title-post">
                       <Link to="#" rel="prev">
@@ -973,7 +973,7 @@ function Blogsingle_v3(props) {
           </div>
         </div>
       </section>
-      <Blog01 data={dataBlog} />
+      <Blog01 data={dataBlog} className='inner-news-section-2 stc' />
       <Footer />
       <Gotop />
     </>

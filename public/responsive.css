@@ -1556,6 +1556,12 @@
     right: 0px;
     top: 0px;
   }
+
+  .inner-review-section-two .wd-review-job.contentbox1 {
+    padding-bottom: 0px;
+    padding-top: 50px;
+  }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -2746,6 +2752,10 @@
   .review-job-section-five .shape.ani7,
   .review-job-section-six .shape.ani7 {
     animation: unset;
+  }
+
+  .wd-review-job.thumb2.stc .trader-box {
+    top: 6.6%;
   }
 }
 
