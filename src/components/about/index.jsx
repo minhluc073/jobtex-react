@@ -4,9 +4,9 @@ import CountUp from "react-countup";
 
 About.propTypes = {};
 
-function About(props) {
+function About({className}) {
   return (
-    <section className="review-job-section tf-tab">
+    <section className={className}>
       <div className="tf-container">
         <div className="row">
           <div className="col-lg-6 col-md-12">

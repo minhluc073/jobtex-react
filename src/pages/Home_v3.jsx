@@ -561,7 +561,7 @@ function Home_v3(props) {
 
       <Location data={dataLocation} />
 
-      <About />
+      <About className="review-job-section" />
 
       <Employer data={dataEm} className="employer-section-two" />
 

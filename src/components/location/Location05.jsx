@@ -11,9 +11,9 @@ import lo8 from "../../assets/images/review/lo8.jpg";
 
 Location05.propTypes = {};
 
-function Location05(props) {
+function Location05({ className }) {
   return (
-    <section className="location-section-two background1">
+    <section className={className}>
       <div className="tf-container">
         <div className="row">
           <div className="col-md-12">

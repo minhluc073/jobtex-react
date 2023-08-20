@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import CountUp from "react-countup";
 import { Waypoint } from "react-waypoint";
 
-
 WidgetCounter.propTypes = {};
 
 function WidgetCounter(props) {
@@ -18,7 +17,7 @@ function WidgetCounter(props) {
     <div className={`wd-review-job thumb2 widget-counter ${className}`}>
       <div className="thumb">
         <img
-          src={require("../../assets/images/review/thumb22.png")}
+          src={require("../../assets/images/review/thumb2.png")}
           alt="images"
         />
       </div>

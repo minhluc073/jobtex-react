@@ -555,7 +555,10 @@ function Home_v4(props) {
 
       <ReviewJob />
 
-      <Location04 data={dataLocation} />
+      <Location04
+        data={dataLocation}
+        className="location-section-two background1"
+      />
 
       <Employer data={dataEm} />
       <Partner data={dataPartner} />

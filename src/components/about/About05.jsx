@@ -5,7 +5,7 @@ import { Waypoint } from "react-waypoint";
 
 About05.propTypes = {};
 
-function About05(props) {
+function About05({className}) {
   const [viewPortEntered, setViewPortEntered] = useState(false);
 
   const onVWEnter = () => {
@@ -13,8 +13,7 @@ function About05(props) {
   };
 
   return (
-    <section className="review-job-section stc">
-      <div className="tf-tab">
+    <section className={className}>
         <div className="tf-container">
           <div className="row">
             <div className="col-lg-7 col-md-12 content-tab wow fadeInLeft">
@@ -356,7 +355,6 @@ function About05(props) {
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 }

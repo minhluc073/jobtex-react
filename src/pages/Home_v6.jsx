@@ -582,11 +582,11 @@ function Home_v6(props) {
       </div>
 
       <Category data={dataCate} className="job-category-section" />
-      <Job07 data={dataJobs} className='jobs-tab-section'/>
+      <Job07 data={dataJobs} className="jobs-tab-section" />
 
-      <Location05 />
+      <Location05 className="location-section-four background1" />
 
-      <About />
+      <About className="review-job-section-three" />
       <Employer data={dataEm} className="employer-section-two" />
       <Partner data={dataPartner} />
       <Footer />

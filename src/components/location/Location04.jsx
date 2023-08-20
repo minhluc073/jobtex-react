@@ -6,8 +6,9 @@ Location04.propTypes = {};
 
 function Location04(props) {
   const { data } = props;
+  const { className } = props;
   return (
-    <section className="location-section-two background1">
+    <section className={className}>
       <div className="tf-container">
         <div className="row">
           <div className="col-md-12">

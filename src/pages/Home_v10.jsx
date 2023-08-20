@@ -550,7 +550,10 @@ function Home_v10(props) {
       <Header clname="act1" handleMobile={handleMobile} />
       <Banner10 />
       <Jobs data={dataJobs} className="jobs-section-two" />
-      <Location04 data={dataLocation} />
+      <Location04
+        data={dataLocation}
+        className="background1 location-section-two"
+      />
       <GetApp />
       <BoxIcon />
       <ReviewJob10 className="review-job-section-six" />

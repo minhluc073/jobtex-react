@@ -552,9 +552,9 @@ function Home_v5(props) {
       <Category data={dataCate} className="job-category-section-three" />
       <Job05 data={dataJobs} />
 
-      <Location05 />
+      <Location05 className="background1 location-section-three" />
 
-      <About05 />
+      <About05 className="review-job-section stc" />
       <Couter />
       <Testimonials
         data={dataTestimonials}
