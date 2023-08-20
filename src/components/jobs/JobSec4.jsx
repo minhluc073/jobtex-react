@@ -160,7 +160,7 @@ function JobSec4(props) {
                                 <Link to="/jobsingle_v1">{idx.cate}</Link>
                               </h4>
                               <h3>
-                                <Link to="/jobsingle_v1">{idx.title}</Link>
+                                <Link to="/jobsingle_v1">{idx.title} </Link>
                                 <span className="icon-bolt"></span>
                               </h3>
                               <ul>

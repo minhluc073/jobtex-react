@@ -8,7 +8,7 @@ import Location04 from "../components/location/Location04";
 import dataLocation from "../assets/fakeData/dataLocation";
 import GetApp from "../components/getapp";
 import BoxIcon from "../components/boxicon";
-import ReviewJob09 from "../components/jobs/ReviewJob09";
+import ReviewJob10 from "../components/jobs/ReviewJob10";
 import Employer from "../components/employer";
 import dataEm from "../assets/fakeData/dataEmployers";
 import Partner from "../components/partner";
@@ -553,7 +553,7 @@ function Home_v10(props) {
       <Location04 data={dataLocation} />
       <GetApp />
       <BoxIcon />
-      <ReviewJob09 className="review-job-section-six" />
+      <ReviewJob10 className="review-job-section-six" />
       <Employer data={dataEm} className="employer-section-four" />
       <Partner data={dataPartner} />
 

@@ -1915,10 +1915,12 @@
   margin-left: 231px;
   margin-right: 247px;
 }
+
 .tf-slider.slider-map {
   position: relative;
   z-index: 10;
 }
+
 .tf-sl3.wd-review-job.thumb2 .icon1 {
   right: -37%;
   top: 27.4%;
@@ -3729,7 +3731,7 @@
 .top-map-jobs2 {
   position: sticky;
   top: 0;
-  z-index: 5;
+  z-index: 100;
 }
 
 .top-map-jobs2.candi {
@@ -3759,6 +3761,10 @@
 
 .wd-findjob-filer .group-select {
   display: flex;
+}
+
+.group-select {
+  row-gap: 12px;
 }
 
 .wd-findjob-filer .group-select .sort-buy .Dropdown-control {
@@ -4556,7 +4562,7 @@
   margin-top: -57px;
   position: sticky;
   top: 0;
-  z-index: 5;
+  z-index: 100;
 }
 
 .group-4-8 {
@@ -12286,3 +12292,13 @@ input[type="number"]::-webkit-inner-spin-button {
   -o-animation-timing-function: linear;
 }
 
+.masonry-wrap {
+  column-count: 3;
+  column-gap: 32px;
+  margin-bottom: 40px;
+}
+
+.masonry-wrap .widget-blog-1 {
+  break-inside: avoid;
+
+}

@@ -113,6 +113,15 @@
     padding: 0px !important;
   }
 
+  .blog.wrap-blog.stc .listBlog-wrap .widget-blog-1 {
+    gap: 0;
+  }
+
+  .blog.wrap-blog.stc .listBlog-wrap .widget-blog-1 .content {
+    padding: 25px !important;
+  }
+
+
   .sticky-area-wrap .header-ct-left .logo {
     margin-right: 20px;
   }
@@ -512,12 +521,6 @@
     padding: 0px;
   }
 
-  /* .features-job .inner-box span.icon-heart {
-    padding: 10px;
-    font-size: 12px;
-  } */
-
-
   .tf-slider.sl6 .form-sl,
   .tf-slider.sl8 .form-sl,
   .tf-slider.sl9 .form-sl {
@@ -566,10 +569,7 @@
     width: calc(33.3333% - 32px);
   }
 
-  /* .job-search-form.style2 .form-group:first-child,
-  .job-search-form.style2 .form-group {
-    width: 25%;
-  } */
+
 
   .job-search-form.style2 .form-group.location,
   .cv-form-details.stc2,
@@ -641,7 +641,8 @@
   }
 
   .wd-job-author.stc-em2 {
-    padding: 25px;
+    padding: 25px 10px;
+    align-items: unset;
   }
 
   .wd-job-author.stc-em2 .content .group-btn {
@@ -720,15 +721,24 @@
     margin-left: 26px;
   }
 
+  .masonry-wrap {
+    column-count: 2;
 
+  }
+
+  .job-search-form .form-group-2 .select-location {
+    width: 100%;
+    border-right: 0;
+  }
 
   .nice-select::after {
     right: 4px;
   }
 
-  /* .blog-detail-side-bar-content .nav-links .title-post.text-end {
-    text-align: left !important;
-  } */
+  .job-search-form .form-group-2 .select-location .Dropdown-placeholder.is-selected,
+  .filter-radio p {
+    padding-left: 42px;
+  }
 
   .blog-detail-side-bar-content .nav-links {
     padding: 30px 0 !important;
@@ -1020,7 +1030,7 @@
   }
 
   .blog-section .group-col-3 .cl3 {
-    width: calc(100% - 32px) !important;
+    width: calc(50% - 32px) !important;
   }
 
   .group-col-4 .cl4 {
@@ -1031,16 +1041,25 @@
     flex-direction: column;
   }
 
+  .blog .list-blog.listBlog-wrap .widget-blog-1 {
+    flex-direction: row;
+  }
+
   .widget-blog-1 .content {
     padding: 0px 27px 27px !important;
   }
 
+  .widget-blog-1.cl3.stc .content,
   .widget-blog-1 .content.stc {
     padding: 24px !important;
   }
 
   .widget-blog-1 img {
     width: 100%;
+  }
+
+  .listBlog-wrap .widget-blog-1 img {
+    width: 50%;
   }
 
   .pagination-job.style-1 {
@@ -1569,6 +1588,14 @@
     flex-wrap: wrap;
   }
 
+  .blog .list-blog.listBlog-wrap .widget-blog-1 {
+    flex-direction: column;
+  }
+
+  .listBlog-wrap .widget-blog-1 img {
+    width: 100%;
+  }
+
   .wrap-col-3.st1 {
     margin-left: -52px;
   }
@@ -2000,6 +2027,14 @@
 }
 
 @media only screen and (max-width: 700px) {
+  .masonry-wrap {
+    column-count: 1;
+
+  }
+
+  .masonry-wrap .widget-blog-1.style-1:last-child {
+    margin-bottom: 0;
+  }
 
   .tf-slider.sl8,
   .tf-slider.sl6 {
@@ -2098,6 +2133,8 @@
     flex-direction: column;
   }
 
+
+
   .widget-blog-1 .content {
     padding: 0px 10px !important;
   }
@@ -2120,6 +2157,11 @@
 
   .widget-side-bar .recent-posts .widget-blog-1 {
     align-items: center;
+  }
+
+  .blog-section .group-col-3 .cl3 {
+    width: calc(100% - 32px) !important;
+
   }
 }
 

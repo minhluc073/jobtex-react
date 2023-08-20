@@ -8,8 +8,9 @@ Job07.propTypes = {};
 
 function Job07(props) {
   const { data } = props;
+  const { className } = props;
   return (
-    <section className="jobs-section">
+    <section className={className}>
       <Tabs className="wrap-testimonials style-1 over-flow-hidden tf-tab">
         <div className="tf-container">
           <div className="tf-title style-3 margin">

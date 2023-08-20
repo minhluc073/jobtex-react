@@ -20,7 +20,7 @@ function BlogSec2(props) {
                     </div>
                     <div className="content">
                     <span className="sub-title">{idx.cate}</span>
-                    <h3 className="main-title"><Link to="blog-detail.html">{idx.title}</Link></h3>
+                    <h3 className="main-title"><Link to="/blogsingle_v1">{idx.title}</Link></h3>
                     <ul className="meta">
                         <li className="author"><span>by</span>{idx.author}</li>
                         <li className="time"><span className="icon-calendar"></span> {idx.time}</li>

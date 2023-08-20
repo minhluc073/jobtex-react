@@ -973,7 +973,7 @@ function Blogsingle_v3(props) {
           </div>
         </div>
       </section>
-      <Blog01 data={dataBlog} className='inner-news-section-2 stc' />
+      <Blog01 data={dataBlog} className="inner-news-section-2 stc" />
       <Footer />
       <Gotop />
     </>

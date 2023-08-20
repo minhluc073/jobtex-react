@@ -4,7 +4,7 @@ import Header2 from "../components/header/Header2";
 import MapSection from "../components/map";
 import Category from "../components/category";
 import dataCate from "../assets/fakeData/dataCategory";
-import Job05 from "../components/jobs/Job05";
+import Job07 from "../components/jobs/Job07";
 import dataJobs from "../assets/fakeData/dataJobs";
 import Location05 from "../components/location/Location05";
 import About from "../components/about";
@@ -551,7 +551,6 @@ function Home_v6(props) {
 
       <MapSection markers={dataMap} />
 
-
       <div className="tf-slider slider-map style-1">
         <div className="tf-container">
           <div className="content">
@@ -583,7 +582,7 @@ function Home_v6(props) {
       </div>
 
       <Category data={dataCate} className="job-category-section" />
-      <Job05 data={dataJobs} />
+      <Job07 data={dataJobs} className='jobs-tab-section'/>
 
       <Location05 />
 

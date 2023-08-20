@@ -8,8 +8,6 @@ import SortBuy from "../dropdown/SortBuy";
 JobSec3.propTypes = {};
 
 function JobSec3(props) {
- 
-
   const { data } = props;
   return (
     <section className="inner-employer-section-two">
@@ -91,7 +89,7 @@ function JobSec3(props) {
                                 <Link to="/jobsingle_v1">{idx.cate}</Link>
                               </h4>
                               <h3>
-                                <Link to="/jobsingle_v1">{idx.title}</Link>
+                                <Link to="/jobsingle_v1">{idx.title} </Link>
                                 <span className="icon-bolt"></span>
                               </h3>
                               <ul>

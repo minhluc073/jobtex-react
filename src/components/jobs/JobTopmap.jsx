@@ -175,7 +175,7 @@ function JobTopmap(props) {
                             <Link to="/Jobsingle_v1">{idx.cate}</Link>
                           </h4>
                           <h3>
-                            <Link to="/Jobsingle_v1">{idx.title}</Link>
+                            <Link to="/Jobsingle_v1">{idx.title} </Link>
                             <span className="icon-bolt"></span>
                           </h3>
                           <div className="star">

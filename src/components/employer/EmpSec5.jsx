@@ -88,6 +88,7 @@ function EmpSec5(props) {
                           </div>
                           <h3>
                             <Link to="/Employersingle_v1">{idx.title}</Link>
+                            &nbsp;
                             <span className="icon-bolt"></span>
                           </h3>
                           <p className="info">
@@ -140,6 +141,7 @@ function EmpSec5(props) {
                           </div>
                           <h3>
                             <Link to="/Employersingle_v1">{idx.title}</Link>
+                            &nbsp;
                             <span className="icon-bolt"></span>
                           </h3>
                           <p className="info">

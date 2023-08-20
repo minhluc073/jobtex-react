@@ -553,7 +553,7 @@ function Home_v7(props) {
       <Banner07 />
       <Category07 data={dataCate} />
 
-      <Job07 data={dataJobs} />
+      <Job07 data={dataJobs} className="jobs-section" />
 
       <Location data={dataLocation} />
       <Box07 />
@@ -562,7 +562,7 @@ function Home_v7(props) {
         <Couter className="background1" />
       </div>
 
-      <Blog01 data={dataBlog} />
+      <Blog01 data={dataBlog} className="news-section" />
       <Partner data={dataPartner} />
       <Footer />
       <Gotop />

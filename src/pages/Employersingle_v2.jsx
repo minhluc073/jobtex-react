@@ -578,7 +578,7 @@ function Employersingle_v2(props) {
                   />
                   <div className="content">
                     <h3>
-                      <Link to="#">Avitex Agency</Link>
+                      <Link to="#">Avitex Agency</Link>&nbsp;
                       <span className="icon-bolt"></span>
                     </h3>
                     <div className="job-info">
