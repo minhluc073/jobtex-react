@@ -16,7 +16,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import Gotop from "../components/gotop";
 import { Collapse } from "react-collapse";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import PopUpForm from "../components/popup";
@@ -24,15 +24,11 @@ import PopUpForm from "../components/popup";
 Home_v1.propTypes = {};
 
 function Home_v1(props) {
-  const location = useLocation();
-  console.log(location);
-
   const [toggle, setToggle] = useState({
     key: "",
     status: false,
   });
   const [isShowMobile, setShowMobile] = useState(false);
-  const [isShowPopUp, setShowPopUp] = useState(false);
 
   const handleToggle = (key) => {
     if (toggle.key === key) {
@@ -64,13 +60,11 @@ function Home_v1(props) {
   }, []);
 
   useEffect(() => {
-    if (!location?.state) {
-      const getPopup = document.querySelector(".wd-popup-form");
-      setTimeout(() => {
-        getPopup.classList.add("modal-menu--open");
-      }, 3000);
-    }
-  }, [location?.state]);
+    const getPopup = document.querySelector(".wd-popup-form");
+    setTimeout(() => {
+      getPopup.classList.add("modal-menu--open");
+    }, 3000);
+  }, []);
 
   return (
     <>

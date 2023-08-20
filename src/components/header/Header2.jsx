@@ -438,14 +438,7 @@ function Header2({ clname = "", handleMobile }) {
                         <div className="menu-bar">
                           <ul className="sub-menu-bar">
                             <li className="menu-item">
-                              <NavLink
-                                to={{
-                                  pathname: "/",
-                                  state: { prevPath: true },
-                                }}
-                              >
-                                Home Page 01{" "}
-                              </NavLink>
+                              <NavLink to="/">Home Page 01 </NavLink>
                             </li>
                             <li className="menu-item">
                               <NavLink to="/home_v2">Home Page 02 </NavLink>
