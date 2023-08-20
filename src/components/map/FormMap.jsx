@@ -9,12 +9,7 @@ import "./style.scss";
 
 FormMap.propTypes = {};
 
-const navStyle = {
-  position: "absolute",
-  top: 36,
-  left: 0,
-  padding: "10px",
-};
+
 
 function FormMap({ markers }) {
   const [popupOpen, setPopupOpen] = useState({});
@@ -33,7 +28,6 @@ function FormMap({ markers }) {
           initialViewState={{
             ...viewPort,
           }}
-          onViewportChange={(viewPort) => setViewPort(viewPort)}
           mapboxAccessToken="pk.eyJ1IjoidGhlbWVzZmxhdCIsImEiOiJjbGt3NGxtYncwa2F2M21saHM3M21uM3h2In0.9NbzjykXil1nELxQ1V8rkA"
           style={{ width: "100%", height: 600 }}
           mapStyle="mapbox://styles/themesflat/cll6d64hy00m901pd1tbe65ra"
@@ -97,9 +91,7 @@ function FormMap({ markers }) {
             );
           })}
 
-          {/* <div style={navStyle}> */}
           <NavigationControl position="top-left" />
-          {/* </div> */}
         </MapBox>
 
         <div className="tf-container">

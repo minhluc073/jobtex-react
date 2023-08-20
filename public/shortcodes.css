@@ -12283,6 +12283,3 @@ input[type="number"]::-webkit-inner-spin-button {
   -o-animation-timing-function: linear;
 }
 
-.mapboxgl-control-container {
-  display: block;
-}

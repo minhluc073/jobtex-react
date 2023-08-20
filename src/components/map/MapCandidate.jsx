@@ -1,29 +1,11 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import MapBox, {
-  Marker,
-  Popup,
-  NavigationControl,
-  FullscreenControl,
-} from "react-map-gl";
+import MapBox, { Marker, Popup, NavigationControl } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { Link } from "react-router-dom";
 import "./style.scss";
 
 MapCandidate.propTypes = {};
-
-const fullscreenControlStyle = {
-  position: "absolute",
-  top: 0,
-  left: 0,
-  padding: "10px",
-};
-const navStyle = {
-  position: "absolute",
-  top: 36,
-  left: 0,
-  padding: "10px",
-};
 
 function MapCandidate({ markers, className }) {
   const [popupOpen, setPopupOpen] = useState({});
@@ -42,7 +24,7 @@ function MapCandidate({ markers, className }) {
           initialViewState={{
             ...viewPort,
           }}
-          // onViewportChange={setViewPort}
+          scrollZoom={false}
           mapboxAccessToken="pk.eyJ1IjoidGhlbWVzZmxhdCIsImEiOiJjbGt3NGxtYncwa2F2M21saHM3M21uM3h2In0.9NbzjykXil1nELxQ1V8rkA"
           style={{ width: "100%", height: 600 }}
           mapStyle="mapbox://styles/themesflat/cll6d64hy00m901pd1tbe65ra"
@@ -81,9 +63,6 @@ function MapCandidate({ markers, className }) {
                     closeButton={true}
                     offsetLeft={10}
                   >
-                    {/* <span style={{ fontSize: "1vw", fontFamily: "Poppins" }}>
-                      {item.name}
-                    </span> */}
                     <div className="marker-popup">
                       <img src={item.img} alt="img" />
                       <div className="content">
@@ -107,12 +86,7 @@ function MapCandidate({ markers, className }) {
               </div>
             );
           })}
-          <div className="fullscreen" style={fullscreenControlStyle}>
-            <FullscreenControl />
-          </div>
-          {/* <div className="nav" style={navStyle}> */}
-          <NavigationControl style={navStyle} />
-          {/* </div> */}
+          <NavigationControl position="top-left" />
         </MapBox>
       </div>
     </section>
