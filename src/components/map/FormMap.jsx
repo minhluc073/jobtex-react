@@ -9,8 +9,6 @@ import "./style.scss";
 
 FormMap.propTypes = {};
 
-
-
 function FormMap({ markers }) {
   const [popupOpen, setPopupOpen] = useState({});
 
@@ -22,106 +20,77 @@ function FormMap({ markers }) {
 
   return (
     <section className="wd-feature-map">
-      <div className="tf-slider slider-map style-1">
-        <MapBox
-          mapLib={import("mapbox-gl")}
-          initialViewState={{
-            ...viewPort,
-          }}
-          mapboxAccessToken="pk.eyJ1IjoidGhlbWVzZmxhdCIsImEiOiJjbGt3NGxtYncwa2F2M21saHM3M21uM3h2In0.9NbzjykXil1nELxQ1V8rkA"
-          style={{ width: "100%", height: 600 }}
-          mapStyle="mapbox://styles/themesflat/cll6d64hy00m901pd1tbe65ra"
-          scrollZoom={false}
-        >
-          {markers.slice(0, 6).map((item) => {
-            return (
-              <div key={item.id}>
-                <Marker
+      <MapBox
+        mapLib={import("mapbox-gl")}
+        initialViewState={{
+          ...viewPort,
+        }}
+        mapboxAccessToken="pk.eyJ1IjoidGhlbWVzZmxhdCIsImEiOiJjbGt3NGxtYncwa2F2M21saHM3M21uM3h2In0.9NbzjykXil1nELxQ1V8rkA"
+        style={{ width: "100%", height: 600 }}
+        mapStyle="mapbox://styles/themesflat/cll6d64hy00m901pd1tbe65ra"
+        scrollZoom={false}
+      >
+        {markers.slice(0, 6).map((item) => {
+          return (
+            <div key={item.id}>
+              <Marker
+                longitude={item.longitude}
+                latitude={item.latitude}
+                anchor="center"
+                closeOnClick={false}
+                onClick={(e) => {
+                  setPopupOpen((prevItem) => ({
+                    ...prevItem,
+                    [item.id]: !prevItem[item.id],
+                  }));
+                }}
+              >
+                <div className="marker marker-logo-cty">
+                  <img
+                    src={item.img}
+                    alt="img"
+                    style={{ width: "28px", height: "28px" }}
+                  />
+                </div>
+              </Marker>
+              {popupOpen[item.id] && (
+                <Popup
+                  key={item.id}
                   longitude={item.longitude}
                   latitude={item.latitude}
                   anchor="center"
+                  onClose={() => setPopupOpen(false)}
                   closeOnClick={false}
-                  onClick={(e) => {
-                    setPopupOpen((prevItem) => ({
-                      ...prevItem,
-                      [item.id]: !prevItem[item.id],
-                    }));
-                  }}
+                  closeButton={true}
+                  offsetLeft={10}
                 >
-                  <div className="marker marker-logo-cty">
-                    <img
-                      src={item.img}
-                      alt="img"
-                      style={{ width: "28px", height: "28px" }}
-                    />
-                  </div>
-                </Marker>
-                {popupOpen[item.id] && (
-                  <Popup
-                    key={item.id}
-                    longitude={item.longitude}
-                    latitude={item.latitude}
-                    anchor="center"
-                    onClose={() => setPopupOpen(false)}
-                    closeOnClick={false}
-                    closeButton={true}
-                    offsetLeft={10}
-                  >
-                    {/* <span style={{ fontSize: "1vw", fontFamily: "Poppins" }}>
+                  {/* <span style={{ fontSize: "1vw", fontFamily: "Poppins" }}>
                       {item.name}
                     </span> */}
-                    <div className="marker-popup">
-                      <img src={item.img} alt="img" />
-                      <div className="content">
-                        <h4>{item.title}</h4>
-                        <h3>
-                          <Link to="/Jobsingle_v1">
-                            {item.name}&nbsp;<span className="icon-bolt"></span>
-                          </Link>
-                        </h3>
-                        <p>
-                          <i className="icon-map-pin"></i>&nbsp;
-                          {item.address}
-                        </p>
-                      </div>
+                  <div className="marker-popup">
+                    <img src={item.img} alt="img" />
+                    <div className="content">
+                      <h4>{item.title}</h4>
+                      <h3>
+                        <Link to="/Jobsingle_v1">
+                          {item.name}&nbsp;<span className="icon-bolt"></span>
+                        </Link>
+                      </h3>
+                      <p>
+                        <i className="icon-map-pin"></i>&nbsp;
+                        {item.address}
+                      </p>
                     </div>
-                  </Popup>
-                )}
-              </div>
-            );
-          })}
-
-          <NavigationControl position="top-left" />
-        </MapBox>
-
-        <div className="tf-container">
-          <div className="content">
-            <div className="form-sl">
-              <form method="post">
-                <div className="row-group-search home1 st">
-                  <div className="form-group-1">
-                    <span className="icon-search search-job"></span>
-                    <input
-                      type="text"
-                      className="input-filter-search"
-                      placeholder="Job title, key words or company"
-                    />
                   </div>
-                  <div className="form-group-2">
-                    <span className="icon-map-pin"></span>
-                    <SelectLocation />
-                  </div>
-                  <div className="form-group-4">
-                    <button type="submit" className="btn btn-find">
-                      Find Jobs
-                    </button>
-                  </div>
-                </div>
-              </form>
+                </Popup>
+              )}
             </div>
-          </div>
-        </div>
-      </div>
+          );
+        })}
+
+        <NavigationControl position="top-left" />
+      </MapBox>
+    
     </section>
   );
 }

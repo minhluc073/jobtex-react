@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Header2 from "../components/header/Header2";
-import FormMap from "../components/map/FormMap";
+import MapSection from "../components/map";
 import Category from "../components/category";
 import dataCate from "../assets/fakeData/dataCategory";
 import Job05 from "../components/jobs/Job05";
@@ -21,6 +21,7 @@ import { Link } from "react-router-dom";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
+import SelectLocation from "../components/dropdown";
 
 Home_v6.propTypes = {};
 
@@ -548,7 +549,38 @@ function Home_v6(props) {
       </div>
       <Header2 clname="act1" handleMobile={handleMobile} />
 
-      <FormMap markers={dataMap} />
+      <MapSection markers={dataMap} />
+
+
+      <div className="tf-slider slider-map style-1">
+        <div className="tf-container">
+          <div className="content">
+            <div className="form-sl">
+              <form method="post">
+                <div className="row-group-search home1 st">
+                  <div className="form-group-1">
+                    <span className="icon-search search-job"></span>
+                    <input
+                      type="text"
+                      className="input-filter-search"
+                      placeholder="Job title, key words or company"
+                    />
+                  </div>
+                  <div className="form-group-2">
+                    <span className="icon-map-pin"></span>
+                    <SelectLocation />
+                  </div>
+                  <div className="form-group-4">
+                    <button type="submit" className="btn btn-find">
+                      Find Jobs
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <Category data={dataCate} className="job-category-section" />
       <Job05 data={dataJobs} />
