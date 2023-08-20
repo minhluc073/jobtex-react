@@ -32,11 +32,11 @@ function Location(props) {
                   slidesPerView: 2,
                   spaceBetween: 19.5,
                 },
-                992: {
+                991: {
                   slidesPerView: 3,
                   spaceBetween: 19.5,
                 },
-                1200: {
+                1400: {
                   slidesPerView: 4,
                   spaceBetween: 19.5,
                 },
