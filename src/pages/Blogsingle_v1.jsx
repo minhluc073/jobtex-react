@@ -9,7 +9,6 @@ import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { Collapse } from "react-collapse";
 import logo from "../assets/images/logo.png";
 import { useState } from "react";
-import Header4 from "../components/header/Header4";
 
 Blogsingle_v1.propTypes = {};
 
