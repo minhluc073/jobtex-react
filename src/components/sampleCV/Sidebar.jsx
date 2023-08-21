@@ -35,7 +35,7 @@ function Sidebar(props) {
         <div className="row">
           <div className="col-lg-4">
             <div className="widget-filter po-sticky m-bottom">
-              <form action="GET">
+              <form>
                 <div className="group-form">
                   <label className="title">Language</label>
                   <div className="group-input">

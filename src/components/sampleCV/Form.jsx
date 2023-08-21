@@ -32,7 +32,7 @@ function Form(props) {
     <section className="form-sticky stc2 ">
       <div className="tf-container">
         <div className="job-search-form inner-form-map style2 cv">
-          <form method="post">
+          <form>
             <div className="row-group-search st2">
               <div className="form-group">
                 <Dropdown

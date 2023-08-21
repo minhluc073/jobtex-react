@@ -753,7 +753,7 @@ function Candidatesingle_v2(props) {
 
                     <div className="form-candidate">
                       <h5>Contact Candidate</h5>
-                      <form method="post">
+                      <form>
                         <div className="group-input">
                           <div className="ip">
                             <label>Subject</label>
