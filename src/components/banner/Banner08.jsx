@@ -21,7 +21,7 @@ function Banner08(props) {
                 </p>
               </div>
               <div className="form-sl">
-                <form method="post">
+                <form action="/job-list-sidebar">
                   <div className="row-group-search home1 st">
                     <div className="form-group-1">
                       <span className="icon-search search-job"></span>

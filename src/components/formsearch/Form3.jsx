@@ -31,7 +31,7 @@ function Form3(props) {
     <section className="form-sticky stc2">
       <div className="tf-container">
         <div className="candidate-form job-search-form inner-form-map style2">
-          <form method="post">
+          <form>
             <div className="row-group-search">
               <div className="form-group">
                 <input

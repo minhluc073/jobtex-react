@@ -28,7 +28,7 @@ function Form2(props) {
     <section className="form-sticky stc2">
       <div className="tf-container">
         <div className="job-search-form st1 employers-form">
-          <form method="post">
+          <form>
             <div className="row-group-search inner-form">
               <div className="form-group-1 form-style-1">
                 <input
@@ -41,7 +41,6 @@ function Form2(props) {
               <div className="form-group-2 form-style-1">
                 <span className="icon-map-pin"></span>
                 <SelectLocation />
-            
               </div>
               <div className="form-group-3 form-style-1">
                 <Dropdown
@@ -49,7 +48,6 @@ function Form2(props) {
                   className="react-dropdown select-location"
                   value={options1[0]}
                 />
-            
               </div>
               <div className="form-group-4 form-style-1">
                 <Dropdown
@@ -57,7 +55,6 @@ function Form2(props) {
                   className="react-dropdown select-location"
                   value={options2[0]}
                 />
-               
               </div>
               <div className="form-group-5 form-style-1">
                 <Dropdown
@@ -65,7 +62,6 @@ function Form2(props) {
                   className="react-dropdown select-location"
                   value={options3[0]}
                 />
-              
               </div>
               <div className="form-group-6">
                 <button className="btn btn-find">Find Employers</button>

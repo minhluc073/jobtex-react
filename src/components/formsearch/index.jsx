@@ -15,7 +15,7 @@ function FormSearch(props) {
     <section className="form-sticky stc1">
       <div className="tf-container">
         <div className="job-search-form inner-form-map st1">
-          <form method="post">
+          <form action="/job-list-sidebar">
             <div className="row-group-search">
               <div className="form-group-1">
                 <input

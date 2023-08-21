@@ -871,70 +871,7 @@ function Header({ clname = "", handleMobile }) {
                 <div className="header-customize-item account">
                   <img src={avt} alt="" />
                   <div className="name">Candidates</div>
-                  {/* <div className="sub-account">
-                    <div className="sub-account-item">
-                      <Link to="dashboard/candidates-dashboard.html">
-                        <span className="icon-dashboard"></span>Dashboard
-                      </Link>
-                    </div>
-                    <div className="sub-account-item">
-                      <Link to="dashboard/candidates-profile-setting.html">
-                        <span className="icon-profile"></span> Profile
-                      </Link>
-                    </div>
-                    <div className="sub-account-item">
-                      <Link to="dashboard/candidates-resumes.html">
-                        <span className="icon-resumes"></span> Resumes
-                      </Link>
-                    </div>
-                    <div className="sub-account-item">
-                      <Link to="dashboard/candidates-my-applied.html">
-                        <span className="icon-my-apply"></span> My Applied
-                      </Link>
-                    </div>
-                    <div className="sub-account-item">
-                      <Link to="dashboard/candidates-save-jobs.html">
-                        <span className="icon-work"></span> Saved Jobs
-                      </Link>
-                    </div>
-                    <div className="sub-account-item">
-                      <Link to="dashboard/candidates-alerts-jobs.html">
-                        <span className="icon-bell1"></span> Candidate Alerts
-                      </Link>
-                    </div>
-                    <div className="sub-account-item">
-                      <Link to="dashboard/candidates-messages.html">
-                        <span className="icon-chat"></span> Messages
-                      </Link>
-                    </div>
-                    <div className="sub-account-item">
-                      <Link to="dashboard/candidates-following-employers.html">
-                        <span className="icon-following"></span>
-                        Following Employers
-                      </Link>
-                    </div>
-                    <div className="sub-account-item">
-                      <Link to="dashboard/candidates-meetings.html">
-                        <span className="icon-meeting"></span> Meeting
-                      </Link>
-                    </div>
-                    <div className="sub-account-item">
-                      <Link to="dashboard/candidates-change-passwords.html">
-                        <span className="icon-change-passwords"></span>
-                        Change Passwords
-                      </Link>
-                    </div>
-                    <div className="sub-account-item">
-                      <Link to="dashboard/candidates-delete-profile.html">
-                        <span className="icon-trash"></span> Delete Profile
-                      </Link>
-                    </div>
-                    <div className="sub-account-item">
-                      <Link to="#">
-                        <span className="icon-log-out"></span> Log Out
-                      </Link>
-                    </div>
-                  </div> */}
+      
                 </div>
                 <div className="header-customize-item button">
                   <Link to="/">Upload Resume</Link>
