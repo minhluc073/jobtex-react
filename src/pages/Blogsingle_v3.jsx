@@ -796,7 +796,7 @@ function Blogsingle_v3(props) {
                     </article>
                   </div>
                 </div>
-                <form method="post" className="wd-form-rating">
+                <form className="wd-form-rating">
                   <div className="row">
                     <div className="col-lg-12">
                       <div className="form-rating-heading">
@@ -856,8 +856,6 @@ function Blogsingle_v3(props) {
               <div className="widget-side-bar stc">
                 <form
                   role="search"
-                  method="get"
-                  action="#"
                   className="widget-block-search-2"
                 >
                   <div className="widget-block-search-2-wrap">

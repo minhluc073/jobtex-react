@@ -786,7 +786,7 @@ function Blogsingle_v1(props) {
                 </article>
               </div>
             </div>
-            <form method="post" className="wd-form-rating">
+            <form className="wd-form-rating">
               <div className="row">
                 <div className="col-lg-12">
                   <div className="form-rating-heading">
