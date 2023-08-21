@@ -551,7 +551,7 @@ function Employernotfound(props) {
               <div className="group-4-8">
                 <div className="cl4">
                   <div className="widget-filter st2  style-scroll">
-                    <form action="GET">
+                    <form>
                       <div className="group-form">
                         <label className="title">Search Company</label>
                         <div className="group-input search-ip">

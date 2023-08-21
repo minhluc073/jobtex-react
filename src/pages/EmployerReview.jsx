@@ -536,7 +536,7 @@ function EmployerReview(props) {
       <section>
         <div className="wrap-form-rating-page">
           <div className="wd-form-rating-page">
-            <form method="POST">
+            <form action="/employerreview">
               <div className="form-title">
                 <h1>Please help answer these questions about your employer</h1>
                 <h4>

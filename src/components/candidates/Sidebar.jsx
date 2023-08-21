@@ -98,7 +98,7 @@ function Sidebar(props) {
                 />
               </div>
             </div>
-            <button type="submit">Find Employers</button>
+            <button type="submit">Find Candidates</button>
           </form>
         </div>
         <div className="widget-filter no-scroll">

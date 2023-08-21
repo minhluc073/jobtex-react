@@ -24,7 +24,7 @@ function FormEmployer() {
     <section className="top-map-jobs">
       <div className="tf-container">
         <div className="job-search-form st1 employers-form">
-          <form method="post">
+          <form>
             <div className="row-group-search inner-form">
               <div className="form-group-1 form-style-1">
                 <input

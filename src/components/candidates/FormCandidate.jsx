@@ -23,13 +23,12 @@ const select4 = [
   { value: "s3", label: "Experience 2" },
 ];
 
-
 function FormCandidate(props) {
   return (
     <section className="top-map-jobs2 candi">
       <div className="tf-container">
         <div className="candidate-form job-search-form inner-form-map style2">
-          <form method="post">
+          <form>
             <div className="row-group-search">
               <div className="form-group">
                 <input

@@ -555,7 +555,7 @@ function Home_v6(props) {
         <div className="tf-container">
           <div className="content">
             <div className="form-sl">
-              <form method="post">
+              <form>
                 <div className="row-group-search home1 st">
                   <div className="form-group-1">
                     <span className="icon-search search-job"></span>
